@@ -18,7 +18,7 @@
 
 #pragma once
 
-#include <opendht.h>
+#include "dhtrunner.h"
 
 #ifdef _WIN32
 #include <Winsock2.h> // before Windows.h, else Winsock 1 conflict
@@ -35,34 +35,38 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h> 
 
-#include <functional>
 #include <string>
 
 namespace dht {
 
-class PeerDiscovery
+class OPENDHT_PUBLIC PeerDiscovery
 {
 public:
 
-    //using PeerDiscoveredCallback = std::function<void(InfoHash, SockAddr)>;
-
-    //PeerDiscovery();
-    //PeerDiscovery(const dht::InfoHash& id, in_port_t servicePort);
-
+    PeerDiscovery(int domain, in_port_t port, char *multicast_ip_group_address);
     ~PeerDiscovery();
 
-    //void startDiscovery(PeerDiscoveredCallback callback);
+    /**
+     * Send socket procudure start - one time sender
+    */
+    void Sender_oneTimeShoot(dht::InfoHash nodeId, in_port_t port_to_send);
+    
+    /**
+     * Send socket procudure start - Loop send
+    */
+    void Sender_Loop(dht::InfoHash nodeId, in_port_t port_to_send);
 
     /**
-     * Send socket procudure start
+     * Listener socket procudure start - one time Listen
     */
-    void Sender_start(int domain, int port, char *multicast_ip_group_address, dht::InfoHash nodeId, in_port_t port_to_send);
+    void Listener_oneTimeShoot();
 
     /**
-     * Listener socket procudure start
+     * Listener socket procudure start - Loop Listen
     */
-    void Listener_start(int domain, int port, char *multicast_ip_group_address);
+    void Listener_Loop();
 
     /**
      * Binary Converters
@@ -100,7 +104,12 @@ public:
         return m_port_received;
 
     }
+    void continue_to_run_setter(bool continue_to_run){
 
+        m_continue_to_run = continue_to_run;
+
+    }
+    
 private:
     
     int m_domain;
@@ -114,14 +123,18 @@ private:
     char* m_multicast_ip_group_address;
     int m_port;
 
+    std::thread m_running;
+    bool m_continue_to_run;
+
     //Data to export - Listener Socket Only
     dht::InfoHash m_node_id_received;
     int m_port_received;
+    std::vector<NodeExport> m_node_vec;
 
     /**
      * Multicast Socket Initialization, accept IPV4, IPV6 
     */
-    void initialize_socket(int &__domain);
+    void initialize_socket();
 
     /**
      * Multicast Socket Option Initialization, aim to allow multiple sockets to use the same PORT number 
@@ -132,17 +145,17 @@ private:
     /**
      * Socket Address Structure Initialization for both Listener
     */
-    void initialize_sockaddr_Listener(int &port);
+    void initialize_sockaddr_Listener();
 
     /**
      * Socket Address Structure Initialization for both Sender 
     */
-    void initialize_sockaddr_Sender(int &port, char* multicast_ip_group_address);
+    void initialize_sockaddr_Sender();
 
     /**
      * Configure the listener to be insterested in joining the IP multicast group
     */
-    void mcast_join(char* multicast_ip_group_address);
+    void mcast_join();
 
     /**
      * send messages
