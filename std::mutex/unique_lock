@@ -1,0 +1,94 @@
+Yes, you can use a std::unique_lock with std::defer_lock. It tells the unique_lock to not lock the mutex immediately, but to build the RAII wrapper.
+
+std::unique_lock<std::mutex> lk1(mutex1, std::defer_lock);
+std::unique_lock<std::mutex> lk2(mutex2, std::defer_lock);
+std::lock(lk1, lk2);
+
+
+class template
+<mutex>
+std::unique_lock
+template <class Mutex> class unique_lock;
+Unique lock
+A unique lock is an object that manages a mutex object with unique ownership in both states: locked and unlocked.
+
+On construction (or by move-assigning to it), the object acquires a mutex object, for whose locking and unlocking operations becomes responsible.
+
+The object supports both states: locked and unlocked.
+
+This class guarantees an unlocked status on destruction (even if not called explicitly). Therefore it is especially useful as an object with automatic duration, as it guarantees the mutex object is properly unlocked in case an exception is thrown.
+
+Note though, that the unique_lock object does not manage the lifetime of the mutex object in any way: the duration of the mutex object shall extend at least until the destruction of the unique_lock that manages it.
+
+Template parameters
+Mutex
+A mutex-like type.
+It shall be a basic lockable type, such as mutex (see BasicLockable for requirements).
+
+Member types
+member type	definition	description
+mutex_type	The template parameter (Mutex)	The managed mutex object type
+
+Member functions
+(constructor)
+Construct unique_lock (public member function )
+(destructor)
+Destroy unique_lock (public member function )
+
+Locking/unlocking
+lock
+Lock mutex (public member function )
+try_lock
+Lock mutex if not locked (public member function )
+try_lock_for
+Try to lock mutex during time span (public member function )
+try_lock_until
+Try to lock mutex until time point (public member function )
+unlock
+Unlock mutex (public member function )
+
+Modifiers
+operator=
+Move-assign unique_lock (public member function )
+swap
+Swap unique locks (public member function )
+release
+Release mutex (public member function )
+
+Observers
+owns_lock
+Owns lock (public member function )
+operator bool
+Return whether it owns a lock (public member function )
+mutex
+Get mutex (public member function )
+
+Non-member overloads
+swap (unique_lock)
+Swap locks (function )
+
+// unique_lock example
+#include <iostream>       // std::cout
+#include <thread>         // std::thread
+#include <mutex>          // std::mutex, std::unique_lock
+
+std::mutex mtx;           // mutex for critical section
+
+void print_block (int n, char c) {
+  // critical section (exclusive access to std::cout signaled by lifetime of lck):
+  std::unique_lock<std::mutex> lck (mtx);
+  //lock when constructed
+  for (int i=0; i<n; ++i) { std::cout << c; }
+  std::cout << '\n';
+}
+
+int main ()
+{
+  std::thread th1 (print_block,50,'*');
+  std::thread th2 (print_block,50,'$');
+
+  th1.join();
+  th2.join();
+
+  return 0;
+}
