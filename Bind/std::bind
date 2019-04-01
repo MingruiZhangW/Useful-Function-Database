@@ -25,4 +25,96 @@ auto memcpy_with_the_parameters_in_the_right_flipping_order = bind(memcpy, _2, _
 I don't recommend using it just because you don't like the API, but it has potential practical uses for example because:
 
 not2(bind(less<T>, _2, _1));
-is a less-than-or-equal function (assuming a total order, blah blah). This example normally isn't necessary since there already is a std::less_equal (it uses the <= operator rather than <, so if they aren't consistent then you might need this, and you might also need to visit the author of the class with a cluestick). It's the sort of transformation that comes up if you're using a functional style of programming, though.
+is a less-than-or-equal function (assuming a total order, blah blah). 
+]This example normally isn't necessary since there already is a 
+std::less_equal (it uses the <= operator rather than <, so if they 
+aren't consistent then you might need this, and you might also need to visit the author of the class with a cluestick). 
+It's the sort of transformation that comes up if you're using a functional style of programming, though.
+
+
+std::bind
+simple(1)	
+template <class Fn, class... Args>
+  /* unspecified */ bind (Fn&& fn, Args&&... args);
+with return type (2)	
+template <class Ret, class Fn, class... Args>
+  /* unspecified */ bind (Fn&& fn, Args&&... args);
+Bind function arguments
+Returns a function object based on fn, but with its arguments bound to args.
+
+Each argument may either be bound to a value or be a placeholder:
+- If bound to a value, calling the returned function object will always use that value as argument.
+- If a placeholder, calling the returned function object forwards an argument passed to the call (the one whose order number is specified by the placeholder).
+
+Calling the returned object returns the same type as fn, unless a specific return type is specified as Ret (2) (note that Ret is the only template parameter that cannot be implicitly deduced by the arguments passed to this function).
+
+The type of the returned object has the following properties:
+Its functional call returns the same as fn with its arguments bound to args... (or forwarded, for placeholders).
+For (1), it may have a member result_type: if Fn is a pointer to function or member function type, it is defined as an alias of its return type. Otherwise, it is defined as Fn::result_type, if such a member type exists.
+For (2), it has a member result_type, defined as an alias of Ret.
+It is move-constructible and, if the type of all of its arguments are copy-constructible, it is also copy-constructible. Both constructors never throw, provided none of the corresponding constructors of the decay types of Fn and Args... throw.
+
+Parameters
+fn
+A function object, pointer to function or pointer to member.
+Fn shall have a decay type which is move-constructible from fn.
+args...
+List of arguments to bind: either values, or placeholders.
+The types in Args... shall have decay types which are move-constructible from their respective arguments in args....
+If for any argument, its decay type is a reference_wrapper, it bounds to its referenced value instead.
+
+Return value
+A function object that, when called, calls fn with its arguments bound to args.
+
+If fn is a pointer to member, the first argument expected by the returned function is an object of the class *fn is a member (or a reference to it, or a pointer to it).
+
+// bind example
+#include <iostream>     // std::cout
+#include <functional>   // std::bind
+
+// a function: (also works with function object: std::divides<double> my_divide;)
+double my_divide (double x, double y) {return x/y;}
+
+struct MyPair {
+  double a,b;
+  double multiply() {return a*b;}
+};
+
+int main () {
+  using namespace std::placeholders;    // adds visibility of _1, _2, _3,...
+
+  // binding functions:
+  auto fn_five = std::bind (my_divide,10,2);               // returns 10/2
+  std::cout << fn_five() << '\n';                          // 5
+
+  auto fn_half = std::bind (my_divide,_1,2);               // returns x/2
+  std::cout << fn_half(10) << '\n';                        // 5
+
+  auto fn_invert = std::bind (my_divide,_2,_1);            // returns y/x
+  std::cout << fn_invert(10,2) << '\n';                    // 0.2
+
+  auto fn_rounding = std::bind<int> (my_divide,_1,_2);     // returns int(x/y)
+  std::cout << fn_rounding(10,3) << '\n';                  // 3
+
+  MyPair ten_two {10,2};
+
+  // binding members:
+  auto bound_member_fn = std::bind (&MyPair::multiply,_1); // returns x.multiply()
+  std::cout << bound_member_fn(ten_two) << '\n';           // 20
+
+  auto bound_member_data = std::bind (&MyPair::a,ten_two); // returns ten_two.a
+  std::cout << bound_member_data() << '\n';                // 10
+
+  return 0;
+}
+Edit & Run
+
+
+Output:
+
+5
+5
+0.2
+3
+20
+10
