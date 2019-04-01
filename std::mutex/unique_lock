@@ -92,3 +92,11 @@ int main ()
 
   return 0;
 }
+
+std::unique_lock use the RAII pattern.
+
+When you want to lock a mutex, you create a local variable of type std::unique_lock passing 
+the mutex as parameter. When the unique_lock is constructed it will lock the mutex, and 
+it gets destructed it will unlock the mutex. More importantly: 
+If a exceptions is thrown, the std::unique_lock destructer will be called and so the mutex will be unlocked.
+
