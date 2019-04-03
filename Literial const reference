@@ -1,0 +1,14 @@
+
+So you can write code like this:
+
+void f( const string & s ) {
+}
+
+f( "foobar" );
+Although strictly speaking what is actually happening here is not the literal being bound to a const reference - instead a temprary string object is created:
+
+string( "foobar" );
+and this nameless string is bound to the reference.
+
+Note that it is actually quite unusual to create non-parameter reference variables as you are doing - the main purpose of references is to serve as function parameters and return values.
+
