@@ -17,19 +17,12 @@
  *  along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifndef PEERDISCOVERYTESTER
-#define PEERDISCOVERYTESTER
+#pragma once
 
-#include <opendht.h>
-#include "peerDiscovery.h"
+#include "peer_discovery.h"
 
 #include <cppunit/TestFixture.h>
 #include <cppunit/extensions/HelperMacros.h>
-
-#include <unistd.h> 
-
-#include <thread>
-
 
 namespace test {
 
@@ -61,5 +54,3 @@ class PeerDiscoveryTester : public CppUnit::TestFixture {
 };
 
 }  // namespace test
-
-#endif
