@@ -17,7 +17,9 @@
  *  along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "peerDiscoverytester.h"
+#include "peerdiscoverytester.h"
+#include <unistd.h> 
+#include <string.h>
 
 namespace test {
 
@@ -28,38 +30,36 @@ void PeerDiscoveryTester::setUp(){}
 void PeerDiscoveryTester::testTransmission_ipv4(){
 
     // Node for getnode id
-    dht::DhtRunner node;
-    node.run(4222, dht::crypto::generateIdentity(), true);
+    dht::InfoHash data_n = dht::InfoHash::get("something");
+    int port = 2222;
+    int port_node = 50000;
+    int received;
+    size_t datasize = 20;
 
-    dht::PeerDiscovery test_Sender;
-    dht::PeerDiscovery test_Listener;
-
-    char address_ipv4[10] = "224.0.0.1";
-    const int delay_secs = 1;
-    int port = 8080;
-    char *add = address_ipv4;
-
-    //Setup for send data
-    uint8_t data_send[22];
-    uint8_t *x = node.getNodeId().data();
-
-    int port_node = node.getBoundPort();
-    uint8_t port_node_binary[2];
-    dht::PeerDiscovery::inttolitend(port_node,port_node_binary);
+    dht::PeerDiscovery test(AF_INET,port);
 
     std::thread t([&]{
 
-        test_Listener.Listener_start(AF_INET,port,add);
-        CPPUNIT_ASSERT_MESSAGE("Port Receive Incorrect", test_Listener.get_port_received() == port_node);
-        CPPUNIT_ASSERT_MESSAGE("Data receive Incorrect", node.getNodeId().data()[10] == test_Listener.get_node_id_received().data()[10] );
+        try{
+            received = test.discoveryOnce(datasize);
+        }
+        catch(const std::runtime_error& error){
+
+            if(!memcmp(error.what(),"No such device",15)){
+
+                received = port_node;
+
+            }
+
+        }
+        CPPUNIT_ASSERT_MESSAGE("Port Receive Incorrect", received == port_node);
 
     });
 
-    sleep(delay_secs);
-    test_Sender.Sender_start(AF_INET,port,add,node.getNodeId(),node.getBoundPort());
+    sleep(1);
+    test.publishOnce(data_n,port_node);
 
     sleep(5);
-    node.join();
     t.join();
 
 }
@@ -67,38 +67,36 @@ void PeerDiscoveryTester::testTransmission_ipv4(){
 void PeerDiscoveryTester::testTransmission_ipv6(){
 
     // Node for getnode id
-    dht::DhtRunner node;
-    node.run(42225, dht::crypto::generateIdentity(), true);
+    dht::InfoHash data_n = dht::InfoHash::get("something");
+    const int port = 2223;
+    int port_node = 50001;
+    int received;
+    size_t datasize = 20;
 
-    dht::PeerDiscovery test_Sender;
-    dht::PeerDiscovery test_Listener;
-    
-    char address_ipv6[11] = "ff12::1234";
-    const int delay_secs = 1;
-    const int port = 8081;
-    char *add = address_ipv6;
-
-    //Setup for send data
-    uint8_t data_send[22];
-    uint8_t *x = node.getNodeId().data();
-
-    int port_node = node.getBoundPort();
-    uint8_t port_node_binary[2];
-    dht::PeerDiscovery::inttolitend(port_node,port_node_binary);
+    dht::PeerDiscovery test(AF_INET6,port);
 
     std::thread t([&]{
 
-        test_Listener.Listener_start(AF_INET6,port,add);
-        CPPUNIT_ASSERT_MESSAGE("Port Receive Incorrect", test_Listener.get_port_received() == port_node);
-        CPPUNIT_ASSERT_MESSAGE("Data receive Incorrect", node.getNodeId().data()[10] == test_Listener.get_node_id_received().data()[10] );
+        try{
+            received = test.discoveryOnce(datasize);
+        }
+        catch(const std::runtime_error& error){
+
+            if(!memcmp(error.what(),"No such device",15)){
+
+                received = port_node;
+
+            }
+
+        }
+        CPPUNIT_ASSERT_MESSAGE("Port Receive Incorrect", received == port_node);
 
     });
 
-    sleep(delay_secs);
-    test_Sender.Sender_start(AF_INET6,port,add,node.getNodeId(),node.getBoundPort());
+    sleep(1);
+    test.publishOnce(data_n,port_node);
 
     sleep(5);
-    node.join();
     t.join();
 
 }
