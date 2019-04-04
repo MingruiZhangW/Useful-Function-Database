@@ -18,26 +18,16 @@
 
 #pragma once
 
-#include "dhtrunner.h"
-
-#ifdef _WIN32
-#include <Winsock2.h> // before Windows.h, else Winsock 1 conflict
-#include <Ws2tcpip.h> // needed for ip_mreq definition for multicast
-#include <Windows.h>
-#else
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <time.h>
-#endif
+#include "sockaddr.h"
+#include "infohash.h"
 
 #include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h> 
 
-#include <string>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
 
 namespace dht {
 
@@ -45,91 +35,65 @@ class OPENDHT_PUBLIC PeerDiscovery
 {
 public:
 
-    PeerDiscovery(int domain, in_port_t port, char *multicast_ip_group_address);
+    using PeerDiscoveredCallback = std::function<void(const InfoHash&, const SockAddr&)>;
+
+    PeerDiscovery(sa_family_t domain, in_port_t port);
     ~PeerDiscovery();
+    
+    /**
+     * startDiscovery - Listen
+    */
+    void startDiscovery(PeerDiscoveredCallback callback, const dht::InfoHash &nodeId);
+
+    /**
+     * startPublish - Send
+    */
+    void startPublish(const dht::InfoHash &nodeId, in_port_t port_to_send);
 
     /**
      * Send socket procudure start - one time sender
     */
-    void Sender_oneTimeShoot(dht::InfoHash nodeId, in_port_t port_to_send);
-    
-    /**
-     * Send socket procudure start - Loop send
-    */
-    void Sender_Loop(dht::InfoHash nodeId, in_port_t port_to_send);
+    void publishOnce(const dht::InfoHash &nodeId, in_port_t port_to_send);
 
     /**
      * Listener socket procudure start - one time Listen
     */
-    void Listener_oneTimeShoot();
+    uint32_t discoveryOnce(const size_t &nodeId_data_size);
 
     /**
-     * Listener socket procudure start - Loop Listen
+     * Thread Stopper
     */
-    void Listener_Loop();
-
-    /**
-     * Binary Converters
-    */
-    static void inttolitend(uint32_t x, uint8_t *lit_int) {
-        lit_int[0] = (uint8_t)(x >>  0);
-        lit_int[1] = (uint8_t)(x >>  8);
-    }
-
-    static uint32_t litendtoint(uint8_t *lit_int) {
-        return (uint32_t)lit_int[0] <<  0
-            | (uint32_t)lit_int[1] <<  8;
-    }
+    void stop();
 
     /**
      * Getter and Setters
     */
-    struct sockaddr_in6 get_v6add(){
+    void join(){
 
-        return m_addr_ipv6;
-
-    }
-    struct sockaddr_in get_v4add(){
-
-        return m_addr_ipv4;
-
-    }
-    dht::InfoHash get_node_id_received(){
-
-        return m_node_id_received;
-
-    }
-    int get_port_received(){
-
-        return m_port_received;
-
-    }
-    void continue_to_run_setter(bool continue_to_run){
-
-        m_continue_to_run = continue_to_run;
+        if(running_listen.joinable()){ running_listen.join(); };
+        if(running_send.joinable()){ running_send.join(); };
 
     }
     
 private:
-    
-    int m_domain;
-    int m_sockfd;
-    u_int m_opt;
-    struct sockaddr_in m_addr_ipv4;
-    struct sockaddr_in6 m_addr_ipv6;
-    struct ip_mreq m_config_ipv4;
-    struct ipv6_mreq m_config_ipv6;
-    socklen_t m_addrlen;
-    char* m_multicast_ip_group_address;
-    int m_port;
 
-    std::thread m_running;
-    bool m_continue_to_run;
+    std::mutex mtx_;
+    std::condition_variable cv_;
+    bool running_ {true};
+    sa_family_t domain_;
+    int sockfd_;
 
-    //Data to export - Listener Socket Only
-    dht::InfoHash m_node_id_received;
-    int m_port_received;
-    std::vector<NodeExport> m_node_vec;
+    SockAddr sockAddrSend_;
+    int port_;
+    std::unique_ptr<uint8_t> data_send_;
+    std::unique_ptr<uint8_t> data_receive_;
+    size_t data_size_ ;
+
+    int stop_writefd_ {-1};
+    //Thread export to be joined 
+    std::thread running_listen;
+    std::thread running_send;
+    dht::InfoHash nodeId_;
 
     /**
      * Multicast Socket Initialization, accept IPV4, IPV6 
@@ -148,24 +112,52 @@ private:
     void initialize_sockaddr_Listener();
 
     /**
-     * Socket Address Structure Initialization for both Sender 
-    */
-    void initialize_sockaddr_Sender();
-
-    /**
      * Configure the listener to be insterested in joining the IP multicast group
     */
     void mcast_join();
 
     /**
-     * send messages
+     * Send messages
     */
-    void m_sendto(uint8_t *buf,size_t &buf_size);
+    void m_sendto(uint8_t *buf,const size_t &buf_size);
 
     /**
-     * send messages
+     * Receive messages
     */
-    void m_recvfrom(uint8_t *buf,size_t &buf_size);
+    SockAddr m_recvfrom(uint8_t *buf,const size_t &buf_size);
+
+    /**
+     * Send thread loop
+    */
+    void sender_thread();
+
+    /**
+     * Listener thread loop
+    */
+    void listener_thread(PeerDiscoveredCallback callback);
+
+    /**
+     * Listener Parameters Setup
+    */
+    void listener_setup();
+
+    /**
+     * Sender Parameters Setup
+    */
+    void sender_setup(const uint8_t * data_n, in_port_t port_to_send);
+
+    /**
+     * Binary Converters
+    */
+    static void inttolitend(uint32_t x, uint8_t *lit_int) {
+        lit_int[0] = (uint8_t)(x >>  0);
+        lit_int[1] = (uint8_t)(x >>  8);
+    }
+
+    static uint32_t litendtoint(uint8_t *lit_int) {
+        return (uint32_t)lit_int[0] <<  0
+            |  (uint32_t)lit_int[1] <<  8;
+    }
 
 #ifdef _WIN32
     WSADATA wsaData;
