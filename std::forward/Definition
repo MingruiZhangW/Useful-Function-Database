@@ -1,0 +1,319 @@
+Perfect Forwarding
+Perfect forwarding reduces the need for overloaded functions and helps avoid the forwarding problem. The forwarding problem can occur when you write a generic function that takes references as its parameters and it passes (or forwards) these parameters to another function. For example, if the generic function takes a parameter of type const T&, then the called function cannot modify the value of that parameter. If the generic function takes a parameter of type T&, then the function cannot be called by using an rvalue (such as a temporary object or integer literal).
+
+Ordinarily, to solve this problem, you must provide overloaded versions of the generic function that take both T& and const T& for each of its parameters. As a result, the number of overloaded functions increases exponentially with the number of parameters. Rvalue references enable you to write one version of a function that accepts arbitrary arguments and forwards them to another function as if the other function had been called directly.
+
+Consider the following example that declares four types, W, X, Y, and Z. The constructor for each type takes a different combination of const and non-const lvalue references as its parameters.
+
+C++
+
+Copy
+struct W
+{
+   W(int&, int&) {}
+};
+
+struct X
+{
+   X(const int&, int&) {}
+};
+
+struct Y
+{
+   Y(int&, const int&) {}
+};
+
+struct Z
+{
+   Z(const int&, const int&) {}
+};
+Suppose you want to write a generic function that generates objects. The following example shows one way to write this function:
+
+C++
+
+Copy
+template <typename T, typename A1, typename A2>
+T* factory(A1& a1, A2& a2)
+{
+   return new T(a1, a2);
+}
+The following example shows a valid call to the factory function:
+
+C++
+
+Copy
+int a = 4, b = 5;
+W* pw = factory<W>(a, b);
+However, the following example does not contain a valid call to the factory function because factory takes lvalue references that are modifiable as its parameters, but it is called by using rvalues:
+
+C++
+
+Copy
+Z* pz = factory<Z>(2, 2);
+Ordinarily, to solve this problem, you must create an overloaded version of the factory function for every combination of A& and const A& parameters. Rvalue references enable you to write one version of the factory function, as shown in the following example:
+
+C++
+
+Copy
+template <typename T, typename A1, typename A2>
+T* factory(A1&& a1, A2&& a2)
+{
+   return new T(std::forward<A1>(a1), std::forward<A2>(a2));
+}
+This example uses rvalue references as the parameters to the factory function. The purpose of the std::forward function is to forward the parameters of the factory function to the constructor of the template class.
+
+The following example shows the main function that uses the revised factory function to create instances of the W, X, Y, and Z classes. The revised factory function forwards its parameters (either lvalues or rvalues) to the appropriate class constructor.
+
+C++
+
+Copy
+int main()
+{
+   int a = 4, b = 5;
+   W* pw = factory<W>(a, b);
+   X* px = factory<X>(2, b);
+   Y* py = factory<Y>(a, 2);
+   Z* pz = factory<Z>(2, 2);
+
+   delete pw;
+   delete px;
+   delete py;
+   delete pz;
+}
+
+std::forward - > type indenifity
+
+If arg is an lvalue reference, the function returns arg with its type unchanged.
+Otherwise, the function returns an rvalue reference (T&&) that refers to arg that can be used to pass an rvalue.
+
+// forward example
+#include <utility>      // std::forward
+#include <iostream>     // std::cout
+
+// function with lvalue and rvalue reference overloads:
+void overloaded (const int& x) {std::cout << "[lvalue]";}
+void overloaded (int&& x) {std::cout << "[rvalue]";}
+
+// function template taking rvalue reference to deduced type:
+template <class T> void fn (T&& x) {
+  overloaded (x);                   // always an lvalue
+  overloaded (std::forward<T>(x));  // rvalue if argument is rvalue
+}
+
+int main () {
+  int a;
+
+  std::cout << "calling fn with lvalue: ";
+  fn (a);
+  std::cout << '\n';
+
+  std::cout << "calling fn with rvalue: ";
+  fn (0);
+  std::cout << '\n';
+
+  return 0;
+}
+
+Don't let T&& fool you here - t is not an rvalue reference [2]. 
+When it appears in a type-deducing context, T&& acquires a special meaning. When func is instantiated, 
+T depends on whether the argument passed to func is an lvalue or an rvalue. If it's an lvalue of type U, 
+T is deduced to U&. If it's an rvalue, T is deduced to U:
+
+template <class T>
+void func(T&& t) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Perfect forwarding and universal references in C++
+ November 03, 2014 at 05:52 Tags C & C++ , Articles
+One of the new features in C++11 aimed at increased code efficiency is the emplace family of methods in containers. std::vector, for example, has an emplace_back method to parallel push_back, and emplace to parallel insert.
+
+Here's a short demonstration of the benefits these new methods bring:
+
+class MyKlass {
+public:
+  MyKlass(int ii_, float ff_) {...}
+
+private:
+  {...}
+};
+
+some function {
+  std::vector<MyKlass> v;
+
+  v.push_back(MyKlass(2, 3.14f));
+  v.emplace_back(2, 3.14f);
+}
+If you trace the execution of the constructors and destructor of MyKlass, you'll see something like the following for the push_back call:
+
+Constructor for a temporary MyKlass object
+Move constructor (if one was defined for MyKlass, otherwise a copy constructor) for the object actually allocated inside the vector
+Destructor for the temporary
+This is quite a lot of work. Much of it isn't required though, since the object passed to push_back is obviously an rvalue that ceases to exist after the statement is completed; there's no reason to create and destroy a temporary - why not just construct the object inside the vector directly?
+
+This is exactly what emplace_back does. For the v.emplace_back(2, 3.14f) call above, all you see is a single constructor invocation. This is the object constructed inside the vector. No temporaries are needed.
+
+emplace_back accomplishes this by invoking the constructor of MyKlass on its own and forwarding its arguments to the constructor. This feat is made possible by two new features in C++11: variadic templates and perfect forwarding. In this article I want to explain how perfect forwarding works and how to use it.
+
+The perfect forwarding problem
+Let func(E1, E2, ..., En) be an arbitrary function call with generic parameters E1, E2, ..., En. We'd like to write a function wrapper such that wrapper(E1, E2, ..., En) is equivalent to func(E1, E2, ..., En). In other words, we'd like to define a function with generic parameters that forwards its parameters perfectly to some other function.
+
+To have something concrete to relate this definition to, think of the emplace_back method discussed above. vector<T>::emplace_back forwards its parameters to a constructor of T, without actually knowing how T looks like.
+
+Next, I'm going to show a few examples of how we might approach this in pre-11 C++. For simplicity's sake, I'll put variadic templates aside; let's assume all we need to forward is two arguments.
+
+The first approach that comes to mind is:
+
+template <typename T1, typename T2>
+void wrapper(T1 e1, T2 e2) {
+    func(e1, e2);
+}
+This will obviously not work if func accepts its parameters by reference, since wrapper introduces a by-value passing step. If func modifies its by-reference parameter, it won't be visible in the caller of wrapper (only the copy created by wrapper itself will be affected).
+
+OK, then, we can make wrapper accept its parameters by reference. This should not interfere with func's taking parameters by value, because the call to func within wrapper will create the required copy.
+
+template <typename T1, typename T2>
+void wrapper(T1& e1, T2& e2) {
+    func(e1, e2);
+}
+This has another problem, though. Rvalues cannot be bound to function parameters that are references, so the following completely reasonable calls will now fail:
+
+wrapper(42, 3.14f);                  // error: invalid initialization of
+                                     //        non-const reference from
+                                     //        an rvalue
+
+wrapper(i, foo_returning_float());   // same error
+And no, making those reference parameters const won't cut it either, because func may legitimately want to accept non-const reference parameters.
+
+What remains is the brute-force approach taken by some libraries: define overloads for both const and non-const references:
+
+template <typename T1, typename T2>
+void wrapper(T1& e1, T2& e2)                { func(e1, e2); }
+
+template <typename T1, typename T2>
+void wrapper(const T1& e1, T2& e2)          { func(e1, e2); }
+
+template <typename T1, typename T2>
+void wrapper(T1& e1, const T2& e2)          { func(e1, e2); }
+
+template <typename T1, typename T2>
+void wrapper(const T1& e1, const T2& e2)    { func(e1, e2); }
+Exponential explosion. You can imagine how much fun this becomes when we want to cover some reasonable amount of function parameters. To make things worse, C++11 adds rvalue references to the mix (which we'd also want to forward correctly), and this clearly isn't a scalable solution.
+
+Reference collapsing and special type deduction for rvalues
+To explain how C++11 solves the perfect forwarding problem, we have to first understand two new rules that were added to the language.
+
+Reference collapsing is the easier one to explain, so let's start with it. Taking a reference to a reference is illegal in C++. However, it can sometimes arise in the context of templates and type deduction:
+
+template <typename T>
+void baz(T t) {
+  T& k = t;
+}
+What happens if we call this function as follows:
+
+int ii = 4;
+baz<int&>(ii);
+In the template instantiation, T is explicitly set to int&. So what is the type of k inside? What the compiler "sees" is int& & - while this isn't something the user is allowed to write in code, the compiler simply infers a single reference from this. In fact, prior to C++11 this wasn't standardized, but many compilers accepted such code anyway because these cases occasionally arise in template metaprogramming. With the addition of rvalue references in C++11, it became important to define what happens when various reference types augment (e.g. what does int&& & mean?).
+
+The result is the reference collapsing rule. The rule is very simple. & always wins. So & & is &, and so are && & and & &&. The only case where && emerges from collapsing is && &&. You can think of it as a logical-OR, with & being 1 and && being 0.
+
+The other addition to C++11 relevant to this article is special type deduction rules for rvalue references in some cases [1]. Given a function template like:
+
+template <class T>
+void func(T&& t) {
+}
+Don't let T&& fool you here - t is not an rvalue reference [2]. When it appears in a type-deducing context, T&& acquires a special meaning. When func is instantiated, T depends on whether the argument passed to func is an lvalue or an rvalue. If it's an lvalue of type U, T is deduced to U&. If it's an rvalue, T is deduced to U:
+
+func(4);            // 4 is an rvalue: T deduced to int
+
+double d = 3.14;
+func(d);            // d is an lvalue; T deduced to double&
+
+float f() {...}
+func(f());          // f() is an rvalue; T deduced to float
+
+int bar(int i) {
+  func(i);          // i is an lvalue; T deduced to int&
+}
+This rule may seem unusual and strange. That's because it is. However, it starts making sense when we realize it was designed to solve the perfect forwarding problem.
+
+Solving perfect forwarding with std::forward
+Let's get back to our original wrapper template. Here's how it should be written in C++11:
+
+template <typename T1, typename T2>
+void wrapper(T1&& e1, T2&& e2) {
+    func(forward<T1>(e1), forward<T2>(e2));
+}
+And this is forward:
+
+template<class T>
+T&& forward(typename std::remove_reference<T>::type& t) noexcept {
+  return static_cast<T&&>(t);
+}
+
+template <class T>
+T&& forward(typename std::remove_reference<T>::type&& t) noexcept {
+  return static_cast<T&&>(t);
+}
+Let's say we call:
+
+int ii ...;
+float ff ...;
+wrapper(ii, ff);
+Examining the first argument (since the second is handled similarly): ii is an lvalue, so T1 is deduced to int& following the special deduction rules. We get the call func(forward<int&>(e1), ...). Therefore, forward is instantiated with int& and we get this version of it:
+
+int& && forward(int& t) noexcept {
+    return static_cast<int& &&>(t);
+}
+Now it's time to apply the reference collapsing rule:
+
+int& forward(int& t) noexcept {
+    return static_cast<int&>(t);
+}
+In other words, the argument is passed on by reference to func, as needed for lvalues.
+
+The other case to handle is:
+
+wrapper(42, 3.14f);
+Here the arguments are rvalues, so T1 is deduced to int. We get the call func(forward<int>(e1), ...). Therefore, forward is instantiated with int and we get this version of it [3]:
+
+int&& forward(int&& t) noexcept {
+    return static_cast<int&&>(t);
+}
+One can see forward as a pretty wrapper around static_cast<T&&>(t) when T can be deduced to either U& or U&&, depending on the kind of argument to the wrapper (lvalue or rvalue). Now we get wrapper as a single template that handles all kinds of forwarding cleanly.
+
+The forward template exists in C++11, in the <utility> header, as std::forward.
+
+Another thing I want to mention is the use of std::remove_reference<T>. In fact, it you think about it, forward could do without it. Reference collapsing does the job already, so std::remove_reference<T> is superfluous. It's there to turn the T& t into a non-deducing context (according to the C++ standard, section 14.8.2.5), thus forcing us to explicitly specify the template parameter when calling std::forward.
+
+Universal references
+In his talks, blog posts and book, Scott Myers gave the name "universal references" to rvalues that appear in a type-deducing context. Whether this is a useful mnemonic or not depends on the beholder; personally, when I first read the relevant chapters of the new "Effective C++", I found myself seriously confused on this topic. Only later, when I understood the underlying mechanisms (reference collapsing and special deduction rules), the topic became somewhat clearer.
+
+The trap is that saying "universal references" [4] is surely more succinct and nice than "rvalue references in a type deducing context", but once you want to really understand some piece of code (rather than just cargo-culting boilerplate), you'll find that avoiding the full definition is impossible.
+
+Examples of using perfect forwarding
+Perfect forwarding is extremely useful, because it enables a kind of higher order programming. Higher order functions are functions that may take other functions as arguments or return them. Without perfect forwarding, higher order functions are cumbersome because there is no convenient way to forward arguments to wrapped functions. And by "functions" here I mean classes as well, whose constructors are still functions.
+
+In the beginning of the article I mentioned the emplace_back method of containers. Another good examples is make_unique, which I described in the previous article:
+
+template<typename T, typename... Args>
+unique_ptr<T> make_unique(Args&&... args)
+{
+    return unique_ptr<T>(new T(std::forward<Args>(args)...));
+}
+There, I pleaded to ignore the strange && syntax and focus on the variadic template packs, but now there's no trouble fully understanding the code. It goes without saying that perfect forwarding and variadic templates very often go hand in hand, because we generally don't know how many arguments the functions or constructors we pass around accept.
+
+For a significantly more complex use of perfect forwarding, you may also want to take a look at std::bind.
+
