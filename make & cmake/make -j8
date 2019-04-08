@@ -1,0 +1,4 @@
+-j [jobs], --jobs[=jobs]	
+Specifies the number of jobs (commands) to run simultaneously. 
+If there is more than one -j option, the last one is effective. 
+If the -j option is given without an argument, make will not limit the number of jobs that can run simultaneously.
