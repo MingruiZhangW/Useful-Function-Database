@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?include Config.wxi?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="*" Name="$(var.Name)" Language="1033" Version="$(fun.AutoVersion(1.0))" Manufacturer="$(var.Manufacturer)" UpgradeCode="7c45b52b-0390-4fe8-947a-3f13e82dd346">
+        <Package InstallerVersion="301" Compressed="yes" InstallScope="perMachine" />
+
+        <MajorUpgrade AllowSameVersionUpgrades="yes" DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+        <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
+
+        <Icon Id="icon.ico" SourceFile="icon.ico" />
+        <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+        <Feature Id="ProductFeature" Title="Main" Level="1" Absent="disallow">
+            <ComponentGroupRef Id="ProductComponents" Primary="yes" />
+            <ComponentRef Id="ApplicationShortcutDesktop" />
+            <ComponentRef Id="ApplicationShortcutStartMenu" />
+        </Feature>
+        <Feature Id="VCRedist" Title="Visual C++ Runtime" AllowAdvertise="no" Display="hidden" Level="1">
+            <MergeRef Id="VCRedist" />
+        </Feature>
+
+        <UIRef Id="CustomUI" />
+        <WixVariable Id="WixUIBannerBmp" Value="top-banner.bmp" />
+        <WixVariable Id="WixUIDialogBmp" Value="main-banner.bmp" />
+        <WixVariable Id="WixUISupportPerUser" Value="0" />
+    </Product>
+
+    <Fragment Id="DirectoryStructure">
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFiles64Folder">
+                <Directory Id="ManufacturerFolder" Name="$(var.Manufacturer)">
+                  <Directory Id="APPLICATIONFOLDER" Name="$(var.Name)" />
+                </Directory>
+            </Directory>
+            <Directory Id="DesktopFolder" Name="Desktop" />
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ApplicationProgramsFolder" />
+            </Directory>
+        </Directory>
+    </Fragment>
+
+    <Fragment Id="Shortcuts">
+        <DirectoryRef Id="DesktopFolder">
+            <Component Id="ApplicationShortcutDesktop" Guid="*" Win64="yes">
+                <Shortcut Id="ApplicationShortcutDesktop" Name="$(var.Name)" Description="Launch $(var.Name)"
+                    Target="[#fileMain.exe]" WorkingDirectory="INSTALLFOLDER" />
+                <RemoveFolder Id="DesktopFolder" On="uninstall" />
+                <RegistryValue Root="HKCU" Key="Software/$(var.Name)" Name="desktop" Type="integer" Value="1" KeyPath="yes" />
+            </Component>
+        </DirectoryRef>
+
+        <DirectoryRef Id="ApplicationProgramsFolder">
+            <Component Id="ApplicationShortcutStartMenu" Guid="*" Win64="yes">
+                <Shortcut Id="ApplicationShortcutStartMenu" Name="$(var.Name)" Description="Launch $(var.Name)"
+                    Target="[#fileMain.exe]" WorkingDirectory="INSTALLFOLDER" />
+                <RemoveFolder Id="StartMenuFolder" On="uninstall" />
+                <RegistryValue Root="HKCU" Key="Software/$(var.Name)" Name="startmenu" Type="integer" Value="1" KeyPath="yes" />
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+
+    <Fragment Id="UI">
+        <UI Id="CustomUI">
+          <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+          <Property Id="ApplicationFolderName" Value="$(var.Name)" />
+          <UIRef Id="WixUI_Advanced"/>
+          <Dialog Id="InstallDlg" Width="370" Height="270" Title="[ProductName] Setup" NoMinimize="yes">
+            <Control Id="background" Type="Bitmap" Text="bgPic" Height="300" Width="400" X="0" Y="0" TabSkip="no" />
+            <Control Id="installButton" Type="PushButton" Text="[Install]" Height="62" Width="62" X="160" Y="110" Bitmap="yes">
+              <Publish Event="EndDialog" Value="Return">1</Publish>
+            </Control>
+            <Control Id="Cancel" Type="PushButton" X="555" Y="555" Width="56" Height="17" Default="yes" Text="Cancel" Cancel="yes" >
+              <Publish Event="EndDialog" Value="Exit">1</Publish>
+            </Control>
+          </Dialog>
+          <InstallUISequence>
+            <Show Dialog="InstallDlg" Before="AdvancedWelcomeEulaDlg" />
+          </InstallUISequence>
+        </UI>
+        <Binary Id="bgPic" SourceFile="backblu.bmp"/>
+        <Property Id="Install">installbtn</Property>
+        <Binary Id="installbtn" SourceFile="jamites.bmp"/>
+        <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch $(var.Name)" />
+        <Property Id="WixShellExecTarget" Value="[#fileMain.exe]" />
+        <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+        <WixVariable Id="WixUILicenseRtf" Value="$(var.ReleaseDir)\License.rtf"/>
+    </Fragment>
+
+    <Fragment Id="VCRedist">
+        <DirectoryRef Id="TARGETDIR">
+            <Merge Id="VCRedist" SourceFile="$(env.VCRedistMergeModule)" DiskId="1" Language="0" />
+        </DirectoryRef>
+    </Fragment>
+</Wix>
