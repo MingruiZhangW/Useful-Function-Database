@@ -15,3 +15,5 @@ std::function<void(int,int)> f = [=](int a, int b) {
     this->doSomethingArgs(a, b);
 }
 (I don't have a C++11 capable compiler at hand right now, so I can't check this one.)
+
+https://stackoverflow.com/questions/7582546/using-generic-stdfunction-objects-with-member-functions-in-one-class
