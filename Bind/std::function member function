@@ -1,0 +1,17 @@
+Using generic std::function objects with member functions in one class
+
+A non-static member function must be called with an object. That is, it always implicitly passes "this" pointer as its argument.
+
+Because your std::function signature specifies that your function doesn't take any arguments (<void(void)>), you must bind the first (and the only) argument.
+
+std::function<void(void)> f = std::bind(&Foo::doSomething, this);
+If you want to bind a function with parameters, you need to specify placeholders:
+
+using namespace std::placeholders;
+std::function<void(int,int)> f = std::bind(&Foo::doSomethingArgs, this, _1, _2);
+Or, if your compiler supports C++11 lambdas:
+
+std::function<void(int,int)> f = [=](int a, int b) {
+    this->doSomethingArgs(a, b);
+}
+(I don't have a C++11 capable compiler at hand right now, so I can't check this one.)
