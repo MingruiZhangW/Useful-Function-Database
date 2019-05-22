@@ -2,7 +2,8 @@
 Constant pointer vs Pointer to constant [duplicate]
 
 const int* ptr; 
-declares ptr a pointer to const int type. You can modify ptr itself but the object pointed to by ptr shall not be modified.
+declares ptr a pointer to const int type. 
+You can modify ptr itself but the object pointed to by ptr shall not be modified.
 
 const int a = 10;
 const int* ptr = &a;  
