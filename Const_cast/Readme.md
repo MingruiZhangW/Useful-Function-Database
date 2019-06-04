@@ -6,7 +6,7 @@ C++ supports following 4 types of casting operators:
 3. dynamic_cast
 4. reinterpret_cast
 
-1. const_cast
+const_cast
 const_cast is used to cast away the constness of variables. Following are some interesting facts about const_cast.
 
 > 1) const_cast can be used to change non-const class members inside a const member function. Consider the following code snippet. Inside const member function fun(), ‘this’ is treated by the compiler as ‘const student* const this’, i.e. ‘this’ is a constant pointer to a constant object, thus compiler doesn’t allow to change the data members through ‘this’ pointer. const_cast changes the type of ‘this’ pointer to ‘student* const this’.
