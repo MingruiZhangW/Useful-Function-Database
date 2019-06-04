@@ -15,7 +15,7 @@ C and C++ use different function name mangling techniques. C++ allows function o
 
 By declaring a function with extern "C", it changes the linkage requirements so that the C++ compiler does not add the extra mangling information to the symbol.
 
-extern "C" void foo(int bar);
+    extern "C" void foo(int bar);
 
 If you have a library that can be shared between C and C++, you will need to make the functions visible in the C namespace. The easiest way to accomplish this is with the following pattern:
 
