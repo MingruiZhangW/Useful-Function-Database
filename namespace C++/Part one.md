@@ -65,69 +65,102 @@ Output:
 
 - A namespace definition begins with the keyword namespace followed by the namespace name as follows:
 
+```
 namespace namespace_name 
 {
    int x, y; // code declarations where 
              // x and y are declared in 
              // namespace_name's scope
 }
+```
 
--Namespace declarations appear only at global scope.
--Namespace declarations can be nested within another namespace.
--Namespace declarations don’t have access specifiers. (Public or private)
--No need to give semicolon after the closing brace of definition of namespace.
--We can split the definition of namespace over several units.
+- Namespace declarations appear only at global scope.
+- Namespace declarations can be nested within another namespace.
+- Namespace declarations don’t have access specifiers. (Public or private)
+- No need to give semicolon after the closing brace of definition of namespace.
+- We can split the definition of namespace over several units.
 
-    // Creating namespaces 
+        // Creating namespaces 
+        #include <iostream> 
+        using namespace std; 
+        namespace ns1 
+        { 
+            int value()    { return 5; } 
+        } 
+        namespace ns2  
+        { 
+            const double x = 100; 
+            double value() {  return 2*x; } 
+        } 
+
+        int main() 
+        { 
+            // Access value function within ns1 
+            cout << ns1::value() << '\n';  
+
+            // Access value function within ns2 
+            cout << ns2::value() << '\n';  
+
+            // Access variable x directly 
+            cout << ns2::x << '\n';        
+
+            return 0; 
+        } 
+Output:
+```
+5
+200
+100
+```
+### Classes and Namespace:
+
+    // A C++ program to demonstrate use of class 
+    // in a namespace 
     #include <iostream> 
     using namespace std; 
-    namespace ns1 
+
+    namespace ns 
     { 
-        int value()    { return 5; } 
-    } 
-    namespace ns2  
-    { 
-        const double x = 100; 
-        double value() {  return 2*x; } 
+        // A Class in a namespace 
+        class geek 
+        { 
+        public: 
+            void display() 
+            { 
+                cout << "ns::geek::display()\n"; 
+            } 
+        }; 
     } 
 
     int main() 
     { 
-        // Access value function within ns1 
-        cout << ns1::value() << '\n';  
+        // Creating Object of student Class 
+        ns::geek obj; 
 
-        // Access value function within ns2 
-        cout << ns2::value() << '\n';  
-
-        // Access variable x directly 
-        cout << ns2::x << '\n';        
+        obj.display(); 
 
         return 0; 
     } 
+    
 Output:
+```
+ns::geek::display()
+```
+Class can also be declared inside namespace and defined outside namespace using following syntax
 
-5
-200
-100
- 
+    // A C++ program to demonstrate use of class 
+    // in a namespace 
+    #include <iostream> 
+    using namespace std; 
 
-Classes and Namespace:
+    namespace ns 
+    { 
+        // Only declaring class here 
+        class geek; 
+    } 
 
-Following is a simple way to create classes in a name space
-filter_none
-edit
-play_arrow
-
-brightness_4
-// A C++ program to demonstrate use of class 
-// in a namespace 
-#include <iostream> 
-using namespace std; 
-  
-namespace ns 
-{ 
-    // A Class in a namespace 
-    class geek 
+    // Defining class outside 
+    class ns::geek 
     { 
     public: 
         void display() 
@@ -135,100 +168,56 @@ namespace ns
             cout << "ns::geek::display()\n"; 
         } 
     }; 
-} 
-  
-int main() 
-{ 
-    // Creating Object of student Class 
-    ns::geek obj; 
-  
-    obj.display(); 
-  
-    return 0; 
-} 
+
+    int main() 
+    { 
+        //Creating Object of student Class 
+        ns::geek obj; 
+        obj.display(); 
+        return 0; 
+    } 
 Output:
-
+```
 ns::geek::display()
-Class can also be declared inside namespace and defined outside namespace using following syntax
+```
+We can define methods also outside the namespace. Following is an example code.
 
-filter_none
-edit
-play_arrow
+    // A C++ code to demonstrate that we can define  
+    // methods outside namespace. 
+    #include <iostream> 
+    using namespace std; 
 
-brightness_4
-// A C++ program to demonstrate use of class 
-// in a namespace 
-#include <iostream> 
-using namespace std; 
-  
-namespace ns 
-{ 
-    // Only declaring class here 
-    class geek; 
-} 
-  
-// Defining class outside 
-class ns::geek 
-{ 
-public: 
-    void display() 
+    // Creating a namespace 
+    namespace ns 
+    { 
+        void display(); 
+        class geek 
+        { 
+        public: 
+           void display(); 
+        }; 
+    } 
+
+    // Defining methods of namespace 
+    void ns::geek::display() 
     { 
         cout << "ns::geek::display()\n"; 
     } 
-}; 
-  
-int main() 
-{ 
-    //Creating Object of student Class 
-    ns::geek obj; 
-    obj.display(); 
-    return 0; 
-} 
-Output:
-
-ns::geek::display()
-We can define methods also outside the namespace. Following is an example code.
-
-filter_none
-edit
-play_arrow
-
-brightness_4
-// A C++ code to demonstrate that we can define  
-// methods outside namespace. 
-#include <iostream> 
-using namespace std; 
-  
-// Creating a namespace 
-namespace ns 
-{ 
-    void display(); 
-    class geek 
+    void ns::display() 
     { 
-    public: 
-       void display(); 
-    }; 
-} 
-  
-// Defining methods of namespace 
-void ns::geek::display() 
-{ 
-    cout << "ns::geek::display()\n"; 
-} 
-void ns::display() 
-{ 
-    cout << "ns::display()\n"; 
-} 
-  
-// Driver code 
-int main() 
-{ 
-    ns::geek obj; 
-    ns::display(); 
-    obj.display(); 
-    return 0; 
-} 
-Output:
+        cout << "ns::display()\n"; 
+    } 
 
+    // Driver code 
+    int main() 
+    { 
+        ns::geek obj; 
+        ns::display(); 
+        obj.display(); 
+        return 0; 
+    } 
+Output:
+```
 ns::display()
 ns::geek::display()
+```
