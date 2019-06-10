@@ -1,3 +1,4 @@
+https://stackoverflow.com/questions/41469165/reference-sign-after-method-declaration-c
 ### Reference sign after method declaration c++
 
 In what case is it benificial to declare a method or function using const& instead of just using const?<br/>
