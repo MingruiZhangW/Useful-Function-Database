@@ -5,67 +5,46 @@ A condition variable is an object able to block the calling thread until notifie
 It uses a unique_lock (over a mutex) to lock the thread when one of its wait functions is called. The thread remains blocked until woken up by another thread that calls a notification function on the same condition_variable object.
 
 Objects of type condition_variable always use unique_lock<mutex> to wait: for an alternative that works with any kind of lockable type, see condition_variable_any
+  
+    // condition_variable example
+    #include <iostream>           // std::cout
+    #include <thread>             // std::thread
+    #include <mutex>              // std::mutex, std::unique_lock
+    #include <condition_variable> // std::condition_variable
 
-Member functions
-(constructor)
-Construct condition_variable (public member function )
-(destructor)
-Destroy condition_variable (public member function )
+    std::mutex mtx;
+    std::condition_variable cv;
+    bool ready = false;
 
-Wait functions
-wait
-Wait until notified (public member function )
-wait_for
-Wait for timeout or until notified (public member function )
-wait_until
-Wait until notified or time point (public member function )
+    void print_id (int id) {
+      std::unique_lock<std::mutex> lck(mtx);
+      while (!ready) cv.wait(lck);
+      // ...
+      std::cout << "thread " << id << '\n';
+    }
 
-Notify functions
-notify_one
-Notify one (public member function )
-notify_all
-Notify all (public member function )
+    void go() {
+      std::unique_lock<std::mutex> lck(mtx);
+      ready = true;
+      cv.notify_all();
+    }
 
-// condition_variable example
-#include <iostream>           // std::cout
-#include <thread>             // std::thread
-#include <mutex>              // std::mutex, std::unique_lock
-#include <condition_variable> // std::condition_variable
+    int main ()
+    {
+      std::thread threads[10];
+      // spawn 10 threads:
+      for (int i=0; i<10; ++i)
+        threads[i] = std::thread(print_id,i);
 
-std::mutex mtx;
-std::condition_variable cv;
-bool ready = false;
+      std::cout << "10 threads ready to race...\n";
+      go();                       // go!
 
-void print_id (int id) {
-  std::unique_lock<std::mutex> lck(mtx);
-  while (!ready) cv.wait(lck);
-  // ...
-  std::cout << "thread " << id << '\n';
-}
+      for (auto& th : threads) th.join();
 
-void go() {
-  std::unique_lock<std::mutex> lck(mtx);
-  ready = true;
-  cv.notify_all();
-}
+      return 0;
+    }
 
-int main ()
-{
-  std::thread threads[10];
-  // spawn 10 threads:
-  for (int i=0; i<10; ++i)
-    threads[i] = std::thread(print_id,i);
-
-  std::cout << "10 threads ready to race...\n";
-  go();                       // go!
-
-  for (auto& th : threads) th.join();
-
-  return 0;
-}
-Edit & Run
-
-
+```
 Possible output (thread order may vary):
 
 10 threads ready to race...
@@ -79,3 +58,4 @@ thread 7
 thread 5
 thread 3
 thread 1
+```
