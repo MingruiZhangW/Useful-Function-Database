@@ -1,4 +1,4 @@
-# std::unique_lock<std::mutex> or std::lock_guard<std::mutex>?
+# std::unique_lock or std::lock_guard?
 
 The difference is that you can lock and unlock a std::unique_lock. std::lock_guard will be locked only once on construction and unlocked on destruction.So for use case B you definitely need a std::unique_lock for the condition variable. In case A it depends whether you need to relock the guard.</br>
 std::unique_lock has other features that allow it to e.g.: be constructed without locking the mutex immediately but to build the RAII wrapper (see here).
