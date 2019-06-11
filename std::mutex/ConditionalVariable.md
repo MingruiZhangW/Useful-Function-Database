@@ -1,8 +1,5 @@
-class
-<condition_variable>
-std::condition_variable
-class condition_variable;
-Condition variable
+
+# Condition variable
 A condition variable is an object able to block the calling thread until notified to resume.
 
 It uses a unique_lock (over a mutex) to lock the thread when one of its wait functions is called. The thread remains blocked until woken up by another thread that calls a notification function on the same condition_variable object.
