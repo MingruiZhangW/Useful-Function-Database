@@ -135,6 +135,7 @@
             return false;
 
         memLock_.acquire();
+        //You need to create() the shared memory segment in one of the processes which are using it. Most likely, you have one "master"         //or "server" process which is started first - let this process create the shared memory with a specific size:
         const bool isRunning = sharedMem_.attach();
         if (isRunning)
             sharedMem_.detach();
