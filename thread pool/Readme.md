@@ -1,6 +1,6 @@
 # Thread Pool
 
->A thread pool is a group of pre-instantiated, idle threads which stand ready to be given work. These are preferred over instantiating new >threads for each task when there is a large number of short tasks to be done rather than a small number of long ones. This prevents having >to incur the overhead of creating a thread a large number of times.
+>A thread pool is a group of pre-instantiated, idle threads which stand ready to be given work. These are preferred over instantiating new threads for each task when there is a large number of short tasks to be done rather than a small number of long ones. This prevents having to incur the overhead of creating a thread a large number of times.
 
 Implementation will vary by environment, but in simplified terms, you need the following:
 
