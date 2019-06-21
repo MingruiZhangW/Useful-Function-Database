@@ -1,6 +1,7 @@
 # JavaScript Knowledge
 
->string.match finds the first match and returns it with the actual match, the index at which the text was found and the actual input, when the global flag is not used. string.match just returns all the matches, when the global flag is used.
+- Regex.exec(), string.match()
+string.match finds the first match and returns it with the actual match, the index at which the text was found and the actual input, when the global flag is not used. string.match just returns all the matches, when the global flag is used.
 ```
 var myString = "[22].[44].[33].";
 
