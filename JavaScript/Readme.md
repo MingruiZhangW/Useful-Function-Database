@@ -26,7 +26,7 @@ will return
 ```
 As you can see, the lastIndex property is updated whenever a match is found. So, keep two things in mind when you use exec, or you will run into an infinite loop.
 
-If you don't use g option, then you will always get the first match, if there is one, otherwise null. So, the following will run into an infinite loop.
+>If you don't use g option, then you will always get the first match, if there is one, otherwise null. So, the following will run into an infinite loop.
 ```
 var myString = "[22].[44].[33].", myRegexp = /\d+/, result;
 
