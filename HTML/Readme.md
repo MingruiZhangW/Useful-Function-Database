@@ -33,3 +33,10 @@ This only works on WebKit browsers, but I like it a lot. Will behave like auto o
 }
 ```
 This will make the scrollbar appear only as an overlay, thus not affecting the width of your element!
+
+You can stablish specific toolbar for div
+```
+div::-webkit-scrollbar {
+    width: 12px;
+}
+```
