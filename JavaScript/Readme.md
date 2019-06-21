@@ -42,3 +42,10 @@ while (result = /\d+/g.exec(myString)) {
     console.log(result);
 }
 ```
+# Delete Parent Element
+```
+function delete_row(e)
+{
+    e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
+}
+```
