@@ -40,3 +40,66 @@ div::-webkit-scrollbar {
     width: 12px;
 }
 ```
+### How to center and crop an image to always appear in square shape with CSS?
+object-fit property does the magic.
+CSS
+```
+.image {
+  width: 160px;
+  height: 160px;
+}
+
+.object-fit_fill {
+  object-fit: fill
+}
+
+.object-fit_contain {
+  object-fit: contain
+}
+
+.object-fit_cover {
+  object-fit: cover
+}
+
+.object-fit_none {
+  object-fit: none
+}
+
+.object-fit_scale-down {
+  object-fit: scale-down
+}
+```
+HTML
+```
+<div class="original-image">
+  <p>original image</p>
+  <img src="http://lorempixel.com/500/200">
+</div>
+
+<div class="image">
+  <p>object-fit: fill</p>
+  <img class="object-fit_fill" src="http://lorempixel.com/500/200">
+</div>
+
+<div class="image">
+  <p>object-fit: contain</p>
+  <img class="object-fit_contain" src="http://lorempixel.com/500/200">
+</div>
+
+<div class="image">
+  <p>object-fit: cover</p>
+  <img class="object-fit_cover" src="http://lorempixel.com/500/200">
+</div>
+
+<div class="image">
+  <p>object-fit: none</p>
+  <img class="object-fit_none" src="http://lorempixel.com/500/200">
+</div>
+
+<div class="image">
+  <p>object-fit: scale-down</p>
+  <img class="object-fit_scale-down" src="http://lorempixel.com/500/200">
+</div>
+```
+Result
+[![N|Solid](https://i.stack.imgur.com/HCG3I.png)](https://nodesource.com/products/nsolid)
