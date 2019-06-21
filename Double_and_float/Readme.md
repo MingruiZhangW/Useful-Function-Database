@@ -29,7 +29,7 @@ Also, the maximum value of float is about 3e38, but double is about 1.7e308, so 
 
 During testing, maybe a few test cases contain these huge numbers, which may cause your programs to fail if you use floats.<br>
 
-Of course, sometimes, even double isn't accurate enough, hence we sometimes have long double[1] (the above example gives 9.000000000000000066 on Mac), but all floating point types suffer from round-off errors, so if precision is very important (e.g. money processing) you should use int or a fraction class.
+> Of course, sometimes, even double isn't accurate enough, hence we sometimes have long double[1] (the above example gives 9.000000000000000066 on Mac), but all floating point types suffer from round-off errors, so if precision is very important (e.g. money processing) you should use int or a fraction class.
 
 Furthermore, don't use += to sum lots of floating point numbers, as the errors accumulate quickly. If you're using Python, use fsum. Otherwise, try to implement the Kahan summation algorithm.<br>
 
