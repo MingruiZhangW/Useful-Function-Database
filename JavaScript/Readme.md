@@ -1,6 +1,6 @@
 # JavaScript Knowledge
 
-- Regex.exec(), string.match()<br>
+### Regex.exec(), string.match()<br>
 string.match finds the first match and returns it with the actual match, the index at which the text was found and the actual input, when the global flag is not used. string.match just returns all the matches, when the global flag is used.
 ```
 var myString = "[22].[44].[33].";
@@ -42,7 +42,7 @@ while (result = /\d+/g.exec(myString)) {
     console.log(result);
 }
 ```
-# Delete Parent Element
+### Delete Parent Element
 ```
 function delete_row(e)
 {
