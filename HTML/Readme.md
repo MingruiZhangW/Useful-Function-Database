@@ -101,5 +101,47 @@ HTML
   <img class="object-fit_scale-down" src="http://lorempixel.com/500/200">
 </div>
 ```
-Result
+Result <br>
 [![N|Solid](https://i.stack.imgur.com/HCG3I.png)](https://nodesource.com/products/nsolid)
+
+### overflow:scroll and The Right Padding Problem - A CSS Only Solution
+
+[![N|Solid](https://cdn-images-1.medium.com/max/800/1*_O3aWkD0UfmgrlBkL5SEnA.png
+)](https://nodesource.com/products/nsolid)
+
+it's possible to create the margins with pseudo-elements:
+```
+.outer::before { content: ' '; min-width: 5px; }
+.outer::after { content: ' '; min-width: 5px; }
+.outer {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 80px;
+    border:1px #ccc solid;
+    overflow-x: auto;
+    padding: 5px;
+}
+.outer::after { content: ' '; min-width: 5px; }
+.outer > div {
+    flex: 1 1 auto;
+    border: 1px #ccc solid;
+    text-align: center;
+    min-width: 50px;
+    margin: 5px;
+}
+```
+```
+<div class="outer">
+    <div>text1</div>
+    <div>text2</div>
+    <div>text3</div>
+    <div>text4</div>
+    <div>text5</div>
+    <div>text6</div>
+    <div>text7</div>
+    <div>text8</div>
+    <div>text9</div>
+    <div>text10</div>
+</div>
+```
