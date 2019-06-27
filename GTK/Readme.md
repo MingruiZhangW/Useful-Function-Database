@@ -10,18 +10,13 @@ gtk_widget_set_can_focus (GtkWidget *widget,
                           gboolean can_focus);
 Specifies whether widget can own the input focus. See gtk_widget_grab_focus() for actually setting the input focus on a widget.
 
-Parameters
-widget
+Parameters:
 
+widget
 a GtkWidget
 
- 
 can_focus
-
 whether or not widget can own the input focus.
-
- 
-Since: 2.18
 ```
 ### Mouse Event Handling
 
