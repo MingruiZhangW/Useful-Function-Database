@@ -15,3 +15,6 @@ https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 
 ### Git 
 https://www.git-tower.com/blog/content/posts/54-git-cheat-sheet/git-cheat-sheet-large01.png
+
+### Git Detached Head
+https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit
