@@ -29,4 +29,4 @@
               Authorization:  Digest realm="montreal5.voip.ms", nonce="5da5d034", algorithm=MD5, username="253902", uri="sip:5145714228@montreal5.voip.ms", response="3d658fec59841ee17f02f0db85a05d73"
           Message Body
 ### Important!!!!!!!!!!!!!!!!!
-> Request will get rejected if the CSeq is less than or equal to the CSeq in a previous request as they will get classified as re-transmits. So sometimes, Cseq number needs to be added manually.
+> Request will get rejected if the CSeq is less than or equal to the CSeq in a previous request as they will get classified as re-transmits. So sometimes, Cseq number needs to be added manually. https://stackoverflow.com/questions/40533382/sip-dialog-cseq-sequence-number
