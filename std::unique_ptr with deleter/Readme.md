@@ -14,3 +14,4 @@
     t->id = id;
     
 https://en.cppreference.com/w/cpp/memory/unique_ptr
+https://stackoverflow.com/questions/19053351/how-do-i-use-a-custom-deleter-with-a-stdunique-ptr-member
