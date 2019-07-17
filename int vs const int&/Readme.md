@@ -1,4 +1,5 @@
 # int vs const int&
+https://stackoverflow.com/questions/4705593/int-vs-const-int
 
 In C++ it's very common what I consider an anti-pattern that uses const T& like a smart way of just saying T when dealing with parameters. However a value and a reference (no matter if const or not) are two completely different things and always and blindly using references instead of values can lead to subtle bugs.
 
