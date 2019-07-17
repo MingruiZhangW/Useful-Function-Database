@@ -6,6 +6,7 @@ A personal collected reusable functions
 - msgpack usage(map) pack of pack
 - WinGetEnv - Environment Vaiable Dir get method
 - Dup - Print into a file
+- Remove new lines in char string
 
 ### Set Remote
 https://help.github.com/en/articles/changing-a-remotes-url
