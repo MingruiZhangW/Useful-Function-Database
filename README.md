@@ -5,8 +5,8 @@ A personal collected reusable functions
 - [Binary Converter uint32_t x -> uint8_t *lit_int](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Binary%20Converter%20from%20uint32_t%20to%20uint8_t.md)
 - [msgpack usage(map) pack of pack](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/msgpack%20usage(map)%20pack%20of%20pack.md)
 - [WinGetEnv - Environment Vaiable Dir get method](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/WinGetEnv-Environment%20Variable%20Dir%20get%20method.md)
-- Dup - Print into a file
-- Remove new lines in char string
+- [Dup - Print into a file](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Create_a_file_to_print.md)
+- [Remove new lines in char string](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Remove_new_lines_in_char.md)
 
 ### Set Remote
 https://help.github.com/en/articles/changing-a-remotes-url
