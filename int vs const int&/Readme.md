@@ -2,7 +2,7 @@
 
 In C++ it's very common what I consider an anti-pattern that uses const T& like a smart way of just saying T when dealing with parameters. However a value and a reference (no matter if const or not) are two completely different things and always and blindly using references instead of values can lead to subtle bugs.
 
-The reason is that when dealing with references you must consider two issues that are not present with values: lifetime and aliasing.
+> The reason is that when dealing with references you must consider two issues that are not present with values: lifetime and aliasing.
 
 Just as an example one place where this anti-pattern is applied is the standard library itself, where std::vector<T>::push_back accepts as parameter a const T& instead of a value and this can bite back for example in code like:
 
