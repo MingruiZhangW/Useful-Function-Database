@@ -31,7 +31,8 @@ Aliasing issues are also a source of subtle problems if const references are use
 };
 The code seems at a first glance pretty safe, P2d is a bidimensional point, Rect is a rectangle and adding/subtracting a point means translating the rectangle.
 
-If however to translate the rectangle back in the origin you write myrect -= myrect.tl; the code will not work because the translation operator has been defined accepting a reference that (in that case) is referencing a member of same instance.
+> If however to translate the rectangle back in the origin you write myrect -= myrect.tl; 
+the code will not work because the translation operator has been defined accepting a reference that (in that case) is referencing a member of same instance.
 
 This means that after updating the topleft with tl -= p; the topleft will be (0, 0) as it should but also p will become at the same time (0, 0) because p is just a reference to the top-left member and so the update of bottom-right corner will not work because it will translate it by (0, 0) hence doing basically nothing.
 
