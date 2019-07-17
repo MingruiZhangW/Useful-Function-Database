@@ -11,11 +11,11 @@
             buffer.write(m.second.data(), m.second.size());
         }
 
-> Unpacking
-        msgpack::object_handle oh =
-        msgpack::unpack(buffer.data(), buffer.size());
-        msgpack::object obj = oh.get();
+- Unpacking<br>
 
+        msgpack::object_handle oh = msgpack::unpack(buffer.data(), buffer.size());
+        msgpack::object obj = oh.get();
+        
         if (obj.type != msgpack::type::MAP)
             throw msgpack::type_error();
         for (unsigned i = 0; i < obj.via.map.size; i++) {
