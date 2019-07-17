@@ -2,7 +2,7 @@
 
 A personal collected reusable functions
 
-- Binary Converter uint32_t x -> uint8_t *lit_int
+- [Binary Converter uint32_t x -> uint8_t *lit_int](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Binary%20Converter%20from%20uint32_t%20to%20uint8_t.md)
 - msgpack usage(map) pack of pack
 - WinGetEnv - Environment Vaiable Dir get method
 - Dup - Print into a file
