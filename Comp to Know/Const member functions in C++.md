@@ -1,10 +1,10 @@
-Const member functions in C++
+# Const member functions in C++
 
 A function becomes const when const keyword is used in function’s declaration. 
 The idea of const functions is not allow them to modify the object on which they are called. 
 It is recommended practice to make as many functions const as possible so that accidental changes to objects are avoided.
 
-Following is a simple example of const function.
+- Following is a simple example of const function.
 
     #include<iostream> 
     using namespace std; 
@@ -25,9 +25,9 @@ Following is a simple example of const function.
         return 0; 
     } 
   
-Output:
+        Output:
 
-20
+        20
 
 When a function is declared as const, 
 it can be called on any type of object. Non-const functions can only be called by non-const objects.
@@ -50,6 +50,6 @@ For example the following program has compiler errors.
         return 0; 
     } 
 
-Output:
-passing 'const Test' as 'this' argument of 'int 
-Test::getValue()' discards qualifiers
+        Output:
+        passing 'const Test' as 'this' argument of 'int 
+        Test::getValue()' discards qualifiers
