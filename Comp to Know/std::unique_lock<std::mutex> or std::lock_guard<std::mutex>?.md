@@ -1,4 +1,4 @@
-# std::unique_lock<std::mutex> or std::lock_guard<std::mutex>?
+# std::unique_lock or std::lock_guard?
 
 > The difference is that you can lock and unlock a std::unique_lock. std::lock_guard will be locked only once on construction and unlocked on destruction.
 
