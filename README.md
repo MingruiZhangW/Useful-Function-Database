@@ -22,7 +22,7 @@ https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit
 
 ### Git - Find the commit that cause the bug
 [Git bisect](https://git-scm.com/docs/git-bisect)<br>
-git bisect start<br>
+> git bisect start<br>
 git bisect bad --id<br>
 git bisect good --id<br>
 git bisect good/bad<br>
