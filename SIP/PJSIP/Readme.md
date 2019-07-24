@@ -32,4 +32,4 @@
 > Request will get rejected if the CSeq is less than or equal to the CSeq in a previous request as they will get classified as re-transmits. So sometimes, Cseq number needs to be added manually. https://stackoverflow.com/questions/40533382/sip-dialog-cseq-sequence-number
 
 ### PJSIP Parse String to Sockaddr
-> pj_sockaddr_parse(family, 0, &pjstring, &addr)
+> [pj_sockaddr_parse(family, 0, &pjstring, &addr)](https://www.pjsip.org/pjlib/docs/html/group__PJ__SOCK.htm#ga1562332273aa3900dc549cffd5b5c4e4)
