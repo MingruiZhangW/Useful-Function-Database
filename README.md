@@ -36,3 +36,4 @@ git bisect reset<br>
     r(restart)
     Control + X + A(UI thread backtrace(bt))
     up/down/step
+    info b
