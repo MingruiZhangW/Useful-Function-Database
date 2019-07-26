@@ -27,3 +27,12 @@ git bisect bad --id<br>
 git bisect good --id<br>
 git bisect good/bad<br>
 git bisect reset<br>
+
+### GDB Breakpoint insert
+    gdb --arg (binary)
+    r 
+    stop program
+    break(b) full_filepath:line
+    r(restart)
+    Control + X + A(UI thread backtrace(bt))
+    up/down/step
