@@ -37,3 +37,5 @@ git bisect reset<br>
     Control + X + A(UI thread backtrace(bt))
     up/down/step
     info b
+### Debug - Turn off Optimizitaion
+    #pragma optimize( "", off )
