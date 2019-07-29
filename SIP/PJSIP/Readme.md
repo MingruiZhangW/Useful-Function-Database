@@ -47,3 +47,5 @@
         nullptr /* on_send_ack */,
         nullptr /* on_redirected */,
     };
+  incoming request message will come from transaction_state_changed_cb<br>
+  sdp_media_update_cb is called after SDP offer/answer session has completed.(also update SDP message)<br>
