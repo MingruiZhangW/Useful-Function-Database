@@ -49,5 +49,4 @@
     };
   incoming request message will come from transaction_state_changed_cb<br>
   sdp_media_update_cb is called after SDP offer/answer session has completed.(also update SDP message)<br>
-  SDP attach with SIP INVITE `#f03c15`<br>
-  ![#f03c15](https://placehold.it/15/f03c15/000000?text=+)
+  ![#f03c15](SDP attach with SIP INVITE `#f03c15`<br>)
