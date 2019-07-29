@@ -5,6 +5,7 @@
 [SDP - Session Description Protocal - part two](https://www.3cx.com/blog/voip-howto/sdp-voip2/)<br>
 
 ### Example
+[From : ](https://andrewjprokop.wordpress.com/2013/09/30/understanding-session-description-protocol-sdp/)
 
     For Example
 
