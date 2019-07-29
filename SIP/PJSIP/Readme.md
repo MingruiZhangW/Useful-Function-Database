@@ -34,8 +34,8 @@
 ### PJSIP Parse String to Sockaddr
 > [pj_sockaddr_parse(family, 0, &pjstring, &addr)](https://www.pjsip.org/pjlib/docs/html/group__PJ__SOCK.htm#ga1562332273aa3900dc549cffd5b5c4e4)
 
-### PJSIP pjsip_inv_callback Structure
-    [static const pjsip_inv_callback inv_cb = {
+### [PJSIP pjsip_inv_callback Structure]((https://www.pjsip.org/pjsip/docs/html/structpjsip__inv__callback.htm))
+    static const pjsip_inv_callback inv_cb = {
         invite_session_state_changed_cb,
         outgoing_request_forked_cb,
         transaction_state_changed_cb,
@@ -46,4 +46,4 @@
         sdp_media_update_cb,
         nullptr /* on_send_ack */,
         nullptr /* on_redirected */,
-    };](https://www.pjsip.org/pjsip/docs/html/structpjsip__inv__callback.htm)
+    };
