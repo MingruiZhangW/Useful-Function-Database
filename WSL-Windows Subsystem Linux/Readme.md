@@ -9,3 +9,5 @@
     change zsh theme ( nano ~/.zshrc )
     
 [Use ZSH Directly on Windows](https://medium.com/@vinhp/use-zsh-in-wsl-on-windows-10-5d439a749c4c)
+
+[oh-my-zsh theme](https://github.com/tylerreckart/hyperzsh?source=post_page---------------------------)
