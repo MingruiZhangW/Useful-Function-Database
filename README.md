@@ -39,3 +39,5 @@ git bisect reset<br>
     info b
 ### Debug - Turn off Optimizitaion
     #pragma optimize( "", off )
+### Install - Apply WSL Terminal
+
