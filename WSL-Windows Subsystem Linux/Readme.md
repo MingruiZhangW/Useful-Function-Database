@@ -1,6 +1,6 @@
 # Choice of WSL Terminal
 
-Install:[Mintty as a terminal for Bash on Ubuntu on Windows / WSL](https://github.com/mintty/wsltty)<br>
+[Mintty as a terminal for Bash on Ubuntu on Windows / WSL](https://github.com/mintty/wsltty)<br>
 [Set up zsh/oh-my-zsh](http://blog.ch4ko.ca/?p=474)
 
     Install zsh –> sudo apt-get install zsh
