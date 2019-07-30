@@ -16,7 +16,7 @@ https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 
 ### Git 
 https://www.git-tower.com/blog/content/posts/54-git-cheat-sheet/git-cheat-sheet-large01.png<br>
-- Git: On undoing, fixing, or removing commits in git
+- **Git: On undoing, fixing, or removing commits in git**
 https://sethrobertson.github.io/GitFixUm/fixup.html#discard_all_unpushed
 
     Removing the last commit
