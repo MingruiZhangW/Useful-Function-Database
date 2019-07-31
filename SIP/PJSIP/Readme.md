@@ -1,6 +1,6 @@
 # PJSIP Knowledge
 
-- PJSIP Developer Guide
+- [PJSIP Developer Guide](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/PJSIP/PJSIP-Dev-Guide.pdf)<br>
 
 - [Implementation Example - GB28181对接视频流](https://www.cnblogs.com/wanggang123/p/7507897.html)<br>
 
