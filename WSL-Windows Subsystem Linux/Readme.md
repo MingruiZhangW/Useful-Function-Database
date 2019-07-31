@@ -10,4 +10,6 @@
     
 [Use ZSH Directly on Windows](https://medium.com/@vinhp/use-zsh-in-wsl-on-windows-10-5d439a749c4c)
 
-[oh-my-zsh theme](https://github.com/tylerreckart/hyperzsh?source=post_page---------------------------)
+[oh-my-zsh theme](https://github.com/tylerreckart/hyperzsh?source=post_page---------------------------)<br>
+
+[Set and use Zsh as default shell in WSL on Windows 10 the right way](https://medium.com/@vinhp/set-and-use-zsh-as-default-shell-in-wsl-on-windows-10-the-right-way-4f30ed9592dc)
