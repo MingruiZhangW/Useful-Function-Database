@@ -3,7 +3,7 @@
     Solution
     A negative lookahead can help you rule out specific words, and is key to this next regex:
 
-    **\b(?!cat\b)\w+**
+    \b(?!cat\b)\w+
     
     Regex options: Case insensitive
     Regex flavors: .NET, Java, JavaScript, PCRE, Perl, Python, Ruby
