@@ -7,6 +7,7 @@ A personal collected reusable functions
 - [WinGetEnv - Environment Vaiable Dir get method](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/WinGetEnv-Environment%20Variable%20Dir%20get%20method.md)
 - [Dup - Print into a file](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Create_a_file_to_print.md)
 - [Remove new lines in char string](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Remove_new_lines_in_char.md)
+- [Regex - Find All Except a Specific Word](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Regex-Find%20All%20Except%20a%20Specific%20Word.md)
 
 ### Set Remote
 https://help.github.com/en/articles/changing-a-remotes-url
