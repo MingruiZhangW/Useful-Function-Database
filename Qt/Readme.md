@@ -14,3 +14,4 @@ ui->label->setPixmap(image);
 
 [QT Tab Order](https://doc.qt.io/archives/qt-4.8/designer-tab-order.html)<br>
 [QT WindowModality](https://doc.qt.io/qt-5/qt.html#WindowModality-enum)<br>
+[QT Modal Dialog](https://doc.qt.io/qt-5/qdialog.html#modal-dialogs)<br>
