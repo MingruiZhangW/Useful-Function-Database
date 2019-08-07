@@ -50,4 +50,6 @@ git bisect reset<br>
 ### Debug - Turn off Optimizitaion
     #pragma optimize( "", off )
 ### Install - Apply WSL Terminal
-[WSL](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/WSL-Windows%20Subsystem%20Linux/Readme.md)
+[WSL](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/WSL-Windows%20Subsystem%20Linux/Readme.md)<br>
+### Check Command History
+[Command History](https://www.cyberciti.biz/faq/linux-unix-shell-history-search-command/)<br>
