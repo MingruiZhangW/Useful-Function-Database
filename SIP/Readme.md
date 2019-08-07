@@ -6,3 +6,4 @@
 - [SIP Expert Web](https://andrewjprokop.wordpress.com/)
 > [SIP Loop Detection](https://andrewjprokop.wordpress.com/2014/03/26/sip-loop-detection-will-it-go-round-in-circles/)<br>
 > [SIP Authentication](https://andrewjprokop.wordpress.com/2015/01/27/understanding-sip-authentication/)
+- [SDES](https://en.wikipedia.org/wiki/SDES)<br>
