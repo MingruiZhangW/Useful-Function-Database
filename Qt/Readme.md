@@ -12,4 +12,5 @@ image.loadFromData(QByteArray::fromBase64(txt));
 ui->label->setPixmap(image);
 ```
 
-[QT Tab Order](https://doc.qt.io/archives/qt-4.8/designer-tab-order.html)
+[QT Tab Order](https://doc.qt.io/archives/qt-4.8/designer-tab-order.html)<br>
+[QT WindowModality](https://doc.qt.io/qt-5/qt.html#WindowModality-enum)<br>
