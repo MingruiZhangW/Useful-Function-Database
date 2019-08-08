@@ -1,5 +1,6 @@
 # Check if Rect Contains QPoint
 
+    QMouseEvent *event
     auto relativeCursorPos = ui->transferCallButton->mapFromGlobal(event->pos());
     if (!ui->transferCallButton->rect().contains(relativeCursorPos)) {
         ui->transferCallButton->setChecked(false);
