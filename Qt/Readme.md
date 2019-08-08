@@ -15,3 +15,4 @@ ui->label->setPixmap(image);
 [QT Tab Order](https://doc.qt.io/archives/qt-4.8/designer-tab-order.html)<br>
 [QT WindowModality](https://doc.qt.io/qt-5/qt.html#WindowModality-enum)<br>
 [QT Modal Dialog](https://doc.qt.io/qt-5/qdialog.html#modal-dialogs)<br>
+[QT Rect/QPoint Contain](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/Check%20if%20a%20Widget%20contains%20QPoint.md)<br>
