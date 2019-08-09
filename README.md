@@ -39,6 +39,9 @@ git bisect good --id<br>
 git bisect good/bad<br>
 git bisect reset<br>
 
+### Git - Origin Definition
+[Git - what is origin](https://stackoverflow.com/questions/9529497/what-is-origin-in-git)
+
 ### GDB Breakpoint insert
     gdb --arg (binary)
     r 
