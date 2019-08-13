@@ -58,3 +58,4 @@ git bisect reset<br>
 [WSL](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/WSL-Windows%20Subsystem%20Linux/Readme.md)<br>
 ### Check Command History
 [Command History](https://www.cyberciti.biz/faq/linux-unix-shell-history-search-command/)<br>
+To get previous command containing string, hit [CTRL]+[r] followed by search string
