@@ -10,4 +10,6 @@
 - [std::unique_lock or std::lock_guard?](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/std::unique_lock%3Cstd::mutex%3E%20or%20std::lock_guard%3Cstd::mutex%3E%3F.md)<br>
 
 **Best Function Pointer Explaination**
-[Learn C++ 7.8](https://www.learncpp.com/cpp-tutorial/78-function-pointers/)
+[Learn C++ 7.8](https://www.learncpp.com/cpp-tutorial/78-function-pointers/)<br>
+
+- [OSI Model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)<br>
