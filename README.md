@@ -16,7 +16,7 @@ https://help.github.com/en/articles/changing-a-remotes-url
 ### SSH KEY
 https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 
-### Git 
+# Git 
 https://www.git-tower.com/blog/content/posts/54-git-cheat-sheet/git-cheat-sheet-large01.png<br>
 - **Git: On undoing, fixing, or removing commits in git**
 https://sethrobertson.github.io/GitFixUm/fixup.html#discard_all_unpushed
@@ -42,6 +42,9 @@ git bisect reset<br>
 
 ### Git - Origin Definition
 [Git - what is origin](https://stackoverflow.com/questions/9529497/what-is-origin-in-git)
+
+### Git - Delete Folder
+https://github.community/t5/How-to-use-Git-and-GitHub/How-to-delete-multiples-files-in-Github/td-p/4623
 
 ### GDB Breakpoint insert
     gdb --arg (binary)
