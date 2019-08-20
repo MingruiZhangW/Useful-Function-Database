@@ -2,6 +2,7 @@
 
 ### Basic:
 - [C++ Order of Definition](https://stackoverflow.com/questions/2133250/x-does-not-name-a-type-error-in-c)<br>
+- [Conditional Operator ?](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Conditional%20Operator%20%3F.md)<br>
 ### Intermediate:
 - [Clear std::queue or other container](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Clear_std::queue.md)<br>
 - [Const member functions](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Const%20member%20functions%20in%20C%2B%2B.md)<br>
@@ -18,4 +19,3 @@
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
 
 - [OSI Model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)<br>
-- [Conditional Operator ?](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Conditional%20Operator%20%3F.md)<br>
