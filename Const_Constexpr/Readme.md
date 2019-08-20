@@ -4,8 +4,8 @@
 - https://stackoverflow.com/questions/14116003/difference-between-constexpr-and-const
 
 > A constexpr function or constructor is implicitly inline. <br>
-> A constexpr function must accept and return only literal types.
-> **constexpr** can be used in places that require compile-time evaluation, but Declaring something as constexpr does not necessarily guarantee that it will be evaluated at compile time. It can be used for such, but it can be used in other places that are evaluated at run-time, as well
+> A constexpr function must accept and return only literal types.<br>
+> **Constexpr** can be used in places that require compile-time evaluation, but Declaring something as constexpr does not necessarily guarantee that it will be evaluated at compile time. It can be used for such, but it can be used in other places that are evaluated at run-time, as well
 
 runtime/compile time
 
