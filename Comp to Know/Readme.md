@@ -11,13 +11,11 @@
 - [Select() Usage](https://drive.google.com/open?id=1TI29UiUzfKljZbGLpQOlep2i0gTgtknrucborCGvq5k)<br>
 - [Is it safe to delete a void pointer?](https://stackoverflow.com/questions/941832/is-it-safe-to-delete-a-void-pointer)<br>
 - [C++ function: pass non const argument to const reference parameter](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/c%2B%2B%20function:%20pass%20non%20const%20argument%20to%20const%20reference%20parameter.md)<br>
+**Best Function Pointer Explaination** [Learn C++ 7.8](https://www.learncpp.com/cpp-tutorial/78-function-pointers/)<br>
 - [std::unique_lock or std::lock_guard?](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/std::unique_lock%3Cstd::mutex%3E%20or%20std::lock_guard%3Cstd::mutex%3E%3F.md)<br>
 
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
-
-**Best Function Pointer Explaination**
-[Learn C++ 7.8](https://www.learncpp.com/cpp-tutorial/78-function-pointers/)<br>
 
 - [OSI Model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)<br>
 - [Conditional Operator ?](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Conditional%20Operator%20%3F.md)<br>
