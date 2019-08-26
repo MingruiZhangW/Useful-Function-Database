@@ -49,6 +49,13 @@ https://github.community/t5/How-to-use-Git-and-GitHub/How-to-delete-multiples-fi
 ### Git - Rebase
 https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase
 
+### Git - stash apply vs stash pop
+https://stackoverflow.com/questions/15286075/difference-between-git-stash-pop-and-git-stash-apply
+```
+git stash pop throws away the (topmost, by default) stash after applying it, whereas git stash apply leaves it in the stash list for possible later reuse (or you can then git stash drop it).<br>
+This happens unless there are conflicts after git stash pop, in which case it will not remove the stash, leaving it to behave exactly like git stash apply.<br>
+Another way to look at it: git stash pop is git stash apply && git stash drop<br>
+```
 ### GDB Breakpoint insert
     gdb --arg (binary)
     r 
