@@ -46,6 +46,9 @@ git bisect reset<br>
 ### Git - Delete Folder
 https://github.community/t5/How-to-use-Git-and-GitHub/How-to-delete-multiples-files-in-Github/td-p/4623
 
+### Git - Rebase
+https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase
+
 ### GDB Breakpoint insert
     gdb --arg (binary)
     r 
