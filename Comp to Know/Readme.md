@@ -20,6 +20,7 @@
 
 ### Advanced:
 - [Difference between const and constexpr](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/const_constexpr.md)<br>
+- [RValue Reference](https://www.learncpp.com/cpp-tutorial/15-2-rvalue-references/)<br>
 
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
