@@ -18,6 +18,6 @@
 ```
 - Usage
 ```
-    whileBlocking(checkBox)->setChecked(true);
+    whileBlocking<Type>(checkBox)->setChecked(true);
 ```
 https://stackoverflow.com/questions/3556687/prevent-firing-signals-in-qt
