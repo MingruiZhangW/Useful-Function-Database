@@ -20,8 +20,10 @@
 
 ### Advanced:
 - [Difference between const and constexpr](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/const_constexpr.md)<br>
+**Rvalue Reference**
 - [RValue Reference](https://www.learncpp.com/cpp-tutorial/15-2-rvalue-references/)<br>
 - [std::forward](http://www.cplusplus.com/reference/utility/forward/)<br>
+- [std::move - convert args into r-value](https://www.learncpp.com/cpp-tutorial/15-4-stdmove/)<br>
 
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
