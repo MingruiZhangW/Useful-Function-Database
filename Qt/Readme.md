@@ -22,3 +22,6 @@ ui->label->setPixmap(image);
 
 ### QT Signal & SLot
 [How Signal & Slot Works](https://woboq.com/blog/how-qt-signals-slots-work.html)<br>
+
+### QT KeyBoard Event
+[KeyBoard Press Event](https://www.qtcentre.org/threads/693-Capture-a-keyboard-event)<br>
