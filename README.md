@@ -56,6 +56,8 @@ git stash pop throws away the (topmost, by default) stash after applying it, whe
 This happens unless there are conflicts after git stash pop, in which case it will not remove the stash, leaving it to behave exactly like git stash apply.<br>
 Another way to look at it: git stash pop is git stash apply && git stash drop<br>
 ```
+# Debug
+
 ### GDB Breakpoint insert
     gdb --arg (binary)
     r 
