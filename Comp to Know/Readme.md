@@ -27,7 +27,7 @@
 - [std::move - convert args into r-value](https://www.learncpp.com/cpp-tutorial/15-4-stdmove/)<br>
 > **push_back vs emplace_back**
 - https://stackoverflow.com/questions/4303513/push-back-vs-emplace-back <br>
-Avoid push_back and prefer emplace_back instead (using move semanic)
+Avoid push_back and prefer emplace_back instead (using move semanic, and For possible big maps, add reserve() when you use a vector to avoid a lot of resize.
 
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
