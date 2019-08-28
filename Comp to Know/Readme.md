@@ -26,7 +26,7 @@
 - [std::forward](http://www.cplusplus.com/reference/utility/forward/)<br>
 - [std::move - convert args into r-value](https://www.learncpp.com/cpp-tutorial/15-4-stdmove/)<br>
 > **push_back vs emplace_back**
-<br>https://stackoverflow.com/questions/4303513/push-back-vs-emplace-back
+- https://stackoverflow.com/questions/4303513/push-back-vs-emplace-back <br>
 Avoid push_back and prefer emplace_back instead (using move semanic)
 
 ### CMake List
