@@ -31,6 +31,6 @@
 
     connect(signalMapper, SIGNAL(mapped(int)), this, SLOT(panelButtonClicked(int)));
 
-clicked()->map()->(setMapping(object,id))->mapped(id)->panelButtonClicked(id)
+**clicked()->map()->(setMapping(object,id))->mapped(id)->panelButtonClicked(id)**
 
 https://doc.qt.io/qt-5/qsignalmapper.html#setMapping
