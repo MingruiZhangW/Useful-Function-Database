@@ -25,3 +25,6 @@ ui->label->setPixmap(image);
 
 ### QT KeyBoard Event
 [KeyBoard Press Event](https://www.qtcentre.org/threads/693-Capture-a-keyboard-event)<br>
+
+### QT Signal Mappper
+[Signal Mapper & setMapping](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/qt_signal_mapper.md)<br>
