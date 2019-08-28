@@ -19,15 +19,15 @@
 - [std::unique_lock or std::lock_guard?](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/std::unique_lock%3Cstd::mutex%3E%20or%20std::lock_guard%3Cstd::mutex%3E%3F.md)<br>
 
 ### Advanced:
-**Const Vs Constexpr**
+> **Const Vs Constexpr**
 - [Difference between const and constexpr](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/const_constexpr.md)<br>
-**Rvalue Reference**
+> **Rvalue Reference**
 - [RValue Reference](https://www.learncpp.com/cpp-tutorial/15-2-rvalue-references/)<br>
 - [std::forward](http://www.cplusplus.com/reference/utility/forward/)<br>
 - [std::move - convert args into r-value](https://www.learncpp.com/cpp-tutorial/15-4-stdmove/)<br>
-**push_back vs emplace_back**
-https://stackoverflow.com/questions/4303513/push-back-vs-emplace-back
-> Avoid push_back and prefer emplace_back instead (using move semanic)
+> **push_back vs emplace_back**
+<br>https://stackoverflow.com/questions/4303513/push-back-vs-emplace-back
+Avoid push_back and prefer emplace_back instead (using move semanic)
 
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
