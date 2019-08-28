@@ -19,3 +19,6 @@ ui->label->setPixmap(image);
 > [QT Customize Widget Promating](https://doc.qt.io/qt-5/designer-using-custom-widgets.html#promoting-widgets)<br>
 ### QT Block Signal General Functions
 [BlockSignals](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/QT%20BlockSignal%20General%20Function.md)<br>
+
+### QT Signal & SLot
+[How Signal & Slot Works](https://woboq.com/blog/how-qt-signals-slots-work.html)<br>
