@@ -56,6 +56,11 @@ git stash pop throws away the (topmost, by default) stash after applying it, whe
 This happens unless there are conflicts after git stash pop, in which case it will not remove the stash, leaving it to behave exactly like git stash apply.<br>
 Another way to look at it: git stash pop is git stash apply && git stash drop<br>
 ```
+### Git - Configure a fork & How to update/push to fork
+- [Configure a remote for fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork)<br>
+- [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork)<br>
+- [Push Commits](https://help.github.com/en/articles/pushing-commits-to-a-remote-repository)<br>
+
 # Debug
 
 ### GDB Breakpoint insert
