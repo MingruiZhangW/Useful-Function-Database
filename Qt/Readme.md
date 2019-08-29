@@ -16,7 +16,6 @@ ui->label->setPixmap(image);
 - [QT WindowModality](https://doc.qt.io/qt-5/qt.html#WindowModality-enum)<br>
 - [QT Modal Dialog](https://doc.qt.io/qt-5/qdialog.html#modal-dialogs)<br>
 - [QT Rect/QPoint Contain](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/Check%20if%20a%20Widget%20contains%20QPoint.md)<br>
-> [QT Customize Widget Promating](https://doc.qt.io/qt-5/designer-using-custom-widgets.html#promoting-widgets)<br>
 - [QT Use QString Effectively](https://wiki.qt.io/Using_QString_Effectively)<br>
 ### QT Block Signal General Functions
 [BlockSignals](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/QT%20BlockSignal%20General%20Function.md)<br>
@@ -29,3 +28,7 @@ ui->label->setPixmap(image);
 
 ### QT Signal Mappper
 [Signal Mapper & setMapping](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/qt_signal_mapper.md)<br>
+
+# QT Promote a Widget
+- [QT Customize Widget Promoting](https://doc.qt.io/qt-5/designer-using-custom-widgets.html#promoting-widgets)<br>
+- [Widget Promote Global Include](https://stackoverflow.com/questions/24031774/what-does-the-global-include-checkbox-mean-in-the-promoted-widgets-dialog)<br>
