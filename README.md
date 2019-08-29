@@ -81,6 +81,9 @@ fatal: Could not read from remote repository.
     Control + X + A(UI thread backtrace(bt))
     up/down/step
     info b
+### GDB - Watch point
+https://www.thegeekstuff.com/2014/02/gdb-breakpoins-watchpoints/<br>
+
 ### Debug - Turn off Optimizitaion
     #pragma optimize( "", off )
 ### Install - Apply WSL Terminal
