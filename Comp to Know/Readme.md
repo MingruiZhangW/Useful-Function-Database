@@ -7,7 +7,7 @@
 - [Bitwise Operator](https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/)<br>
 - [Inline member function - Where to declare](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Inline%20function%20where%20to%20define.md)<br>
 - [std::advance](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/std::advance.md)<br>
-> [String Manipulation](https://www.systutorials.com/131/convert-string-to-int-and-reverse/)<br>
+> - [String Manipulation](https://www.systutorials.com/131/convert-string-to-int-and-reverse/)<br>
 ### Intermediate:
 - [Clear std::queue or other container](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Clear_std::queue.md)<br>
 - [Const member functions](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Const%20member%20functions%20in%20C%2B%2B.md)<br>
