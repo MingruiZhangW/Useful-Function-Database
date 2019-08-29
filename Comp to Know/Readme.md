@@ -34,11 +34,13 @@ Avoid push_back and prefer emplace_back instead (using move semanic, and For pos
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
 
-- [OSI Model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)<br>
-
 ### Function Pointer
 > **Best Function Pointer Explaination** [Learn C++ 7.8](https://www.learncpp.com/cpp-tutorial/78-function-pointers/)<br>
 - [Member Function Function Pointer](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzarg/cplr034.htm)<br>
 
 ### Move Semantics - the whole thing
 [Move Semantics](https://www.learncpp.com/cpp-tutorial/15-1-intro-to-smart-pointers-move-semantics/)<br>
+
+# OSI Model
+- [OSI Model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)<br>
+https://www.networkworld.com/article/3239677/the-osi-model-explained-how-to-understand-and-remember-the-7-layer-network-model.html
