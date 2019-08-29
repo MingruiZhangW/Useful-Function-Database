@@ -60,6 +60,15 @@ Another way to look at it: git stash pop is git stash apply && git stash drop<br
 - [Configure a remote for fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork)<br>
 - [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork)<br>
 - [Push Commits](https://help.github.com/en/articles/pushing-commits-to-a-remote-repository)<br>
+**Possible SSH ERROR**
+>sign_and_send_pubkey: signing failed: agent refused operation
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+**Solution**
+https://askubuntu.com/questions/762541/ubuntu-16-04-ssh-sign-and-send-pubkey-signing-failed-agent-refused-operation
+https://www.ssh.com/ssh/add
+https://stackoverflow.com/questions/44250002/how-to-solve-sign-and-send-pubkey-signing-failed-agent-refused-operation
 
 # Debug
 
