@@ -64,7 +64,7 @@ Another way to look at it: git stash pop is git stash apply && git stash drop<br
 # Debug
 
 ### GDB Breakpoint insert
-    gdb --arg (binary)
+    gdb --args (binary)
     r 
     stop program
     break(b) full_filepath:line
