@@ -66,9 +66,9 @@ git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
 
 **Solution**
-https://askubuntu.com/questions/762541/ubuntu-16-04-ssh-sign-and-send-pubkey-signing-failed-agent-refused-operation <br>
-https://www.ssh.com/ssh/add <br>
-https://stackoverflow.com/questions/44250002/how-to-solve-sign-and-send-pubkey-signing-failed-agent-refused-operation <br>
+- https://askubuntu.com/questions/762541/ubuntu-16-04-ssh-sign-and-send-pubkey-signing-failed-agent-refused-operation <br>
+- https://www.ssh.com/ssh/add <br>
+- https://stackoverflow.com/questions/44250002/how-to-solve-sign-and-send-pubkey-signing-failed-agent-refused-operation <br>
 
 # Debug
 
