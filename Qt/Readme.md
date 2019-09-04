@@ -29,6 +29,10 @@ ui->label->setPixmap(image);
 ### QT Signal Mappper
 [Signal Mapper & setMapping](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/qt_signal_mapper.md)<br>
 
+### QT Property System
+[Qt Property](https://doc.qt.io/qt-5/properties.html)<br>
+- By adding dynamic properties in QT Creator, and set Q_Property DESIGNABLE true, we can add customize properties into our customized widgets. ([Example](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/overlay.h))
+
 # QT Promote a Widget
 - [QT Customize Widget Promoting](https://doc.qt.io/qt-5/designer-using-custom-widgets.html#promoting-widgets)<br>
 - [Widget Promote Global Include](https://stackoverflow.com/questions/24031774/what-does-the-global-include-checkbox-mean-in-the-promoted-widgets-dialog)<br>
