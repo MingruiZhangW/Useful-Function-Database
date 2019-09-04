@@ -36,3 +36,12 @@ ui->label->setPixmap(image);
 # QT Promote a Widget
 - [QT Customize Widget Promoting](https://doc.qt.io/qt-5/designer-using-custom-widgets.html#promoting-widgets)<br>
 - [Widget Promote Global Include](https://stackoverflow.com/questions/24031774/what-does-the-global-include-checkbox-mean-in-the-promoted-widgets-dialog)<br>
+
+# QT Widget VS Window VS Dialog
+- Widget: A rectangular region on the screen for display and user interaction. They include buttons, sliders, views, dialogs, windows, etc. All widgets will display something on the screen, and many will also accept user input from the keyboard or mouse. The word "widget" comes from Unix, on Windows they are called "controls".
+
+- Window: A "top level" widget. A window is the top of a parent/child hiearchy, and are usually displayed with a titlebar and border. The underlying windowing system (Windows, KDE, GNOME, etc) will provide policies for the windows, such as titlebar/border style, placement, focus, etc.
+
+- Dialog: A special kind of window, usually temporary. They may or may not have a different titlebar appearance. They are presented to the user for the purpose of notification or gathering input, and typically have OK, Cancel, etc., buttons on the bottom or right.
+
+> The key here is that all of these are widgets, windows are the top-level widgets, and dialogs are a special kind of window.
