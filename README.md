@@ -11,6 +11,7 @@
 **QT**
 - [QT Block Signal Wrapper](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/QT%20Block%20Signal%20Wrapper%20(For%20Toggle%20Button%20and%20etc.).md)<br>
 - [QT Draw Rounded Edge Image](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/QT-Draw_Rounded_Edge_Photo.md)<br>
+- [QT - Draw Black Circular Widget](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/QT%20-%20Draw%20Black%20Circular%20Widget.md)<br>
 
 ### Set Remote
 https://help.github.com/en/articles/changing-a-remotes-url
