@@ -46,3 +46,6 @@ https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
 # OSI Model
 - [OSI Model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)<br>
 https://www.networkworld.com/article/3239677/the-osi-model-explained-how-to-understand-and-remember-the-7-layer-network-model.html
+
+# Singleton
+- [Singleton](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Singleton.md)
