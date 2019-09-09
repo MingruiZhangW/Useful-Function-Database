@@ -1,6 +1,6 @@
 # Useful-Function-Database
 
-A personal collected reusable functions
+**A personal collected reusable functions**
 
 - [Binary Converter uint32_t x -> uint8_t *lit_int](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Binary%20Converter%20from%20uint32_t%20to%20uint8_t.md)
 - [msgpack usage(map) pack of pack](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/msgpack%20usage(map)%20pack%20of%20pack.md)
@@ -8,7 +8,7 @@ A personal collected reusable functions
 - [Dup - Print into a file](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Create_a_file_to_print.md)
 - [Remove new lines in char string](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Remove_new_lines_in_char.md)
 - [Regex - Find All Except a Specific Word](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Regex-Find%20All%20Except%20a%20Specific%20Word.md)<br>
-### QT
+**QT**
 - [QT Block Signal Wrapper](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/QT%20Block%20Signal%20Wrapper%20(For%20Toggle%20Button%20and%20etc.).md)<br>
 - [QT Draw Rounded Edge Image](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/QT-Draw_Rounded_Edge_Photo.md)<br>
 
