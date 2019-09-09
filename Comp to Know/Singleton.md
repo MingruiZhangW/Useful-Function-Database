@@ -2,7 +2,7 @@
 
 1. [First: Static Duration Variables](https://www.learncpp.com/cpp-tutorial/43-static-duration-variables/):<br>
 
-```static int s_value = 1; // static duration via static keyword.  This line is only executed once.```
+        static int s_value = 1; // static duration via static keyword.  This line is only executed once.
 
 2. Singleton Example
 
