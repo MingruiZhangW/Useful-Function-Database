@@ -7,10 +7,10 @@
 int a = 5, b = 2;
 double result = static_cast<double>(a) /  b;
 ```
-dynamic_cast
+# dynamic_cast
 
-It can only be used with pointers and references to objects. It's almost exclusively used for handling polymorphism. It makes sure that the result of the type conversion is valid and complete object of the requested class.
-
+> It can only be used with pointers and references to objects. It's almost exclusively used for handling polymorphism. It makes sure that the result of the type conversion is valid and complete object of the requested class.
+```
 class Base { };
 class Derived : public Base { };
  
@@ -19,11 +19,11 @@ Derived b, *ptr_b;
  
 ptr_a = dynamic_cast<Base *>(&b);  // Fine
 ptr_b = dynamic_cast<Derived *>(&a);  // Fail
-
+```
 The first dynamic_cast statement will work because we cast from derived class to base. The second dynamic_cast statement will produce a compilation error because base class to derived conversion is not allowed with dynamic_cast unless the base class is polymorphic (a polymorphic type has at least one virtual function, declared or inherited).
 
-If a class is polymorphic then dynamic_cast will perform a special check during runtime.
-
+- If a class is polymorphic then dynamic_cast will perform a special check during runtime.
+```
 class Base { virtual void dummy() {} }; // polymorphic class
 class Derived : public Base { int a; }; // so is this
  
@@ -44,18 +44,20 @@ if (ptr_c != nullptr) {
 if (ptr_d != nullptr) {
     // ptr_b actually points to a Derived object 
 }
-
+```
 When the dynamic_cast is performed,  ptr_a is pointing to a full object of class Derived, but the pointer ptr_b points to an object of class Base. This object is an incomplete object of class Derived; thus this cast will result in a null pointer !
 
-Important:
+### Important:
 
 A null pointer is returned to indicate a failure while dealing with a pointer.
 
 When a reference type conversion fails then there will be an exception thrown.
 
-NOTE: dynamic_cast have a significant runtime overhead.
+**NOTE: dynamic_cast have a significant runtime overhead.**
 
-reinterpret_cast
+- In QT: https://stackoverflow.com/questions/43994584/what-is-qobject-cast
+
+# reinterpret_cast
 
 It is used for casts that are not type-safe. It converts between types by reinterpreting the underlying bit pattern.
 
