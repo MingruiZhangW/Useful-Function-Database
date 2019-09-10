@@ -1,11 +1,12 @@
-static_cast   
+# static_cast   
 
-It can be used for any normal conversion between types, conversions that rely on static (compile-time) type information. This includes any casts between numeric types (for instance : from short to int or from int to float), casts of pointers and references up the hierarchy (upcasting).
+> It can be used for any normal conversion between types, conversions that rely on static (compile-time) type information. This includes any casts between numeric types (for instance : from short to int or from int to float), casts of pointers and references up the hierarchy (upcasting).
 
-static_cast performs no run-time checks and hence no runtime overhead.
-
+```static_cast``` performs no run-time checks and hence no runtime overhead.
+```
 int a = 5, b = 2;
 double result = static_cast<double>(a) /  b;
+```
 dynamic_cast
 
 It can only be used with pointers and references to objects. It's almost exclusively used for handling polymorphism. It makes sure that the result of the type conversion is valid and complete object of the requested class.
