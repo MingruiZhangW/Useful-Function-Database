@@ -49,3 +49,6 @@ https://www.networkworld.com/article/3239677/the-osi-model-explained-how-to-unde
 
 # Singleton
 - [Singleton](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Singleton.md)
+
+# How does SSH works
+- [SSH](https://www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work)<br>
