@@ -105,3 +105,5 @@ a = const_cast<int*>(ptr); // Fail
 a = reinterpret_cast<int*>(ptr); // Fail, reinterpret_cast can't cast away const qualifiers
 a = reinterpret_cast<int*>(const_cast<char*>(ptr)); // Fine, as long as you know why you are doing it
 ```
+# Origin: 
+Forget....
