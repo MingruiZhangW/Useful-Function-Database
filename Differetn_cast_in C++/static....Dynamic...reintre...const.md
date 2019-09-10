@@ -59,17 +59,13 @@ When a reference type conversion fails then there will be an exception thrown.
 
 # reinterpret_cast
 
-It is used for casts that are not type-safe. It converts between types by reinterpreting the underlying bit pattern.
+> It is used for casts that are not type-safe. It converts between types by reinterpreting the underlying bit pattern.
 
-Unlike static_cast, but like const_cast, the reinterpret_cast expression does not compile to any CPU instructions. It is purely a compiler directive which instructs the compiler to treat the sequence of bits (object representation) of expression as if it had the new_type (that you are casting to).
+- Unlike static_cast, but like const_cast, the reinterpret_cast expression does not compile to any CPU instructions. It is purely a compiler directive which instructs the compiler to treat the sequence of bits (object representation) of expression as if it had the new_type (that you are casting to).
 
 In short, you tell the compiler, believe me I know what am I doing.
 
-Between pointers and pointers (even of unrelated classes). All pointer conversions are allowed: neither the content pointed nor the pointer type itself is checked.
-Between integers and pointers.
-Between function-pointers and function-pointer
-However it can't modify const qualification.
-
+```
 class A { /* ... */ }; 
 class B { /* ... */ }; 
 A *a = new A{}; 
@@ -77,32 +73,35 @@ B *b = reinterpret_cast<B*>(a);  // Fine
  
 const char* message = "hello"; 
 int* data = reinterpret_cast<int*>(message);  // Fail
-const_cast
+```
 
-The only way to cast away the constness of an object is to use const_cast. But this is not the end of story,
+# const_cast
 
-Important:
+> The only way to cast away the constness of an object is to use const_cast. But this is not the end of story,
 
-const_cast can be safely used to remove constness from a reference or a pointer used to access a non-const object.
+**Important:**
 
+- const_cast can be safely used to remove constness from a reference or a pointer used to access a non-const object.
+```
 int a = 5; // NOTE: non-const object
 const int* pA = &a;
 *pA = 10; // compiler error, pA is a pointer to const int 
 int* pX = const_cast<int*>(pA); // cast away constness
 *pX = 10 // fine and a is now 10
-
+```
 But if your actual object is declared const, that constness can never be removed. Modifying a const object through a non-const access path results in undefined behavior.
-
+```
 const int a = 5; // NOTE: const object
 const int* pA = &a;
 *pA = 10; // compiler error, pA is a pointer to const int 
 int* pX = const_cast<int*>(pA); // cast away constness 
 *pX = 10 // Free ticket to a long journey of UNDEFINED BEHAVIOR
-
+```
 The const_cast can not be used to cast to other data-types, as it is possible with the other casts.
-
+```
 int* a = nullptr;
 const char* ptr = "Hello";
 a = const_cast<int*>(ptr); // Fail
 a = reinterpret_cast<int*>(ptr); // Fail, reinterpret_cast can't cast away const qualifiers
 a = reinterpret_cast<int*>(const_cast<char*>(ptr)); // Fine, as long as you know why you are doing it
+```
