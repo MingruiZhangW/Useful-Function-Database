@@ -27,7 +27,7 @@ int* pi = reinterpret_cast<int*>(pf);
 ```
 In short, static_cast<> will try to convert, e.g., float-to-integer, while reinterpret_cast<> simply changes the compiler's mind to reconsider that object as another type.
 
-**Pointer Types**
+**Pointer Types**<br>
 Pointer casting is a bit complicated, we will use the following classes for the rest of the the article:
 
 ```
@@ -55,7 +55,7 @@ public:
 };
 ```
 
-> Case 1: Casting between unrelated classes
+- Case 1: Casting between unrelated classes
 ```
 // Convert between CBaseX* and CBaseY*
 CBaseX* pX = new CBaseX();
@@ -68,7 +68,7 @@ CBaseY* pY2 = reinterpret_cast<CBaseY*>(pX);
 ```
 As we learnt in the generic types example, static_cast<> will fail if you try to cast an object to another unrelated class, while reinterpret_cast<> will always succeed by "cheating" the compiler to believe that the object is really that unrelated class.
 
-> Case 2: Casting to related classes
+- Case 2: Casting to related classes
 ```
 CDerived* pD = new CDerived();
 printf("CDerived* pD = %x\n", (int)pD);
@@ -104,14 +104,14 @@ CDerived* pD3 = 390fec
 ```
 Noted that when static_cast<>-ing CDerived* to CBaseY* (line 5), the result is CDerived* offset by 4. To know what static_cast<> is actually doing, we have to take a look at the memory layout of CDerived.
 
-**Memory Layout of CDerived**
+**Memory Layout of CDerived**<br>
 Class Memory Layout
 
 > As shown in the diagram, CDerived's memory layout contains two objects, CBaseX and CBaseY, and the compiler knows this. Therefore, when you cast CDerived* to CBaseY*, it adds the pointer by 4, and when you cast CBaseY to CDerived, it subtracts the pointer by 4. However, you can do this even if it is not a CDerived (line 14-18) [1].
 
 Of course, the problem happens only if you have multiple inheritance. static_cast<> and reinterpret_cast<> make no different if you are casting CDerived to CBaseX.
 
-> Case 3: Casting back and forth between void*
+- Case 3: Casting back and forth between void*
 Because any pointer can be cast to void*, and void* can be cast back to any pointer (true for both static_cast<> and reinterpret_cast<>), errors may occur if not handled carefully.
 ```
 CDerived* pD = new CDerived();
