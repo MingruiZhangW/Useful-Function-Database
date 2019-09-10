@@ -27,7 +27,7 @@ int* pi = reinterpret_cast<int*>(pf);
 ```
 In short, static_cast<> will try to convert, e.g., float-to-integer, while reinterpret_cast<> simply changes the compiler's mind to reconsider that object as another type.
 
-***Pointer Types***
+**Pointer Types**
 Pointer casting is a bit complicated, we will use the following classes for the rest of the the article:
 
 ```
@@ -104,16 +104,16 @@ CDerived* pD3 = 390fec
 ```
 Noted that when static_cast<>-ing CDerived* to CBaseY* (line 5), the result is CDerived* offset by 4. To know what static_cast<> is actually doing, we have to take a look at the memory layout of CDerived.
 
-***Memory Layout of CDerived***
+**Memory Layout of CDerived**
 Class Memory Layout
 
-As shown in the diagram, CDerived's memory layout contains two objects, CBaseX and CBaseY, and the compiler knows this. Therefore, when you cast CDerived* to CBaseY*, it adds the pointer by 4, and when you cast CBaseY to CDerived, it subtracts the pointer by 4. However, you can do this even if it is not a CDerived (line 14-18) [1].
+> As shown in the diagram, CDerived's memory layout contains two objects, CBaseX and CBaseY, and the compiler knows this. Therefore, when you cast CDerived* to CBaseY*, it adds the pointer by 4, and when you cast CBaseY to CDerived, it subtracts the pointer by 4. However, you can do this even if it is not a CDerived (line 14-18) [1].
 
 Of course, the problem happens only if you have multiple inheritance. static_cast<> and reinterpret_cast<> make no different if you are casting CDerived to CBaseX.
 
-Case 3: Casting back and forth between void*
+> Case 3: Casting back and forth between void*
 Because any pointer can be cast to void*, and void* can be cast back to any pointer (true for both static_cast<> and reinterpret_cast<>), errors may occur if not handled carefully.
-
+```
 CDerived* pD = new CDerived();
 printf("CDerived* pD = %x\n", (int)pD);
 
@@ -128,12 +128,14 @@ CDerived* pD2 = static_cast<CDerived*>(pV1);
 printf("CDerived* pD2 = %x\n", (int)pD2);
 // System crash
 // pD2->bar();
-
+```
 ---------------------- output ---------------------------
+```
 CDerived* pD = 392fb8
 CBaseY* pY = 392fbc
 void* pV1 = 392fbc
 CDerived* pD2 = 392fbc
+```
 Once we have cast the pointer to void*, we can't cast it back to the original class easily. In the above example, the only way to get back a CDerived* from a void* is to cast it to a CBaseY* and then to CDerived*. But if we are not sure whether it is CBaseY* or CDerived*, then we have to use dynamic_cast<> or typeid [2].
 
 Footnote
