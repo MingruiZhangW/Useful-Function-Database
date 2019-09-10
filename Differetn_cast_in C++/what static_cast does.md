@@ -1,10 +1,10 @@
-What static_cast<> is actually doing
+# What static_cast<> is actually doing
 
-Introduction
-Most programmers learn C before C++, and get used to C style casting. When writing C++, sometimes we may be confused about when to use static_cast<> and when to use reinterpret_cast<>. In this article, I will illustrate what static_cast<> actually does, and will show some cases that will lead to errors.
+### Introduction
+> Most programmers learn C before C++, and get used to C style casting. When writing C++, sometimes we may be confused about when to use static_cast<> and when to use reinterpret_cast<>. In this article, I will illustrate what static_cast<> actually does, and will show some cases that will lead to errors.
 
-Generic Types
-
+**Generic Types**
+```
 float f = 12.3;
 float* pf = &f;
 
@@ -24,12 +24,13 @@ int* pn2 = static_cast<int*>(pv);
 //int i = reinterpret_cast<int>(f);
 // OK, but *pn is actually rubbish, same as *pn2
 int* pi = reinterpret_cast<int*>(pf);
+```
 In short, static_cast<> will try to convert, e.g., float-to-integer, while reinterpret_cast<> simply changes the compiler's mind to reconsider that object as another type.
 
-Pointer Types
+***Pointer Types***
 Pointer casting is a bit complicated, we will use the following classes for the rest of the the article:
 
-
+```
 class CBaseX
 {
 public:
@@ -52,9 +53,10 @@ class CDerived : public CBaseX, public CBaseY
 public:
     int z;
 };
+```
 
-Case 1: Casting between unrelated classes
-
+> Case 1: Casting between unrelated classes
+```
 // Convert between CBaseX* and CBaseY*
 CBaseX* pX = new CBaseX();
 // Error, types pointed to are unrelated
@@ -63,44 +65,46 @@ CBaseX* pX = new CBaseX();
 CBaseY* pY2 = reinterpret_cast<CBaseY*>(pX);
 // System crash!!
 // pY2->bar();
+```
 As we learnt in the generic types example, static_cast<> will fail if you try to cast an object to another unrelated class, while reinterpret_cast<> will always succeed by "cheating" the compiler to believe that the object is really that unrelated class.
 
-Case 2: Casting to related classes
+> Case 2: Casting to related classes
+```
+CDerived* pD = new CDerived();
+printf("CDerived* pD = %x\n", (int)pD);
 
-1.  CDerived* pD = new CDerived();
-2.  printf("CDerived* pD = %x\n", (int)pD);
-3. 
-4.  // static_cast<> CDerived* -> CBaseY* -> CDerived*
-    // OK, implicit static_cast<> casting
-5.  CBaseY* pY1 = pD;
-6.  printf("CBaseY* pY1 = %x\n", (int)pY1);
-    // OK, now pD1 = pD
-7.  CDerived* pD1 = static_cast<CDerived*>(pY1);
-8.  printf("CDerived* pD1 = %x\n", (int)pD1);
-9.  
-10. // reinterpret_cast
-    // OK, but pY2 is not CBaseY*
-11. CBaseY* pY2 = reinterpret_cast<CBaseY*>(pD);
-12. printf("CBaseY* pY2 = %x\n", (int)pY2);
-13. 
-14. // unrelated static_cast<>
-15. CBaseY* pY3 = new CBaseY();
-16. printf("CBaseY* pY3 = %x\n", (int)pY3);
-    // OK, even pY3 is just a "new CBaseY()"
-17. CDerived* pD3 = static_cast<CDerived*>(pY3);
-18. printf("CDerived* pD3 = %x\n", (int)pD3);
+// static_cast<> CDerived* -> CBaseY* -> CDerived*
+// OK, implicit static_cast<> casting
+CBaseY* pY1 = pD;
+printf("CBaseY* pY1 = %x\n", (int)pY1);
+// OK, now pD1 = pD
+CDerived* pD1 = static_cast<CDerived*>(pY1);
+printf("CDerived* pD1 = %x\n", (int)pD1);
 
+// reinterpret_cast
+// OK, but pY2 is not CBaseY*
+CBaseY* pY2 = reinterpret_cast<CBaseY*>(pD);
+printf("CBaseY* pY2 = %x\n", (int)pY2);
+ 
+// unrelated static_cast<>
+CBaseY* pY3 = new CBaseY();
+printf("CBaseY* pY3 = %x\n", (int)pY3);
+// OK, even pY3 is just a "new CBaseY()"
+CDerived* pD3 = static_cast<CDerived*>(pY3);
+printf("CDerived* pD3 = %x\n", (int)pD3);
+```
 ---------------------- output ---------------------------
+```
 CDerived* pD = 392fb8
 CBaseY* pY1 = 392fbc
 CDerived* pD1 = 392fb8
 CBaseY* pY2 = 392fb8
 CBaseY* pY3 = 390ff0
 CDerived* pD3 = 390fec
-
+```
 Noted that when static_cast<>-ing CDerived* to CBaseY* (line 5), the result is CDerived* offset by 4. To know what static_cast<> is actually doing, we have to take a look at the memory layout of CDerived.
 
-Memory Layout of CDerived
+***Memory Layout of CDerived***
 Class Memory Layout
 
 As shown in the diagram, CDerived's memory layout contains two objects, CBaseX and CBaseY, and the compiler knows this. Therefore, when you cast CDerived* to CBaseY*, it adds the pointer by 4, and when you cast CBaseY to CDerived, it subtracts the pointer by 4. However, you can do this even if it is not a CDerived (line 14-18) [1].
