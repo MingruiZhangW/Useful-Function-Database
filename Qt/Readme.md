@@ -45,3 +45,17 @@ ui->label->setPixmap(image);
 - Dialog: A special kind of window, usually temporary. They may or may not have a different titlebar appearance. They are presented to the user for the purpose of notification or gathering input, and typically have OK, Cancel, etc., buttons on the bottom or right.
 
 > The key here is that all of these are widgets, windows are the top-level widgets, and dialogs are a special kind of window.
+
+# QT Message Box With Answer/Respond
+```
+    QMessageBox::StandardButton resBtn = QMessageBox::Yes;
+    if (changes) {
+        resBtn = QMessageBox::question( this, APP_NAME,
+                                        tr("Are you sure?\n"),
+                                        QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
+                                        QMessageBox::Yes);
+    }
+    if (resBtn == QMessageBox::Yes) {
+        QDialog::reject();
+    }
+```
