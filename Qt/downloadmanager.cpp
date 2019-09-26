@@ -24,7 +24,9 @@ https://stackoverflow.com/questions/35913912/qnetworkreply-error-signal-not-dete
 
 #include <QMessageBox>
 
+#ifdef Q_OS_WIN
 #include <windows.h>
+#endif // !Q_OS_WIN
 
 DownloadManager::DownloadManager()
 {}
@@ -53,8 +55,6 @@ void DownloadManager::downloadFile(const QUrl& fileUrl,
         return;
     }
 
-    downloadTime_.start();
-
     QNetworkRequest request(fileUrl);
     currentDownload_ = manager_.get(request);
 
@@ -67,6 +67,10 @@ void DownloadManager::downloadFile(const QUrl& fileUrl,
 #if QT_CONFIG(ssl)
     connect(currentDownload_, SIGNAL(sslErrors(const QList<QSslError>&)), this, SLOT(slotSslErrors(QList<QSslError>)));
 #endif
+    connect(&progressBar_, &updateDownloadDialog::isCanceled,
+        [this] {
+            cancelDownload();
+        });
 
     if (withUI_) {
         progressBar_.exec();
@@ -76,6 +80,11 @@ void DownloadManager::downloadFile(const QUrl& fileUrl,
 void DownloadManager::slotDownloadFinished()
 {
     statusCode_ = currentDownload_->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+    if (httpRequestAborted_) {
+        // request aborted
+        statusCode_ = 0;
+    }
 
     currentDownload_->deleteLater();
     currentDownload_ = nullptr;
@@ -88,7 +97,7 @@ void DownloadManager::slotDownloadFinished()
         progressBar_.setMaximum(0);
         progressBar_.setValue(0);
         progressBar_.update("0");
-        progressBar_.close();
+        progressBar_.done(0);
     }
 
     if (doneCb_)
@@ -109,26 +118,7 @@ void DownloadManager::slotDownloadProgress(qint64 bytesReceived, qint64 bytesTot
     progressBar_.setMaximum(bytesTotal);
     progressBar_.setValue(bytesReceived);
 
-    int presentTime = downloadTime_.elapsed();
-    // calculate the download speed
-    double speed = (bytesReceived - previousDownloadBytes_) * 1000.0 / (presentTime - previousTime_);
-    if (speed < 0)
-        speed = 0;
-    previousTime_ = presentTime;
-    previousDownloadBytes_ = bytesReceived;
-
-    QString unit;
-    if (speed < 1024) {
-        unit = "B/s";
-    } else if (speed < 1024 * 1024) {
-        speed /= 1024;
-        unit = "kB/s";
-    } else {
-        speed /= 1024 * 1024;
-        unit = "MB/s";
-    }
-
-    progressBar_.update(QString::number(speed) + " " + unit);
+    progressBar_.update(Utils::humanFileSize(bytesReceived) + " / " + Utils::humanFileSize(bytesTotal));
 }
 
 void DownloadManager::slotHttpReadyRead()
@@ -156,3 +146,12 @@ int DownloadManager::getDownloadStatus()
 {
     return statusCode_;
 }
+
+void DownloadManager::cancelDownload()
+{
+    httpRequestAborted_ = true;
+    if(currentDownload_)
+        currentDownload_->abort();
+}
+
+https://review.jami.net/c/ring-client-windows/+/12661/6/downloadmanager.cpp
