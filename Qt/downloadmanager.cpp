@@ -1,3 +1,5 @@
+https://stackoverflow.com/questions/35913912/qnetworkreply-error-signal-not-detected-when-connection-is-lost/#Answer
+
 /***************************************************************************
  * Copyright (C) 2019 by Savoir-faire Linux                                *
  * Author: Mingrui Zhang <mingrui.zhang@savoirfairelinux.com>              *
