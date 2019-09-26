@@ -9,3 +9,5 @@
 - [SDES](https://en.wikipedia.org/wiki/SDES)<br>
 - [Annotated Example SDP for WebRTC](https://tools.ietf.org/id/draft-ietf-rtcweb-sdp-08.html#rfc.section.5.2.8)<br>
 > [Blind Call Transfer & Attended Call Transfer](https://help.masierotechgroup.com/hc/en-us/articles/115013090548-What-is-the-difference-between-blind-and-attended-transfer-)<br>
+
+- [SIP Voice-Mail, MWI(Message Waitting Indication)](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/sip_MWI.md)<br>
