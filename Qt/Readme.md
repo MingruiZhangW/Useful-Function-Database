@@ -48,14 +48,13 @@ ui->label->setPixmap(image);
 
 # QT Message Box With Answer/Respond
 ```
-    QMessageBox::StandardButton resBtn = QMessageBox::Yes;
-    if (changes) {
-        resBtn = QMessageBox::question( this, APP_NAME,
-                                        tr("Are you sure?\n"),
-                                        QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
-                                        QMessageBox::Yes);
-    }
+    QMessageBox::StandardButton resBtn = QMessageBox::question(this, "Update",
+        tr("Quit Update?\n"),
+        QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
+        QMessageBox::Yes);
     if (resBtn == QMessageBox::Yes) {
-        QDialog::reject();
+        emit isCanceled();
+    } else {
+        event->ignore();
     }
 ```
