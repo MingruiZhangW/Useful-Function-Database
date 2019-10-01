@@ -37,7 +37,7 @@ Avoid push_back and prefer emplace_back instead (using move semanic, and For pos
 > **Variadic Function**
 - [Variadic](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Variadic%20function/Variadic_function.md)<br>
 > **Std::tuple**
--[Tuple](https://en.cppreference.com/w/cpp/utility/tuple)<br>
+- [Tuple](https://en.cppreference.com/w/cpp/utility/tuple)<br>
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
 
