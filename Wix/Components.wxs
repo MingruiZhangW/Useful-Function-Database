@@ -1,0 +1,1069 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPLICATIONFOLDER">
+            <Component Id="cmpBA259EE77B6D453D6E4DB740569D182C" Guid="*">
+                <File Id="fil13A24641F0D9147F9CA8ECBA4CAEDDD9" KeyPath="yes" Source="$(var.HarvestPath)\avcodec-58.dll" />
+            </Component>
+            <Component Id="cmp4C33E97D9FDE050288E75291B5A4DF20" Guid="*">
+                <File Id="fil425D7815DF4F71DE037CDBF4427D0667" KeyPath="yes" Source="$(var.HarvestPath)\avdevice-58.dll" />
+            </Component>
+            <Component Id="cmpE36391A006C8071C3DAB2854BA1D031F" Guid="*">
+                <File Id="filB9B1BA326C72D3A154BE48BB38FF9746" KeyPath="yes" Source="$(var.HarvestPath)\avfilter-7.dll" />
+            </Component>
+            <Component Id="cmp92EA23EC7D068141FD686E0C0F71E64C" Guid="*">
+                <File Id="filCC4BD620D2A6E1E03C0BC69B22BE35DB" KeyPath="yes" Source="$(var.HarvestPath)\avformat-58.dll" />
+            </Component>
+            <Component Id="cmp3789A0B6EA35FEF5921909731B4496BC" Guid="*">
+                <File Id="fil005E917A53CC2070F2D59FF33C6D7FEF" KeyPath="yes" Source="$(var.HarvestPath)\avutil-56.dll" />
+            </Component>
+            <Component Id="cmp6FAEA3F9F61E5AB0CE462E42B572D724" Guid="*">
+                <File Id="fil6A41295D0070F31E5D32EDFAC11A6F0D" KeyPath="yes" Source="$(var.HarvestPath)\D3Dcompiler_47.dll" />
+            </Component>
+            
+            <Component Id="cmp0AACD7B49B88FF405D706EB5471D1237" Guid="*">
+                <File Id="filB10B4D48B9631B43068A4134FFFD14DB" KeyPath="yes" Source="$(var.HarvestPath)\jami.ico" />
+            </Component>
+            <Component Id="cmpD174826C0ED93EBF1BF03DA4FC5B66C9" Guid="*">
+                <File Id="fil6994045B8C530B95FAF1AA21D5764232" KeyPath="yes" Source="$(var.HarvestPath)\libeay32.dll" />
+            </Component>
+            <Component Id="cmpED1C29F8914A4A53211F619E1872ECC1" Guid="*">
+                <File Id="fil6FEA381F205FBC4A929B8656B60465E6" KeyPath="yes" Source="$(var.HarvestPath)\libEGL.dll" />
+            </Component>
+            <Component Id="cmpA20718F4A0EE0FBBC36D57F3E5F5FFEA" Guid="*">
+                <File Id="filBE292B9196A953298B7259C8682D61BF" KeyPath="yes" Source="$(var.HarvestPath)\libGLESV2.dll" />
+            </Component>
+            <Component Id="cmp8C8A3AF5CDB5F97F27E3139ACC3EB0AA" Guid="*">
+                <File Id="fil1AFBF0FAE158B901AC372EDCCD0876F5" KeyPath="yes" Source="$(var.HarvestPath)\License.rtf" />
+            </Component>
+            <Component Id="cmp7EC42EDF377FE192A700CC18765A056F" Guid="*">
+                <File Id="fil66B5A180B5AA7F0B0DFBA6BE2A0A577D" KeyPath="yes" Source="$(var.HarvestPath)\opengl32sw.dll" />
+            </Component>
+            <Component Id="cmpD4AD31229AA37D2E7A3F52788C9A9E65" Guid="*">
+                <File Id="filA9A5F4D39FD3F8252EED2634257E8904" KeyPath="yes" Source="$(var.HarvestPath)\qt.conf" />
+            </Component>
+            <Component Id="cmpBFE3655736E41D50E712591DC1147FC5" Guid="*">
+                <File Id="fil18884C01FADD063A745A8C70ABD0BB4D" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Core.dll" />
+            </Component>
+            <Component Id="cmp3372EBEC3E25927C88F92158F815B79E" Guid="*">
+                <File Id="fil6F543C0CBB7890241C90157805B2A2CB" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Gui.dll" />
+            </Component>
+            <Component Id="cmpABB9BC54D1E943DFD6E88C3E7AC5BEFF" Guid="*">
+                <File Id="fil7C26080F33755F4744D7D3C4988E19B1" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Network.dll" />
+            </Component>
+            <Component Id="cmpDAB7BC782DF697C4ED8249DF723B1A45" Guid="*">
+                <File Id="filFC025C16F75257858FF6A0EE04DC6256" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Positioning.dll" />
+            </Component>
+            <Component Id="cmp56C822215169F0B6D1522325BA8C4C24" Guid="*">
+                <File Id="filC1DDA5EA419E2F2470873287E9BA8DA7" KeyPath="yes" Source="$(var.HarvestPath)\Qt5PrintSupport.dll" />
+            </Component>
+            <Component Id="cmpB1A9D672E1461549CA6A6F0A20B454AC" Guid="*">
+                <File Id="filB54B9F6B9A4D152C731920ED1E5C6E54" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Qml.dll" />
+            </Component>
+            <Component Id="cmpD46588C094E71CAD15BAEB861E6BC88C" Guid="*">
+                <File Id="fil9F90DE9E46D8780093119B21A7283F60" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Quick.dll" />
+            </Component>
+            <Component Id="cmp9C3E941A1BD80A2EDD2D715065858082" Guid="*">
+                <File Id="fil7C5D8206A1D80CF4EBDE951D41BD28BC" KeyPath="yes" Source="$(var.HarvestPath)\Qt5QuickWidgets.dll" />
+            </Component>
+            <Component Id="cmp0B5E4E546DC40913954F95F5E7DAA502" Guid="*">
+                <File Id="fil3E9AD4CAFF329F02C5C85AC0C24678F8" KeyPath="yes" Source="$(var.HarvestPath)\Qt5SerialPort.dll" />
+            </Component>
+            <Component Id="cmpF8B7388C32A8EBC2F119FEBC975A65FB" Guid="*">
+                <File Id="filB0E18D458C1F68468CDF79D7DAF7536C" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Sql.dll" />
+            </Component>
+            <Component Id="cmp2B2C120D18DC2BC4ADC575C3847F733E" Guid="*">
+                <File Id="fil9AFFF8CD66BEE467233F9C56E0419B50" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Svg.dll" />
+            </Component>
+            <Component Id="cmpFF84822641B26457C980A534E7460FD8" Guid="*">
+                <File Id="fil4D8E0E0A679C862C22E101852969EA2E" KeyPath="yes" Source="$(var.HarvestPath)\Qt5WebChannel.dll" />
+            </Component>
+            <Component Id="cmpB1753E9F212516EA210DC5D905536869" Guid="*">
+                <File Id="filDD3EBB15793FB30CD6ADD3C6331D3CCE" KeyPath="yes" Source="$(var.HarvestPath)\Qt5WebEngineCore.dll" />
+            </Component>
+            <Component Id="cmp3E78C23573D3F03CA33A1D3F02559F86" Guid="*">
+                <File Id="filBFB9FEDFC5B5B73989EBCB43B820F900" KeyPath="yes" Source="$(var.HarvestPath)\Qt5WebEngineWidgets.dll" />
+            </Component>
+            <Component Id="cmp5A470D201E319A780FFC3EB59B1AF1AE" Guid="*">
+                <File Id="filE122A1022B617669CEE5055AE7E80737" KeyPath="yes" Source="$(var.HarvestPath)\Qt5Widgets.dll" />
+            </Component>
+            <Component Id="cmpFACC66D02943E1883B1C6F2461C79750" Guid="*">
+                <File Id="filE3C3CF9EB642F2DC08A4945E888F5659" KeyPath="yes" Source="$(var.HarvestPath)\Qt5WinExtras.dll" />
+            </Component>
+            <Component Id="cmpE30FACB43AD2D14B5FEA346E4210D8FD" Guid="*">
+                <File Id="fil945055CBDD44038CBF6B25D75733EB7A" KeyPath="yes" Source="$(var.HarvestPath)\QtWebEngineProcess.exe" />
+            </Component>
+            <Component Id="cmpE0C20B0AB9E584CF7364F06BFABCB044" Guid="*">
+                <File Id="filBD9D68D9A39EFEABFA9B6AF71FA03EDF" KeyPath="yes" Source="$(var.HarvestPath)\ssleay32.dll" />
+            </Component>
+            <Component Id="cmp51FB5733B3C7726A8051520F3320011E" Guid="*">
+                <File Id="fil57ED4A697A4382691653BED34AD99126" KeyPath="yes" Source="$(var.HarvestPath)\swresample-3.dll" />
+            </Component>
+            <Component Id="cmp727F65AE2152795AE04EBB26A506FA0F" Guid="*">
+                <File Id="fil5C46BA1F202C3F7EED8EE401E82EB75B" KeyPath="yes" Source="$(var.HarvestPath)\swscale-5.dll" />
+            </Component>
+            <Directory Id="dir105973C6EE77356398AF6CC2E5BEB53E" Name="bearer">
+                <Component Id="cmp6A013AE4FDB87EEAF94000152B3837AF" Guid="*">
+                    <File Id="filE252CFAD8D550A14AD5DCAB4501F5FF0" KeyPath="yes" Source="$(var.HarvestPath)\bearer\qgenericbearer.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir1F35EF557267C6E3FDEFF606F60C3F5B" Name="iconengines">
+                <Component Id="cmpACA7ED5453D1E5AED743FC46C8175378" Guid="*">
+                    <File Id="filD2BE0EBA85657A1F256295384A3DE6B6" KeyPath="yes" Source="$(var.HarvestPath)\iconengines\qsvgicon.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir620D0D01DB995A0900E22137FB52FEDC" Name="imageformats">
+                <Component Id="cmp46736DD2209095065A4C6E26D9851CF8" Guid="*">
+                    <File Id="fil0BD4FC9ECDE3AA7604D8FFBD132879F3" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qgif.dll" />
+                </Component>
+                <Component Id="cmp1E8C3088230E19E7CF583AB13EA514EC" Guid="*">
+                    <File Id="filCFE7C35F53BDF42F5C368DE742CE9800" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qicns.dll" />
+                </Component>
+                <Component Id="cmp3455928D8A0C69222466E8170A6B1A33" Guid="*">
+                    <File Id="fil0E13420F1832DFD1DE99A36168BEB006" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qico.dll" />
+                </Component>
+                <Component Id="cmpC8EA4BC57BDDA69462DD489A58F0F639" Guid="*">
+                    <File Id="fil0232F5CE36F7BCB540CCA8463780175E" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qjpeg.dll" />
+                </Component>
+                <Component Id="cmpD21BF951417C481F0C30EFC37FB90977" Guid="*">
+                    <File Id="filE6E268EFEA267C67A00C81BB91010C86" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qsvg.dll" />
+                </Component>
+                <Component Id="cmpA25107749893061BB83EB0ECD9628B54" Guid="*">
+                    <File Id="fil28160B06F39FD128059C2AFDEC2DB97C" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qtga.dll" />
+                </Component>
+                <Component Id="cmp907002B489B54EAA79A74D1DA8E9C329" Guid="*">
+                    <File Id="filB216834ED48D326377FBEC0BA7A2EB12" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qtiff.dll" />
+                </Component>
+                <Component Id="cmp93AA482AB203D00D124D9A02519399AE" Guid="*">
+                    <File Id="filC160FDE2AB4567D020D113DF53B7EE32" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qwbmp.dll" />
+                </Component>
+                <Component Id="cmpD773A839CCD184CC5B7A1DB4E4CA9897" Guid="*">
+                    <File Id="fil5BD125FBE4B0140F5C393F4706B3CC3D" KeyPath="yes" Source="$(var.HarvestPath)\imageformats\qwebp.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir5F2F62AA6F6135041AE87AC93F029148" Name="platforms">
+                <Component Id="cmpC320569E537CABD3BF9C70EC951FDBEE" Guid="*">
+                    <File Id="filE75EA04A4CF8BE2EA395ED9B60AD7B42" KeyPath="yes" Source="$(var.HarvestPath)\platforms\qwindows.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir64BC60F27750595E6410E2DD43ECF9D4" Name="position">
+                <Component Id="cmpAC09F2C2DAE3BF129D21DC3C26C85646" Guid="*">
+                    <File Id="fil71D439A3C8C70470903D468ABFCF1A38" KeyPath="yes" Source="$(var.HarvestPath)\position\qtposition_geoclue.dll" />
+                </Component>
+                <Component Id="cmpB197DBCD13C46984D35981C0A6ABDF99" Guid="*">
+                    <File Id="filB98D3B587C75A981538504B432FF4DE5" KeyPath="yes" Source="$(var.HarvestPath)\position\qtposition_positionpoll.dll" />
+                </Component>
+                <Component Id="cmpC6B73D1F19418891AC7DCD9D2E46E5A8" Guid="*">
+                    <File Id="fil64497F8B39AE1558B068960FC56510D4" KeyPath="yes" Source="$(var.HarvestPath)\position\qtposition_serialnmea.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dir7DA47D56BA9740AAFEA9AFAC9E732C13" Name="printsupport">
+                <Component Id="cmp503334D9D086631213738CA51F72AB17" Guid="*">
+                    <File Id="filE39C38C27872358E94897F2C1E0340A4" KeyPath="yes" Source="$(var.HarvestPath)\printsupport\windowsprintersupport.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirD51FBD42A867274D15CA506A46837A01" Name="resources">
+                <Component Id="cmp58CB18ADCC395B8B6C788807F72B5493" Guid="*">
+                    <File Id="filE0395818A2542F0797219BAD3DED7263" KeyPath="yes" Source="$(var.HarvestPath)\resources\icudtl.dat" />
+                </Component>
+                <Component Id="cmp594498C85C32344E5209B829879F4620" Guid="*">
+                    <File Id="filFF8FF0BEB2C0212B3A7E38CC40C53B53" KeyPath="yes" Source="$(var.HarvestPath)\resources\qtwebengine_devtools_resources.pak" />
+                </Component>
+                <Component Id="cmp8B26405D990CCAF31A0D013C7BCFE8AA" Guid="*">
+                    <File Id="filFC5397E6D1965FF744B9DE0E4E943AE9" KeyPath="yes" Source="$(var.HarvestPath)\resources\qtwebengine_resources.pak" />
+                </Component>
+                <Component Id="cmp7FBA612DE6E6486C90AA901C154BD294" Guid="*">
+                    <File Id="fil28A09C7F7C200082C7074F0835092D30" KeyPath="yes" Source="$(var.HarvestPath)\resources\qtwebengine_resources_100p.pak" />
+                </Component>
+                <Component Id="cmp21419E99DF87022FDBECFCD84419367D" Guid="*">
+                    <File Id="filC0874EE1D090731F0E6723D59457FAB0" KeyPath="yes" Source="$(var.HarvestPath)\resources\qtwebengine_resources_200p.pak" />
+                </Component>
+            </Directory>
+            <Directory Id="dirFA5E6F9E18091633C3DB379D639B3B19" Name="ringtones">
+                <Component Id="cmp9D0E744EB5812854A69347B7CF1ABA5E" Guid="*">
+                    <File Id="filD390C0C4A2CEC940B7D4BD09EE068A29" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\01_AfroNigeria.opus" />
+                </Component>
+                <Component Id="cmp184189344D489A3CFE3BA559FB3685DA" Guid="*">
+                    <File Id="filE1E51C40CF2532E10DD8F448F6EB4A32" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\02_AfroNigeria.opus" />
+                </Component>
+                <Component Id="cmp8E59578710AF17C3E09ED80EF4081743" Guid="*">
+                    <File Id="fil70DBDA21596E8253C26D6081449C7B70" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\03_AcousticGuitar.opus" />
+                </Component>
+                <Component Id="cmp4C4526FF93566BE394A369E0AACB7CC1" Guid="*">
+                    <File Id="filB3ADB0BBB50F6A27F164E0EFF6E57DA4" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\04_ElectricGuitar.opus" />
+                </Component>
+                <Component Id="cmpDD149C65BDEAAC373643E2DF78AB9356" Guid="*">
+                    <File Id="fil10CFF4F50FAE3E0EFBD981955C7E236C" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\05_AcousticIndia.opus" />
+                </Component>
+                <Component Id="cmpED250557317CC7C52B89E9C4DEE3CAAE" Guid="*">
+                    <File Id="fil5984589DFCA10C96B00485C6D92DF8EA" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\06_RingSoft.opus" />
+                </Component>
+                <Component Id="cmp39F2FE4C059E73C6C3420866D38CE7FB" Guid="*">
+                    <File Id="filE33F95F1F157979B2C61ECD9B9082855" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\07_RingTribal.opus" />
+                </Component>
+                <Component Id="cmp926ED761A67F5653EAB91E32FC5CFD78" Guid="*">
+                    <File Id="filB564E280A601B2AEFC4FBA6EDB3F4D07" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\08_RingFirefly.opus" />
+                </Component>
+                <Component Id="cmpE1E41F8959B87130AA1F4681ED8B4D0C" Guid="*">
+                    <File Id="fil87624691F4042EB8D89D9C59320CEB7D" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\09_ElectroCloud.opus" />
+                </Component>
+                <Component Id="cmp16743C0C600977B589DBD69AF8FDED3E" Guid="*">
+                    <File Id="fil1CE2DDD69818C70EBE95BA519132F0B6" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\10_UrbanTrap.opus" />
+                </Component>
+                <Component Id="cmp40487D2F0CF92E30BE770BDD274CECA9" Guid="*">
+                    <File Id="filD398EC1B9B4C12F6F7868C175EC983B7" KeyPath="yes" Source="$(var.HarvestPath)\ringtones\default.opus" />
+                </Component>
+            </Directory>
+            <Directory Id="dir5CFEF18C6BC63DC5544975B569015BCA" Name="share">
+                <Directory Id="dirD809BDCAEDA58745E7815B453DB5A479" Name="libringclient">
+                    <Directory Id="dirF560EF30184CEDA73D1579B245D36652" Name="translations">
+                        <Component Id="cmpBDA3764E1634B79D3320C86C4B6661E0" Guid="*">
+                            <File Id="fil8995FC63589D0F5A92C75FF3DCDB4019" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_ar.qm" />
+                        </Component>
+                        <Component Id="cmp35DB643A04BCC6D058D1C57589288884" Guid="*">
+                            <File Id="fil052B14B9F2346B3C0D8ECAE9EB6304EE" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_bg.qm" />
+                        </Component>
+                        <Component Id="cmp30605AE95DADF836738B4520EAF88A1D" Guid="*">
+                            <File Id="fil773A7F649578172373F040ADDEA7C621" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_ca.qm" />
+                        </Component>
+                        <Component Id="cmp6852E8A72539614B269FA4922C2AC451" Guid="*">
+                            <File Id="fil788353434C06261DA55326FA8374FE45" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_cs_CZ.qm" />
+                        </Component>
+                        <Component Id="cmpDDF4D378849F04BE4CCFBD591032B702" Guid="*">
+                            <File Id="filE964FE7301E74B24EC02CE3305F09D55" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_da.qm" />
+                        </Component>
+                        <Component Id="cmp6FA6FE193E88F90BBAD8C8D5C066C872" Guid="*">
+                            <File Id="fil7E0F39AE2EF77353BFFFBCDEAD40275A" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_da_DK.qm" />
+                        </Component>
+                        <Component Id="cmp619D7843C711113F45FBB504BE76C1A9" Guid="*">
+                            <File Id="filA3AB4EBDA5FDBC97D5AB7A8923D61B3C" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_de.qm" />
+                        </Component>
+                        <Component Id="cmpCD1B1A594AE229457C2E1601CCC04D29" Guid="*">
+                            <File Id="filF03FA4878F9D61A333C1D6BC2451EAA6" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_de_DE.qm" />
+                        </Component>
+                        <Component Id="cmp792BF6E4B30A83035A405680D2FEF400" Guid="*">
+                            <File Id="filE02A60BC02D9F6235628EDFB05386889" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_el.qm" />
+                        </Component>
+                        <Component Id="cmpD35EE78D956EC2F62F798E466ABC8A5A" Guid="*">
+                            <File Id="fil7F7593557775968F108B73E7465AB0C0" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_en.qm" />
+                        </Component>
+                        <Component Id="cmpDADC5F4E1A39F39526227E161F3F52AC" Guid="*">
+                            <File Id="filDBE1FE2963076907C5558E27E163DE8C" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_en_GB.qm" />
+                        </Component>
+                        <Component Id="cmp36F21CE18C8AEF34CBAEDABD94C45266" Guid="*">
+                            <File Id="fil304F0B80946CA3CA5B6A31F6C44EA3F3" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_eo.qm" />
+                        </Component>
+                        <Component Id="cmpDF31DA915C5ED0E420EA145630C1C47B" Guid="*">
+                            <File Id="fil52155C36D8E4FC4035351B500C759AB1" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_es.qm" />
+                        </Component>
+                        <Component Id="cmp4A2F8AF2B7D2606EB0A8746018B6FEA6" Guid="*">
+                            <File Id="fil159DCA712EFF11C4D2C4D3DB33A9EB4B" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_es_AR.qm" />
+                        </Component>
+                        <Component Id="cmpDCC5B83EC02FEBDA99EFDE9F1B1186C5" Guid="*">
+                            <File Id="filD423D9B28FBFEFFE4F2353843DEBFF3C" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_et_EE.qm" />
+                        </Component>
+                        <Component Id="cmp3B6E35D72B71D9233F7A5E8CC1A03DC2" Guid="*">
+                            <File Id="filE0795A0B887F57741D48178534783550" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_eu.qm" />
+                        </Component>
+                        <Component Id="cmp2114360C15FBB81F8563BDA533EB8DAA" Guid="*">
+                            <File Id="fil8C312D302F99BC4B6C716C18EDFB8446" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_fa_IR.qm" />
+                        </Component>
+                        <Component Id="cmpD3EAE6B8403D6F17634171C3C8929B23" Guid="*">
+                            <File Id="filD61D6EDF28AD00527BA81FF001D9180B" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_fi.qm" />
+                        </Component>
+                        <Component Id="cmp32371504BBF11A98DEB92D0102953261" Guid="*">
+                            <File Id="fil79977CA23DA0B239129C20E2CF49FBB8" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_fr.qm" />
+                        </Component>
+                        <Component Id="cmp17C94B45C93F443F69166731325E51E2" Guid="*">
+                            <File Id="fil484C09EAAAB16D8C78DA1650E36FB63F" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_fr_BE.qm" />
+                        </Component>
+                        <Component Id="cmpD1A89ABC22E388B2B148ECC38F73A147" Guid="*">
+                            <File Id="fil9D11DD9763E065311EDA892C8293A79A" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_fr_CA.qm" />
+                        </Component>
+                        <Component Id="cmpA861AAB391313037D65BD7B3359910DE" Guid="*">
+                            <File Id="fil2D49C7F40E272B88C2142C956558E6EB" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_fr_CH.qm" />
+                        </Component>
+                        <Component Id="cmp596D8A3EBD6F20758B013FE785830C72" Guid="*">
+                            <File Id="fil5C9BDA3AA1B949A6F13CD16BD3447D9C" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_fr_FR.qm" />
+                        </Component>
+                        <Component Id="cmpC8A04498DDBD5F8C2836E4C2328EC208" Guid="*">
+                            <File Id="filE3EE84040159C8BAFDDBE8824C77299E" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_he.qm" />
+                        </Component>
+                        <Component Id="cmp3780AC3E497FB63F76DBCB5A52B490FD" Guid="*">
+                            <File Id="filE262204A11C0908A30E06F6C4EA0A25B" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_hi_IN.qm" />
+                        </Component>
+                        <Component Id="cmp22BE810E88D6D37D2C8996FA05E59A69" Guid="*">
+                            <File Id="fil7A8D216AA5599821E3844CD87824BC87" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_hr.qm" />
+                        </Component>
+                        <Component Id="cmp6B950B5F61CAD51F0D7954849310B858" Guid="*">
+                            <File Id="fil540ACF63B0AE0F55460D29A9230C1830" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_hu.qm" />
+                        </Component>
+                        <Component Id="cmp880043FBCFE7920A73E8539DA6A0475A" Guid="*">
+                            <File Id="filFFD421BC2675CF5804D34B492BC81B9E" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_id.qm" />
+                        </Component>
+                        <Component Id="cmpD59ADC25714EFA2575755F9DA61788FF" Guid="*">
+                            <File Id="fil80D19229A4BDD992FF8BB20A07FCF542" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_it.qm" />
+                        </Component>
+                        <Component Id="cmp5D794B933C3D55B8763E08A60FBA8155" Guid="*">
+                            <File Id="filF8B95E7907DF9ACEEC26589720C0DC6D" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_it_IT.qm" />
+                        </Component>
+                        <Component Id="cmpB68B10455B70A4F510D415950E1E1E32" Guid="*">
+                            <File Id="filE4FF8741929A0CCD6E58C1E1EFE90C62" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_ja.qm" />
+                        </Component>
+                        <Component Id="cmp5FE6591136735F0B093237C490F14B98" Guid="*">
+                            <File Id="fil65DF61C6D7B14BADA57B26C9D8F18365" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_ko_KR.qm" />
+                        </Component>
+                        <Component Id="cmpDEB21637ABE7880B93AB2AEBA2C88BD5" Guid="*">
+                            <File Id="filE8DFD8862C645ACD16894E1CD492851E" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_lt.qm" />
+                        </Component>
+                        <Component Id="cmp86F1EE873126C04FECE0ED209C01C6AC" Guid="*">
+                            <File Id="fil2EB80D40B171B2837A6B257BB310C72E" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_ms.qm" />
+                        </Component>
+                        <Component Id="cmp9930DBE327E48824BDF22CDDF407DA5A" Guid="*">
+                            <File Id="fil8DB1081A091F9FB069A39BDCC9F1CD83" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_nb.qm" />
+                        </Component>
+                        <Component Id="cmp17F3455C5AE1244B9A9FB0B1B62DBF4C" Guid="*">
+                            <File Id="filEAE600080AFB728A966D2E0869D00612" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_nl.qm" />
+                        </Component>
+                        <Component Id="cmp49096E3CBE91D8D8ECC81C448BAEF070" Guid="*">
+                            <File Id="fil959096E9C969B1E81FD673EAF7B029F3" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_nl_BE.qm" />
+                        </Component>
+                        <Component Id="cmp8A13CACD629C1A613F052CCFB99F2D36" Guid="*">
+                            <File Id="fil606E5B73484EC6C0D74A6E68B9C8D83F" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_nl_NL.qm" />
+                        </Component>
+                        <Component Id="cmpDB8EFFE69F18EBB8E749CB4D0B1ADA0F" Guid="*">
+                            <File Id="fil478594976A21A2E73E3A1FBCF0DB0022" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_pa.qm" />
+                        </Component>
+                        <Component Id="cmp638555492CE17542524F2FEAC086F469" Guid="*">
+                            <File Id="fil78884B08C017AD965A2ADCEF593A98E9" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_pl.qm" />
+                        </Component>
+                        <Component Id="cmp4CB15BEEF856DD9BD0263C9FCFFCB3B3" Guid="*">
+                            <File Id="fil2A7707668BACD07988C1A069DBBB052E" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_pl_PL.qm" />
+                        </Component>
+                        <Component Id="cmp7897E6D39AFC5AF65F9C4F0C766E0073" Guid="*">
+                            <File Id="filF4121F48E8FFD6F80507B119CD61AA3A" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_pt.qm" />
+                        </Component>
+                        <Component Id="cmp8711A48C2F37596B02A54EAB242272A4" Guid="*">
+                            <File Id="fil91B60BD9D5A797530D40D18283653F33" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_pt_BR.qm" />
+                        </Component>
+                        <Component Id="cmp9C70305094B36207A88829384859477C" Guid="*">
+                            <File Id="fil4BBE6B12396760571B08C949D2C64270" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_pt_PT.qm" />
+                        </Component>
+                        <Component Id="cmp959A10CF41CA13F3870D0D12C35433F3" Guid="*">
+                            <File Id="fil43328A0C0D7A73FF9BC983F4C65E004B" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_ro.qm" />
+                        </Component>
+                        <Component Id="cmp7AD1C86E0158D5CB0A75A74105185FC6" Guid="*">
+                            <File Id="fil72DB6081682BAC1B2007BBD38DD54050" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_ru.qm" />
+                        </Component>
+                        <Component Id="cmpC5D97B0F12C95C0615A28CEA83CCC340" Guid="*">
+                            <File Id="filB9829B0E1AA834189BF53CF9379691C8" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_ru_RU.qm" />
+                        </Component>
+                        <Component Id="cmp52F8CCDE1BC3E2CD539D3790D70C3CB4" Guid="*">
+                            <File Id="fil76587B3197A18F1C376A713F559ACF81" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_sk_SK.qm" />
+                        </Component>
+                        <Component Id="cmp49782A2C0629BF699A08E350842D3DEB" Guid="*">
+                            <File Id="fil238152513AA1595BB97A777AAEA89331" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_sl.qm" />
+                        </Component>
+                        <Component Id="cmp4675C49770B5FF3A8019BE5784F19749" Guid="*">
+                            <File Id="fil0D4735006E32353A044B1EA6CA4CFAE0" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_sq_AL.qm" />
+                        </Component>
+                        <Component Id="cmp297B7C5BD00FD12C793CD064C608B532" Guid="*">
+                            <File Id="fil4BA499B9FBC5E27F3B1B67226B4D620B" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_sv.qm" />
+                        </Component>
+                        <Component Id="cmp0C58C66E64785FFB7B1C58FDDA40079E" Guid="*">
+                            <File Id="filE6D26823F131FD8C5CE20A052155261E" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_tr.qm" />
+                        </Component>
+                        <Component Id="cmpBC4B4FFE67FBF33BC5660FD1CAF11F47" Guid="*">
+                            <File Id="fil4A1884D6D7804A21B095C0A9F418233B" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_uk.qm" />
+                        </Component>
+                        <Component Id="cmp800CB6250B37C0297CDC9B5F9975AE16" Guid="*">
+                            <File Id="fil8E2062B884874B0E5A27A64244D2BF98" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_zh.qm" />
+                        </Component>
+                        <Component Id="cmp6C8FCC4DD64BF5408C09142A4DD394A8" Guid="*">
+                            <File Id="fil73B6DCBDFE1EED692FBCE7E6863584D2" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_zh_CN.qm" />
+                        </Component>
+                        <Component Id="cmpA72308727945B9EBB0EAA526DB929294" Guid="*">
+                            <File Id="filC4AF175360476DD306AE9EF7D49C12B2" KeyPath="yes" Source="$(var.HarvestPath)\share\libringclient\translations\lrc_zh_TW.qm" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="dir6D53BEA5EB5D629C07A29BA956493A31" Name="ring">
+                    <Directory Id="dir420CB0A82B30CB94ECE52093C251C838" Name="translations">
+                        <Component Id="cmp41097746DDCC7A0731DE03EE255669D4" Guid="*">
+                            <File Id="filFDE3A5B4AF6EEA5979719B88D1BFFD9A" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows.qm" />
+                        </Component>
+                        <Component Id="cmp4EBF75895BB045FCE0B98981A8C6E070" Guid="*">
+                            <File Id="fil2F032DA4218FD9C4CF9D3C1C7774F5AD" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_ar.qm" />
+                        </Component>
+                        <Component Id="cmp74AC466D130EB75D6C029800E47AC9DB" Guid="*">
+                            <File Id="fil47023F3B88BB041061EA5A63ABA75523" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_bg.qm" />
+                        </Component>
+                        <Component Id="cmpF3D48E1D8C4C0A0AF9AECDD5FA9F8BD5" Guid="*">
+                            <File Id="fil4CD2341229CBA08C2357566F2F44C91B" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_ca.qm" />
+                        </Component>
+                        <Component Id="cmp7AA58B98C67FD72D14FFAF1A1687D32B" Guid="*">
+                            <File Id="filE7E8E3C92F63808BF540F8AF46CE476A" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_cs_CZ.qm" />
+                        </Component>
+                        <Component Id="cmpC9E5806FA9ABD38FAB23D5181C3A155B" Guid="*">
+                            <File Id="fil50E156244C5CA3AC5972D4791F6727C1" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_da.qm" />
+                        </Component>
+                        <Component Id="cmpF88EA76C675F10FB34A23A8F6C2D8F8C" Guid="*">
+                            <File Id="filAFBC42078BC7B47533EA5121A9319F6C" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_da_DK.qm" />
+                        </Component>
+                        <Component Id="cmpCBEFAF24DF8D193D52BBD230C8FF965B" Guid="*">
+                            <File Id="fil58FD573568A2809CD8D4D116436BC4EB" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_de.qm" />
+                        </Component>
+                        <Component Id="cmpDFB8DC6E65740BBB1FB06D1B09863B6B" Guid="*">
+                            <File Id="fil48CE2DA00DF97B8D78C208D2C20EBDBB" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_de_DE.qm" />
+                        </Component>
+                        <Component Id="cmpB478D1EE66F7F9521CA0D8981EC82344" Guid="*">
+                            <File Id="fil7EF4E9EBF13792724E2F9D037F3B8D73" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_el.qm" />
+                        </Component>
+                        <Component Id="cmpED7D4C12FCC37422DEDECC8EF57B2BFB" Guid="*">
+                            <File Id="fil8D9DDCBD06D3E147FF2107DA2F6B330A" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_en_GB.qm" />
+                        </Component>
+                        <Component Id="cmp46E8D2DE92564C887FBC1140BCBFBDEC" Guid="*">
+                            <File Id="fil3080CF987C344943C4540388B978E057" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_eo.qm" />
+                        </Component>
+                        <Component Id="cmp8CEE693C69C29B83AE993645A1BFD935" Guid="*">
+                            <File Id="fil3AE815B965DD333A1604FEA63D653D49" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_es.qm" />
+                        </Component>
+                        <Component Id="cmp2B06896B2BF89974A938858E1465ECEF" Guid="*">
+                            <File Id="fil84A2EB6DED4BA292E8A21078BCB72CBA" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_es_AR.qm" />
+                        </Component>
+                        <Component Id="cmpE5FD9E435861726C9111E73DCDF1F143" Guid="*">
+                            <File Id="filF9626340D260E5720B95CC9F60984F26" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_et_EE.qm" />
+                        </Component>
+                        <Component Id="cmp4A2938F29B06193AFEDAE5DA2F5AB539" Guid="*">
+                            <File Id="filEE753D2F36B2CFD1D2E5D4105D6385F7" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_eu.qm" />
+                        </Component>
+                        <Component Id="cmp4D285140B0FB0C433AD199B589005512" Guid="*">
+                            <File Id="fil7BBC43773A1F458BBA8C4322FFE64578" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_fa_IR.qm" />
+                        </Component>
+                        <Component Id="cmp16DC3081CC26327DED8F0881FD35091E" Guid="*">
+                            <File Id="filA9613613545B3067C155245B144D938C" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_fi.qm" />
+                        </Component>
+                        <Component Id="cmp59D82EC00E010F52E37B897882915960" Guid="*">
+                            <File Id="fil393294FF9C96DD7B9676D11D35E75E93" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_fr.qm" />
+                        </Component>
+                        <Component Id="cmp5F76CC7B322A7B17CF6E9BDAC8D7B5C5" Guid="*">
+                            <File Id="filEB47962E70C053E3A6888D2132229EA6" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_fr_BE.qm" />
+                        </Component>
+                        <Component Id="cmp9EF4ACA1DB50E21A7F19E6067AA8D8B2" Guid="*">
+                            <File Id="filE96FA54A292CC9F3EAA19106BA86C8EA" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_fr_CA.qm" />
+                        </Component>
+                        <Component Id="cmpE6718D42EF8EC8D8762BCE811A589388" Guid="*">
+                            <File Id="fil06F1A4EF6D877A472C89536D6AE31BB2" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_fr_CH.qm" />
+                        </Component>
+                        <Component Id="cmpC1C22CDE1D9C71C85213BD063B9C5F89" Guid="*">
+                            <File Id="filF21C0013D7AC746B42F523396B7E9F64" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_fr_FR.qm" />
+                        </Component>
+                        <Component Id="cmpFF10F3ABB26E958B8B386939D4F21108" Guid="*">
+                            <File Id="fil6CCC15E82E7D00B4263F197C3E8B2BA7" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_he.qm" />
+                        </Component>
+                        <Component Id="cmp16CFB30EE857C66775E5CFF1B44CE53E" Guid="*">
+                            <File Id="fil97785D11CF78ED20FB668FAD41C71221" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_hi_IN.qm" />
+                        </Component>
+                        <Component Id="cmpDC76284DC30F4C606F95D596CFEB8BDF" Guid="*">
+                            <File Id="filE8EEC98FEC669CEFEBA256DC847A0820" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_hr.qm" />
+                        </Component>
+                        <Component Id="cmp2D9EE7C663300F7C8E70CC1620B4BA0E" Guid="*">
+                            <File Id="fil293A33D86405B6921FB413AED8E888F5" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_hu.qm" />
+                        </Component>
+                        <Component Id="cmpA65818CD26C22E7E328235E6A2594D3C" Guid="*">
+                            <File Id="filBAAF58107532095ED711E666ECB6F837" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_id.qm" />
+                        </Component>
+                        <Component Id="cmp91DB4048CE2F6D9B524D96BEA8A39105" Guid="*">
+                            <File Id="fil4E438109165496FE372E947AA735A809" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_it.qm" />
+                        </Component>
+                        <Component Id="cmp6DCF2DF71957611A44EEFA022EC3C83E" Guid="*">
+                            <File Id="filEF0FE8F6785B51F623304385ED23F361" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_it_IT.qm" />
+                        </Component>
+                        <Component Id="cmp27AF06747810E628D055210CCA1BD616" Guid="*">
+                            <File Id="fil2B4497954DFCA828107000CB2BD3B3FA" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_ja.qm" />
+                        </Component>
+                        <Component Id="cmpE777D74F134334A80F5323AF4F925643" Guid="*">
+                            <File Id="filAED9016CE2E982612FA4FBFD61E82290" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_ko_KR.qm" />
+                        </Component>
+                        <Component Id="cmp50BF185C72AEC801D83FE9EDFF270455" Guid="*">
+                            <File Id="filDED16414AB2BB56C08C9A7AA7BB6F0CC" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_lt.qm" />
+                        </Component>
+                        <Component Id="cmpA4EFDAAD789753DD23AF09B2AF53E90A" Guid="*">
+                            <File Id="fil60128A4E03902FB90EB51BCE7A4CCF16" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_ms.qm" />
+                        </Component>
+                        <Component Id="cmpF391B2E93E3AC11E9CA12E81BACFEDF5" Guid="*">
+                            <File Id="fil905DE972972355267874D98B4F204D65" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_nb.qm" />
+                        </Component>
+                        <Component Id="cmp3819CC2096AEF977340D6F070D8F0527" Guid="*">
+                            <File Id="fil2D33AFD7FEDCF1EAEA5C9EA98B621B8E" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_nb_NO.qm" />
+                        </Component>
+                        <Component Id="cmp8A1E4C9FE866E93446BD6299449E53F4" Guid="*">
+                            <File Id="filBC4C99ADEDBBF1EF3E34C66AE4A87993" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_nl.qm" />
+                        </Component>
+                        <Component Id="cmpE3275D0C0AB41FFA5A193AF453546BEF" Guid="*">
+                            <File Id="fil39AD7F230B0D63C57151525872B29ED7" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_nl_BE.qm" />
+                        </Component>
+                        <Component Id="cmp7BD1C7AB4D68D652CD4EFB21CE19D902" Guid="*">
+                            <File Id="filD91979250F62981982FC5E86A62EE0E2" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_nl_NL.qm" />
+                        </Component>
+                        <Component Id="cmp2F2B2570FA3943A00CA5B7F64150D1A8" Guid="*">
+                            <File Id="fil696A61EF58F98628F9BF8B4A94A9067E" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_pa.qm" />
+                        </Component>
+                        <Component Id="cmp9C706A124AF41C2913BCFFEF88273692" Guid="*">
+                            <File Id="fil65C7B49F00311083BF4A050EEF452D24" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_pl.qm" />
+                        </Component>
+                        <Component Id="cmp282003BC64AAE7EBFBDFB0295311CB5F" Guid="*">
+                            <File Id="fil1088B0C9C32BEF058363AF162BC42F95" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_pl_PL.qm" />
+                        </Component>
+                        <Component Id="cmpB9C8CD9D924399BE5D33B8D89DCAE1EB" Guid="*">
+                            <File Id="fil34114D535297F9C1BFDC6DE7C1E91113" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_pt.qm" />
+                        </Component>
+                        <Component Id="cmpB53666918EB7592C089B135EEE438615" Guid="*">
+                            <File Id="fil6E0FDDAA906C845873C1774A635AEFC1" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_pt_BR.qm" />
+                        </Component>
+                        <Component Id="cmpDCB9F0EFD0388D17CB7066CB6AE2672E" Guid="*">
+                            <File Id="fil761ADA3350C67C8BF5BC174DC5382FCB" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_pt_PT.qm" />
+                        </Component>
+                        <Component Id="cmp7ABD149B1636E776346112B7D0F4D1CE" Guid="*">
+                            <File Id="fil05D382430C23BAA5A8B1E5B7BDE26558" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_ro.qm" />
+                        </Component>
+                        <Component Id="cmp2EAECB33D18C9BA43AED9A77090273B9" Guid="*">
+                            <File Id="filA50AA7A1D4BE2BF94633883EF8620568" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_ru.qm" />
+                        </Component>
+                        <Component Id="cmp1B7D33ADEE12A017FD455A759A74E532" Guid="*">
+                            <File Id="filF8146BF7196A67EDBBA49FB2813E5C44" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_ru_RU.qm" />
+                        </Component>
+                        <Component Id="cmpA2FE75586A7CCBC341C4FB3DEB0A6CB4" Guid="*">
+                            <File Id="fil31081CE7530AD3153950ED6E0BC1AD4D" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_sk_SK.qm" />
+                        </Component>
+                        <Component Id="cmp7833328F2B94039C4B34A64A66ED4408" Guid="*">
+                            <File Id="fil1FB1C078BA6ED07329CF8571AB6B0247" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_sl.qm" />
+                        </Component>
+                        <Component Id="cmpC25445BAB873C893070509DD7A14B73B" Guid="*">
+                            <File Id="filA0944EFE08BDDB583FE5403867553C09" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_sq_AL.qm" />
+                        </Component>
+                        <Component Id="cmpAA1F78F7EF33E4B20BDBE9415DE4A114" Guid="*">
+                            <File Id="fil646D0F56EDA9A7049F0F740A15AB7C9F" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_sv.qm" />
+                        </Component>
+                        <Component Id="cmpE432BB9A03B50B81F76CBDB5E20695EC" Guid="*">
+                            <File Id="fil112335B81B7EACE261E36E9276863813" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_tr.qm" />
+                        </Component>
+                        <Component Id="cmp00D46020362B0A6C6497EB1E3F2B9986" Guid="*">
+                            <File Id="fil739C85F84375AAC2ED5F32B57786B4D2" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_uk.qm" />
+                        </Component>
+                        <Component Id="cmp6889BD1B61EACE0E0630851302EDF845" Guid="*">
+                            <File Id="filD06A931DBBC4E5E3AE026D0A4CB248AE" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_zh.qm" />
+                        </Component>
+                        <Component Id="cmp47F09581EA91AA09DFDAE8121F2B90C8" Guid="*">
+                            <File Id="filB993E37146B04949E97FAC974EAD2090" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_zh_CN.qm" />
+                        </Component>
+                        <Component Id="cmpDFF434C89D4C9A8B8A3414241C3E6246" Guid="*">
+                            <File Id="filF91684E2B79BE1E7D999A74D7264BC36" KeyPath="yes" Source="$(var.HarvestPath)\share\ring\translations\ring_client_windows_zh_TW.qm" />
+                        </Component>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="dirB0464CDDD7F688E489E6F1D2F96F31F0" Name="sqldrivers">
+                <Component Id="cmpBC385B906096443F6DC4C3767061BBDE" Guid="*">
+                    <File Id="filC97BC424F11C37467BBFF0336123223C" KeyPath="yes" Source="$(var.HarvestPath)\sqldrivers\qsqlite.dll" />
+                </Component>
+                <Component Id="cmp0D9DB7370D38AB21D14A00643A82BD76" Guid="*">
+                    <File Id="fil7648F6CA3337967831B24B0D1E8E0842" KeyPath="yes" Source="$(var.HarvestPath)\sqldrivers\qsqlmysql.dll" />
+                </Component>
+                <Component Id="cmpBA8F288120669ACAF105E5A14D6C7641" Guid="*">
+                    <File Id="fil65611EAC74F3321AD5CC24645D552634" KeyPath="yes" Source="$(var.HarvestPath)\sqldrivers\qsqlodbc.dll" />
+                </Component>
+                <Component Id="cmpAB7165AAE7812B32DE836DE9D752CE15" Guid="*">
+                    <File Id="filDA8508B148A637208DD8E5D70DB7DD66" KeyPath="yes" Source="$(var.HarvestPath)\sqldrivers\qsqlpsql.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="dirECC29599FCFE9E458549A895F0628289" Name="translations">
+                <Component Id="cmpAED73B0152F25F518488AD1C4CA8B6DA" Guid="*">
+                    <File Id="filCB2115C7A109C7D2970B555B96850520" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_ar.qm" />
+                </Component>
+                <Component Id="cmpFC9073088F9C705F0DD59FF0D6CD9635" Guid="*">
+                    <File Id="fil0BF893D7F314AB368B1ECD5281ACA1CF" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_bg.qm" />
+                </Component>
+                <Component Id="cmp8494351EA7DAA1DC026E4F5B02D21572" Guid="*">
+                    <File Id="fil0011EBD34625FFC5FC5C22AAE186838A" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_ca.qm" />
+                </Component>
+                <Component Id="cmpD9C58E2B9527653C8E3DD3426D43F77B" Guid="*">
+                    <File Id="filE4C05F709C0FF0242A2F27D78F941436" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_cs.qm" />
+                </Component>
+                <Component Id="cmp2B46EB4F8C6030705B98FD0D3B4E894E" Guid="*">
+                    <File Id="filCEC6B50B0F1ECB9D94668ADF8F052BB0" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_da.qm" />
+                </Component>
+                <Component Id="cmp928AC4D8573342D8E28D1002BC5C55C3" Guid="*">
+                    <File Id="fil7EC5166ECC30B6E0B5C2F6B227A64AA2" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_de.qm" />
+                </Component>
+                <Component Id="cmpBA7634D5AD3249D667CE516CD6E742A4" Guid="*">
+                    <File Id="fil6B3FBB64B43ED99D6040953875B1485C" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_en.qm" />
+                </Component>
+                <Component Id="cmp541D963AFEA1EF2FDBCE4C13185D7AA7" Guid="*">
+                    <File Id="filD6E6B762C703648488771E22C5DB6E44" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_es.qm" />
+                </Component>
+                <Component Id="cmp117D49F717160D348E2058725167ED28" Guid="*">
+                    <File Id="fil8911ECE07B85F83C7BBE4AC0648C4C87" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_fi.qm" />
+                </Component>
+                <Component Id="cmp8C23D508E060D545B33FA1AAE609663D" Guid="*">
+                    <File Id="fil179457B18BB07257464037C8ABDC93C6" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_fr.qm" />
+                </Component>
+                <Component Id="cmpB66C0D7389B913E438D93C6A3A571B47" Guid="*">
+                    <File Id="fil6BC785EA947807F339AD95CD6711CED0" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_gd.qm" />
+                </Component>
+                <Component Id="cmp23398EAAFB16BFA56F4F5C210DEF4C7E" Guid="*">
+                    <File Id="fil340FF5DF54FB65C1EF3D2F8914BF2B77" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_he.qm" />
+                </Component>
+                <Component Id="cmpE9582353D1D4B653DA9D120BF1CE9F70" Guid="*">
+                    <File Id="fil06310AB0A3514D41D40B1DAF12BED355" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_hu.qm" />
+                </Component>
+                <Component Id="cmpEFB5E458EB368DCC8CFEF314922A01A5" Guid="*">
+                    <File Id="filC8DF6B0E3FB47CB0710E1DAD96757F99" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_it.qm" />
+                </Component>
+                <Component Id="cmpF8410BCA5ADC6DCE1FF7A9B730D46B4E" Guid="*">
+                    <File Id="fil0388B5DFD767755B36C9B30B0713B59F" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_ja.qm" />
+                </Component>
+                <Component Id="cmp0B63E8865B856CC302EE7CE9CFD039A2" Guid="*">
+                    <File Id="filCA020F4510A48BA5F83FABC8F6053026" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_ko.qm" />
+                </Component>
+                <Component Id="cmp7230359FB14B8D98A420E806ED71AE43" Guid="*">
+                    <File Id="fil1523367E6077A64482160E6B9DBF82E6" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_lv.qm" />
+                </Component>
+                <Component Id="cmpC0DC860CBE93525EC4C3D9BCEF44309A" Guid="*">
+                    <File Id="filEA5EC9E3741E8BCC3EA7C0D00A8C5920" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_pl.qm" />
+                </Component>
+                <Component Id="cmp289565675F8E1D4CD87E0627509545DF" Guid="*">
+                    <File Id="fil3B572FC0E6630A08538EF0E0841B0433" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_ru.qm" />
+                </Component>
+                <Component Id="cmp34ABC78F1EFF6E4560CF196C9EF384B8" Guid="*">
+                    <File Id="fil1C755CE9F97B8B97FCAE078B7CE5C710" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_sk.qm" />
+                </Component>
+                <Component Id="cmp49E46CC5913046A79B04663EE450DAB1" Guid="*">
+                    <File Id="filD53ACE0C78FB0756269481A97DFE7F0D" KeyPath="yes" Source="$(var.HarvestPath)\translations\qt_uk.qm" />
+                </Component>
+                <Directory Id="dir9547552AF1C663D335D0C41A2A64C65D" Name="qtwebengine_locales">
+                    <Component Id="cmp24A1183C3E3D57F595DB798260B56008" Guid="*">
+                        <File Id="fil1D6B457C51EB151B5D4FC199856216EA" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\am.pak" />
+                    </Component>
+                    <Component Id="cmp6218E7C44C855718F381F46CEA46DE1E" Guid="*">
+                        <File Id="filF64E899C3E7768B34755A02C56422D59" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ar.pak" />
+                    </Component>
+                    <Component Id="cmpEDEA11EC116C4D23EAB6F1FA38519A71" Guid="*">
+                        <File Id="fil9F185F03BB7BBADEC72BDA9BB765E8F8" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\bg.pak" />
+                    </Component>
+                    <Component Id="cmpF32C0A8125F613E9C45A6C365707EAE0" Guid="*">
+                        <File Id="fil828DEF796D6690F7E9F46B35D5F985D6" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\bn.pak" />
+                    </Component>
+                    <Component Id="cmp25B2512182D85DFEE33A1E52AC17E17B" Guid="*">
+                        <File Id="filD0DE0FD94ED5DBC5BEFC1758C35BBC43" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ca.pak" />
+                    </Component>
+                    <Component Id="cmp079D5A4C6B6E86EE152FC30AB5581640" Guid="*">
+                        <File Id="fil9C317809A02730FE3BCFF9943A054490" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\cs.pak" />
+                    </Component>
+                    <Component Id="cmp2039D60C2F3A15C8D27A2CE4443944AD" Guid="*">
+                        <File Id="filC0321E5F971792EB108A430B1BBC72A5" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\da.pak" />
+                    </Component>
+                    <Component Id="cmp0AFF85D2F8992F94C4DA3E9D10483909" Guid="*">
+                        <File Id="fil3A8E103298B51FDA17BC120FB1FF2644" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\de.pak" />
+                    </Component>
+                    <Component Id="cmp08EE3D179D36C5D530BF9858A09C7B90" Guid="*">
+                        <File Id="fil4B3DDAE67C336DF5D524015BFA618E58" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\el.pak" />
+                    </Component>
+                    <Component Id="cmpE4463CB4AC984476FBF704701550E600" Guid="*">
+                        <File Id="fil93009DF94BF236B947594EA85D9F1B07" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\en-GB.pak" />
+                    </Component>
+                    <Component Id="cmp95004204E380692907D9B8A8B15F0679" Guid="*">
+                        <File Id="filC676675ED546E4D9F9F7203FBBE3D961" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\en-US.pak" />
+                    </Component>
+                    <Component Id="cmpF21F7BD5E00121BDE94C19945A90CE72" Guid="*">
+                        <File Id="fil397EFC6010E0653E07B7ECE5809CB6E7" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\es-419.pak" />
+                    </Component>
+                    <Component Id="cmp7E40B7B1ED00EAC3789B7D7E0FCE0155" Guid="*">
+                        <File Id="fil4A996C28D8A1C23864820C624E27AABE" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\es.pak" />
+                    </Component>
+                    <Component Id="cmp026B15D324CD9F02D901E622C86A2499" Guid="*">
+                        <File Id="filBF25EED618910ED05204076E4A775050" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\et.pak" />
+                    </Component>
+                    <Component Id="cmp1AB6585EF2686B5B8FECCB5AD35C8A63" Guid="*">
+                        <File Id="fil6C08422A3810240964D291B311D3E028" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\fa.pak" />
+                    </Component>
+                    <Component Id="cmp0EE635227A5CE2F80DA6C59343A280E0" Guid="*">
+                        <File Id="filD6A42D6C2CA6EC204107C4007A1B794D" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\fi.pak" />
+                    </Component>
+                    <Component Id="cmp5682C97DDA582B3D3A35A10154FEAAFB" Guid="*">
+                        <File Id="fil5BEEA94BCDD0127F257906C8275E5273" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\fil.pak" />
+                    </Component>
+                    <Component Id="cmp01EC5EA128D9F382A54282FD7B1D46EB" Guid="*">
+                        <File Id="fil3D1394046ABCBB343D805654CC1C6FE2" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\fr.pak" />
+                    </Component>
+                    <Component Id="cmp438F2C5EFD840124A5F8EE3C24C8DBB1" Guid="*">
+                        <File Id="fil4A59E1D61FF0C9F0C3792236B1DDC797" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\gu.pak" />
+                    </Component>
+                    <Component Id="cmp29900366E3A532192A5384B3DC6C3335" Guid="*">
+                        <File Id="fil7C5E960C546495D4A95123ED2E6C5316" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\he.pak" />
+                    </Component>
+                    <Component Id="cmp0E154357BDB8C9D9D515F166C2BDD19D" Guid="*">
+                        <File Id="fil22CE236ED90D8C8B62769A317257F636" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\hi.pak" />
+                    </Component>
+                    <Component Id="cmp3D67527C697EE379AF27ABDC23371C41" Guid="*">
+                        <File Id="fil8C3C590F37F8F73039726052EF207C8A" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\hr.pak" />
+                    </Component>
+                    <Component Id="cmpB8EC9AC5A8F06F2B661DACCC66F53300" Guid="*">
+                        <File Id="filF27937758B85D68DB776CEABFBC2D23D" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\hu.pak" />
+                    </Component>
+                    <Component Id="cmp33D447E3FA19601957C9B5B02A036170" Guid="*">
+                        <File Id="filA2DB609BCA373873D17B5724ACA60F76" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\id.pak" />
+                    </Component>
+                    <Component Id="cmp7E1F5E3890AC387302699FB2D051CB80" Guid="*">
+                        <File Id="fil9F5C3D0085E038336252959BBBD1669E" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\it.pak" />
+                    </Component>
+                    <Component Id="cmp904C0A1C0B1598BE9A7BBE76AD369249" Guid="*">
+                        <File Id="filD83E9154F97BB4B12DFBB20C882C22D0" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ja.pak" />
+                    </Component>
+                    <Component Id="cmpC0A6BAF64DDA025C6F3A44D3B024F62C" Guid="*">
+                        <File Id="filE8E587DE1872B40A581867C89D79EC6A" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\kn.pak" />
+                    </Component>
+                    <Component Id="cmp39282DEA6221E20CC30FCBC9EC4DCFE8" Guid="*">
+                        <File Id="filE1C08CD6D2548053CED1CF8897192946" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ko.pak" />
+                    </Component>
+                    <Component Id="cmp5DA7E239A3812F98DB9CF1E2FB572D9C" Guid="*">
+                        <File Id="fil44D878D41CF41485049A4FB2061C4BD7" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\lt.pak" />
+                    </Component>
+                    <Component Id="cmp4495B1DA3C92B15F2B0EDFB10CA1845C" Guid="*">
+                        <File Id="fil404EE6038F8B73DA0E3F6628212C942F" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\lv.pak" />
+                    </Component>
+                    <Component Id="cmp08B7F1F90033A606811BAC43E7EC2F84" Guid="*">
+                        <File Id="filCC65A0100A019C69804566F242881FD4" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ml.pak" />
+                    </Component>
+                    <Component Id="cmpCFC8A796E477B475F6F619233EC4C4D5" Guid="*">
+                        <File Id="fil336D5FB4C3F9809840B40FA9DFCFD757" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\mr.pak" />
+                    </Component>
+                    <Component Id="cmpC79C4CC3DFCA1BAC62A1246C68D52199" Guid="*">
+                        <File Id="filE69AA0E898B3CB72455A234B2B761463" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ms.pak" />
+                    </Component>
+                    <Component Id="cmp71E57C1CA05536D745E8048E7B536D17" Guid="*">
+                        <File Id="filA3427BE93BE382CE30724CDC62B5C12D" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\nb.pak" />
+                    </Component>
+                    <Component Id="cmp3EE50FBD8C9683BCA303DFD48295B2D1" Guid="*">
+                        <File Id="fil6EF56081C054D0B89583D04A0AFA7106" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\nl.pak" />
+                    </Component>
+                    <Component Id="cmp0AFC93AA98B15D6EA2D3A8F32CB3B4E5" Guid="*">
+                        <File Id="fil608B64C51F708E63715072AD608A3A03" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\pl.pak" />
+                    </Component>
+                    <Component Id="cmpDFD69CF45EE3D1C7BF9438A1447BD106" Guid="*">
+                        <File Id="fil0E879B772E0D6405EA112740E04610A5" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\pt-BR.pak" />
+                    </Component>
+                    <Component Id="cmp68A641AC3B3F5FD3A7DBD7BA1EF2E67A" Guid="*">
+                        <File Id="filDF6B80D4B8DAD78EFAF854DCAA322AC9" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\pt-PT.pak" />
+                    </Component>
+                    <Component Id="cmp01690BB39D6E49F901949DB82CB9B031" Guid="*">
+                        <File Id="fil0889CE37F747C55CB946544FE6DC7641" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ro.pak" />
+                    </Component>
+                    <Component Id="cmp0379541D9D6773E150C95E946502EA56" Guid="*">
+                        <File Id="fil0C227E726347B4016CD8BB4299646FE7" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ru.pak" />
+                    </Component>
+                    <Component Id="cmp6EB720130C59DAD45A472C7C0FC83127" Guid="*">
+                        <File Id="filFB3EC6D08A70FA49D69AA9B6CDAEBF54" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\sk.pak" />
+                    </Component>
+                    <Component Id="cmp6F39D44464020F1FA0D017EC563315D0" Guid="*">
+                        <File Id="fil0DF8A1334B89C9F174DF4E07D894C717" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\sl.pak" />
+                    </Component>
+                    <Component Id="cmpC0F45AA732659FA8DB047DA08F7030F8" Guid="*">
+                        <File Id="fil05B9B385A3FE722EE98DD30A1E5F2227" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\sr.pak" />
+                    </Component>
+                    <Component Id="cmp27CE59567D966AA67BD38AF240F3C246" Guid="*">
+                        <File Id="filCA5EC447731B3D00E4F787A5639569DA" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\sv.pak" />
+                    </Component>
+                    <Component Id="cmp8F9D2EDA2BD2F45C8E9249E9278EFCB2" Guid="*">
+                        <File Id="fil9AE59126F8123B72977F114E35FB172B" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\sw.pak" />
+                    </Component>
+                    <Component Id="cmp768A03B480B508F4C73CB8E0BA94B9E1" Guid="*">
+                        <File Id="fil1D55B08B05223524F86AD4D9D595BEC6" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\ta.pak" />
+                    </Component>
+                    <Component Id="cmpAB7CD3FC310ACC7951FDC3C5701E8DC7" Guid="*">
+                        <File Id="filF9E39A050F67FF6252D2AB10E167CBF8" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\te.pak" />
+                    </Component>
+                    <Component Id="cmp07A3F6606C56C6E448A04517EAEF6766" Guid="*">
+                        <File Id="filC6E328820B27124CDA51082DFA08A3B6" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\th.pak" />
+                    </Component>
+                    <Component Id="cmpC8BFB27E4C9CB8BFF600E51C0ED3A31C" Guid="*">
+                        <File Id="fil975088885EC63B52D784EFCC9D12EC1B" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\tr.pak" />
+                    </Component>
+                    <Component Id="cmp87CAD6D56C33ADA7AFAD54D9016E7B45" Guid="*">
+                        <File Id="filC606C432CDBF1E16B704E453C763F64A" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\uk.pak" />
+                    </Component>
+                    <Component Id="cmpF02B6D6523D552998FC70FF411447AAA" Guid="*">
+                        <File Id="filD09A83A09287FA4BEA6B43949E62C7A5" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\vi.pak" />
+                    </Component>
+                    <Component Id="cmp5E19DC57423F5508A9DA3F2B278C3A1C" Guid="*">
+                        <File Id="fil181C331CB94290E58A08389D66685393" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\zh-CN.pak" />
+                    </Component>
+                    <Component Id="cmp064EEF982959065F609DC0152C67C6BF" Guid="*">
+                        <File Id="fil1725D5EE4BB0E5B68A603BF183C6724A" KeyPath="yes" Source="$(var.HarvestPath)\translations\qtwebengine_locales\zh-TW.pak" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="HeatGenerated">
+            <ComponentRef Id="cmpBA259EE77B6D453D6E4DB740569D182C" />
+            <ComponentRef Id="cmp4C33E97D9FDE050288E75291B5A4DF20" />
+            <ComponentRef Id="cmpE36391A006C8071C3DAB2854BA1D031F" />
+            <ComponentRef Id="cmp92EA23EC7D068141FD686E0C0F71E64C" />
+            <ComponentRef Id="cmp3789A0B6EA35FEF5921909731B4496BC" />
+            <ComponentRef Id="cmp6FAEA3F9F61E5AB0CE462E42B572D724" />
+            <ComponentRef Id="cmp9CFEE34E3A162AB05264E8B756EC1DEC" />
+            <ComponentRef Id="cmp0AACD7B49B88FF405D706EB5471D1237" />
+            <ComponentRef Id="cmpD174826C0ED93EBF1BF03DA4FC5B66C9" />
+            <ComponentRef Id="cmpED1C29F8914A4A53211F619E1872ECC1" />
+            <ComponentRef Id="cmpA20718F4A0EE0FBBC36D57F3E5F5FFEA" />
+            <ComponentRef Id="cmp8C8A3AF5CDB5F97F27E3139ACC3EB0AA" />
+            <ComponentRef Id="cmp7EC42EDF377FE192A700CC18765A056F" />
+            <ComponentRef Id="cmpD4AD31229AA37D2E7A3F52788C9A9E65" />
+            <ComponentRef Id="cmpBFE3655736E41D50E712591DC1147FC5" />
+            <ComponentRef Id="cmp3372EBEC3E25927C88F92158F815B79E" />
+            <ComponentRef Id="cmpABB9BC54D1E943DFD6E88C3E7AC5BEFF" />
+            <ComponentRef Id="cmpDAB7BC782DF697C4ED8249DF723B1A45" />
+            <ComponentRef Id="cmp56C822215169F0B6D1522325BA8C4C24" />
+            <ComponentRef Id="cmpB1A9D672E1461549CA6A6F0A20B454AC" />
+            <ComponentRef Id="cmpD46588C094E71CAD15BAEB861E6BC88C" />
+            <ComponentRef Id="cmp9C3E941A1BD80A2EDD2D715065858082" />
+            <ComponentRef Id="cmp0B5E4E546DC40913954F95F5E7DAA502" />
+            <ComponentRef Id="cmpF8B7388C32A8EBC2F119FEBC975A65FB" />
+            <ComponentRef Id="cmp2B2C120D18DC2BC4ADC575C3847F733E" />
+            <ComponentRef Id="cmpFF84822641B26457C980A534E7460FD8" />
+            <ComponentRef Id="cmpB1753E9F212516EA210DC5D905536869" />
+            <ComponentRef Id="cmp3E78C23573D3F03CA33A1D3F02559F86" />
+            <ComponentRef Id="cmp5A470D201E319A780FFC3EB59B1AF1AE" />
+            <ComponentRef Id="cmpFACC66D02943E1883B1C6F2461C79750" />
+            <ComponentRef Id="cmpE30FACB43AD2D14B5FEA346E4210D8FD" />
+            <ComponentRef Id="cmpE0C20B0AB9E584CF7364F06BFABCB044" />
+            <ComponentRef Id="cmp51FB5733B3C7726A8051520F3320011E" />
+            <ComponentRef Id="cmp727F65AE2152795AE04EBB26A506FA0F" />
+            <ComponentRef Id="cmp6A013AE4FDB87EEAF94000152B3837AF" />
+            <ComponentRef Id="cmpACA7ED5453D1E5AED743FC46C8175378" />
+            <ComponentRef Id="cmp46736DD2209095065A4C6E26D9851CF8" />
+            <ComponentRef Id="cmp1E8C3088230E19E7CF583AB13EA514EC" />
+            <ComponentRef Id="cmp3455928D8A0C69222466E8170A6B1A33" />
+            <ComponentRef Id="cmpC8EA4BC57BDDA69462DD489A58F0F639" />
+            <ComponentRef Id="cmpD21BF951417C481F0C30EFC37FB90977" />
+            <ComponentRef Id="cmpA25107749893061BB83EB0ECD9628B54" />
+            <ComponentRef Id="cmp907002B489B54EAA79A74D1DA8E9C329" />
+            <ComponentRef Id="cmp93AA482AB203D00D124D9A02519399AE" />
+            <ComponentRef Id="cmpD773A839CCD184CC5B7A1DB4E4CA9897" />
+            <ComponentRef Id="cmpC320569E537CABD3BF9C70EC951FDBEE" />
+            <ComponentRef Id="cmpAC09F2C2DAE3BF129D21DC3C26C85646" />
+            <ComponentRef Id="cmpB197DBCD13C46984D35981C0A6ABDF99" />
+            <ComponentRef Id="cmpC6B73D1F19418891AC7DCD9D2E46E5A8" />
+            <ComponentRef Id="cmp503334D9D086631213738CA51F72AB17" />
+            <ComponentRef Id="cmp58CB18ADCC395B8B6C788807F72B5493" />
+            <ComponentRef Id="cmp594498C85C32344E5209B829879F4620" />
+            <ComponentRef Id="cmp8B26405D990CCAF31A0D013C7BCFE8AA" />
+            <ComponentRef Id="cmp7FBA612DE6E6486C90AA901C154BD294" />
+            <ComponentRef Id="cmp21419E99DF87022FDBECFCD84419367D" />
+            <ComponentRef Id="cmp9D0E744EB5812854A69347B7CF1ABA5E" />
+            <ComponentRef Id="cmp184189344D489A3CFE3BA559FB3685DA" />
+            <ComponentRef Id="cmp8E59578710AF17C3E09ED80EF4081743" />
+            <ComponentRef Id="cmp4C4526FF93566BE394A369E0AACB7CC1" />
+            <ComponentRef Id="cmpDD149C65BDEAAC373643E2DF78AB9356" />
+            <ComponentRef Id="cmpED250557317CC7C52B89E9C4DEE3CAAE" />
+            <ComponentRef Id="cmp39F2FE4C059E73C6C3420866D38CE7FB" />
+            <ComponentRef Id="cmp926ED761A67F5653EAB91E32FC5CFD78" />
+            <ComponentRef Id="cmpE1E41F8959B87130AA1F4681ED8B4D0C" />
+            <ComponentRef Id="cmp16743C0C600977B589DBD69AF8FDED3E" />
+            <ComponentRef Id="cmp40487D2F0CF92E30BE770BDD274CECA9" />
+            <ComponentRef Id="cmpBDA3764E1634B79D3320C86C4B6661E0" />
+            <ComponentRef Id="cmp35DB643A04BCC6D058D1C57589288884" />
+            <ComponentRef Id="cmp30605AE95DADF836738B4520EAF88A1D" />
+            <ComponentRef Id="cmp6852E8A72539614B269FA4922C2AC451" />
+            <ComponentRef Id="cmpDDF4D378849F04BE4CCFBD591032B702" />
+            <ComponentRef Id="cmp6FA6FE193E88F90BBAD8C8D5C066C872" />
+            <ComponentRef Id="cmp619D7843C711113F45FBB504BE76C1A9" />
+            <ComponentRef Id="cmpCD1B1A594AE229457C2E1601CCC04D29" />
+            <ComponentRef Id="cmp792BF6E4B30A83035A405680D2FEF400" />
+            <ComponentRef Id="cmpD35EE78D956EC2F62F798E466ABC8A5A" />
+            <ComponentRef Id="cmpDADC5F4E1A39F39526227E161F3F52AC" />
+            <ComponentRef Id="cmp36F21CE18C8AEF34CBAEDABD94C45266" />
+            <ComponentRef Id="cmpDF31DA915C5ED0E420EA145630C1C47B" />
+            <ComponentRef Id="cmp4A2F8AF2B7D2606EB0A8746018B6FEA6" />
+            <ComponentRef Id="cmpDCC5B83EC02FEBDA99EFDE9F1B1186C5" />
+            <ComponentRef Id="cmp3B6E35D72B71D9233F7A5E8CC1A03DC2" />
+            <ComponentRef Id="cmp2114360C15FBB81F8563BDA533EB8DAA" />
+            <ComponentRef Id="cmpD3EAE6B8403D6F17634171C3C8929B23" />
+            <ComponentRef Id="cmp32371504BBF11A98DEB92D0102953261" />
+            <ComponentRef Id="cmp17C94B45C93F443F69166731325E51E2" />
+            <ComponentRef Id="cmpD1A89ABC22E388B2B148ECC38F73A147" />
+            <ComponentRef Id="cmpA861AAB391313037D65BD7B3359910DE" />
+            <ComponentRef Id="cmp596D8A3EBD6F20758B013FE785830C72" />
+            <ComponentRef Id="cmpC8A04498DDBD5F8C2836E4C2328EC208" />
+            <ComponentRef Id="cmp3780AC3E497FB63F76DBCB5A52B490FD" />
+            <ComponentRef Id="cmp22BE810E88D6D37D2C8996FA05E59A69" />
+            <ComponentRef Id="cmp6B950B5F61CAD51F0D7954849310B858" />
+            <ComponentRef Id="cmp880043FBCFE7920A73E8539DA6A0475A" />
+            <ComponentRef Id="cmpD59ADC25714EFA2575755F9DA61788FF" />
+            <ComponentRef Id="cmp5D794B933C3D55B8763E08A60FBA8155" />
+            <ComponentRef Id="cmpB68B10455B70A4F510D415950E1E1E32" />
+            <ComponentRef Id="cmp5FE6591136735F0B093237C490F14B98" />
+            <ComponentRef Id="cmpDEB21637ABE7880B93AB2AEBA2C88BD5" />
+            <ComponentRef Id="cmp86F1EE873126C04FECE0ED209C01C6AC" />
+            <ComponentRef Id="cmp9930DBE327E48824BDF22CDDF407DA5A" />
+            <ComponentRef Id="cmp17F3455C5AE1244B9A9FB0B1B62DBF4C" />
+            <ComponentRef Id="cmp49096E3CBE91D8D8ECC81C448BAEF070" />
+            <ComponentRef Id="cmp8A13CACD629C1A613F052CCFB99F2D36" />
+            <ComponentRef Id="cmpDB8EFFE69F18EBB8E749CB4D0B1ADA0F" />
+            <ComponentRef Id="cmp638555492CE17542524F2FEAC086F469" />
+            <ComponentRef Id="cmp4CB15BEEF856DD9BD0263C9FCFFCB3B3" />
+            <ComponentRef Id="cmp7897E6D39AFC5AF65F9C4F0C766E0073" />
+            <ComponentRef Id="cmp8711A48C2F37596B02A54EAB242272A4" />
+            <ComponentRef Id="cmp9C70305094B36207A88829384859477C" />
+            <ComponentRef Id="cmp959A10CF41CA13F3870D0D12C35433F3" />
+            <ComponentRef Id="cmp7AD1C86E0158D5CB0A75A74105185FC6" />
+            <ComponentRef Id="cmpC5D97B0F12C95C0615A28CEA83CCC340" />
+            <ComponentRef Id="cmp52F8CCDE1BC3E2CD539D3790D70C3CB4" />
+            <ComponentRef Id="cmp49782A2C0629BF699A08E350842D3DEB" />
+            <ComponentRef Id="cmp4675C49770B5FF3A8019BE5784F19749" />
+            <ComponentRef Id="cmp297B7C5BD00FD12C793CD064C608B532" />
+            <ComponentRef Id="cmp0C58C66E64785FFB7B1C58FDDA40079E" />
+            <ComponentRef Id="cmpBC4B4FFE67FBF33BC5660FD1CAF11F47" />
+            <ComponentRef Id="cmp800CB6250B37C0297CDC9B5F9975AE16" />
+            <ComponentRef Id="cmp6C8FCC4DD64BF5408C09142A4DD394A8" />
+            <ComponentRef Id="cmpA72308727945B9EBB0EAA526DB929294" />
+            <ComponentRef Id="cmp41097746DDCC7A0731DE03EE255669D4" />
+            <ComponentRef Id="cmp4EBF75895BB045FCE0B98981A8C6E070" />
+            <ComponentRef Id="cmp74AC466D130EB75D6C029800E47AC9DB" />
+            <ComponentRef Id="cmpF3D48E1D8C4C0A0AF9AECDD5FA9F8BD5" />
+            <ComponentRef Id="cmp7AA58B98C67FD72D14FFAF1A1687D32B" />
+            <ComponentRef Id="cmpC9E5806FA9ABD38FAB23D5181C3A155B" />
+            <ComponentRef Id="cmpF88EA76C675F10FB34A23A8F6C2D8F8C" />
+            <ComponentRef Id="cmpCBEFAF24DF8D193D52BBD230C8FF965B" />
+            <ComponentRef Id="cmpDFB8DC6E65740BBB1FB06D1B09863B6B" />
+            <ComponentRef Id="cmpB478D1EE66F7F9521CA0D8981EC82344" />
+            <ComponentRef Id="cmpED7D4C12FCC37422DEDECC8EF57B2BFB" />
+            <ComponentRef Id="cmp46E8D2DE92564C887FBC1140BCBFBDEC" />
+            <ComponentRef Id="cmp8CEE693C69C29B83AE993645A1BFD935" />
+            <ComponentRef Id="cmp2B06896B2BF89974A938858E1465ECEF" />
+            <ComponentRef Id="cmpE5FD9E435861726C9111E73DCDF1F143" />
+            <ComponentRef Id="cmp4A2938F29B06193AFEDAE5DA2F5AB539" />
+            <ComponentRef Id="cmp4D285140B0FB0C433AD199B589005512" />
+            <ComponentRef Id="cmp16DC3081CC26327DED8F0881FD35091E" />
+            <ComponentRef Id="cmp59D82EC00E010F52E37B897882915960" />
+            <ComponentRef Id="cmp5F76CC7B322A7B17CF6E9BDAC8D7B5C5" />
+            <ComponentRef Id="cmp9EF4ACA1DB50E21A7F19E6067AA8D8B2" />
+            <ComponentRef Id="cmpE6718D42EF8EC8D8762BCE811A589388" />
+            <ComponentRef Id="cmpC1C22CDE1D9C71C85213BD063B9C5F89" />
+            <ComponentRef Id="cmpFF10F3ABB26E958B8B386939D4F21108" />
+            <ComponentRef Id="cmp16CFB30EE857C66775E5CFF1B44CE53E" />
+            <ComponentRef Id="cmpDC76284DC30F4C606F95D596CFEB8BDF" />
+            <ComponentRef Id="cmp2D9EE7C663300F7C8E70CC1620B4BA0E" />
+            <ComponentRef Id="cmpA65818CD26C22E7E328235E6A2594D3C" />
+            <ComponentRef Id="cmp91DB4048CE2F6D9B524D96BEA8A39105" />
+            <ComponentRef Id="cmp6DCF2DF71957611A44EEFA022EC3C83E" />
+            <ComponentRef Id="cmp27AF06747810E628D055210CCA1BD616" />
+            <ComponentRef Id="cmpE777D74F134334A80F5323AF4F925643" />
+            <ComponentRef Id="cmp50BF185C72AEC801D83FE9EDFF270455" />
+            <ComponentRef Id="cmpA4EFDAAD789753DD23AF09B2AF53E90A" />
+            <ComponentRef Id="cmpF391B2E93E3AC11E9CA12E81BACFEDF5" />
+            <ComponentRef Id="cmp3819CC2096AEF977340D6F070D8F0527" />
+            <ComponentRef Id="cmp8A1E4C9FE866E93446BD6299449E53F4" />
+            <ComponentRef Id="cmpE3275D0C0AB41FFA5A193AF453546BEF" />
+            <ComponentRef Id="cmp7BD1C7AB4D68D652CD4EFB21CE19D902" />
+            <ComponentRef Id="cmp2F2B2570FA3943A00CA5B7F64150D1A8" />
+            <ComponentRef Id="cmp9C706A124AF41C2913BCFFEF88273692" />
+            <ComponentRef Id="cmp282003BC64AAE7EBFBDFB0295311CB5F" />
+            <ComponentRef Id="cmpB9C8CD9D924399BE5D33B8D89DCAE1EB" />
+            <ComponentRef Id="cmpB53666918EB7592C089B135EEE438615" />
+            <ComponentRef Id="cmpDCB9F0EFD0388D17CB7066CB6AE2672E" />
+            <ComponentRef Id="cmp7ABD149B1636E776346112B7D0F4D1CE" />
+            <ComponentRef Id="cmp2EAECB33D18C9BA43AED9A77090273B9" />
+            <ComponentRef Id="cmp1B7D33ADEE12A017FD455A759A74E532" />
+            <ComponentRef Id="cmpA2FE75586A7CCBC341C4FB3DEB0A6CB4" />
+            <ComponentRef Id="cmp7833328F2B94039C4B34A64A66ED4408" />
+            <ComponentRef Id="cmpC25445BAB873C893070509DD7A14B73B" />
+            <ComponentRef Id="cmpAA1F78F7EF33E4B20BDBE9415DE4A114" />
+            <ComponentRef Id="cmpE432BB9A03B50B81F76CBDB5E20695EC" />
+            <ComponentRef Id="cmp00D46020362B0A6C6497EB1E3F2B9986" />
+            <ComponentRef Id="cmp6889BD1B61EACE0E0630851302EDF845" />
+            <ComponentRef Id="cmp47F09581EA91AA09DFDAE8121F2B90C8" />
+            <ComponentRef Id="cmpDFF434C89D4C9A8B8A3414241C3E6246" />
+            <ComponentRef Id="cmpBC385B906096443F6DC4C3767061BBDE" />
+            <ComponentRef Id="cmp0D9DB7370D38AB21D14A00643A82BD76" />
+            <ComponentRef Id="cmpBA8F288120669ACAF105E5A14D6C7641" />
+            <ComponentRef Id="cmpAB7165AAE7812B32DE836DE9D752CE15" />
+            <ComponentRef Id="cmpAED73B0152F25F518488AD1C4CA8B6DA" />
+            <ComponentRef Id="cmpFC9073088F9C705F0DD59FF0D6CD9635" />
+            <ComponentRef Id="cmp8494351EA7DAA1DC026E4F5B02D21572" />
+            <ComponentRef Id="cmpD9C58E2B9527653C8E3DD3426D43F77B" />
+            <ComponentRef Id="cmp2B46EB4F8C6030705B98FD0D3B4E894E" />
+            <ComponentRef Id="cmp928AC4D8573342D8E28D1002BC5C55C3" />
+            <ComponentRef Id="cmpBA7634D5AD3249D667CE516CD6E742A4" />
+            <ComponentRef Id="cmp541D963AFEA1EF2FDBCE4C13185D7AA7" />
+            <ComponentRef Id="cmp117D49F717160D348E2058725167ED28" />
+            <ComponentRef Id="cmp8C23D508E060D545B33FA1AAE609663D" />
+            <ComponentRef Id="cmpB66C0D7389B913E438D93C6A3A571B47" />
+            <ComponentRef Id="cmp23398EAAFB16BFA56F4F5C210DEF4C7E" />
+            <ComponentRef Id="cmpE9582353D1D4B653DA9D120BF1CE9F70" />
+            <ComponentRef Id="cmpEFB5E458EB368DCC8CFEF314922A01A5" />
+            <ComponentRef Id="cmpF8410BCA5ADC6DCE1FF7A9B730D46B4E" />
+            <ComponentRef Id="cmp0B63E8865B856CC302EE7CE9CFD039A2" />
+            <ComponentRef Id="cmp7230359FB14B8D98A420E806ED71AE43" />
+            <ComponentRef Id="cmpC0DC860CBE93525EC4C3D9BCEF44309A" />
+            <ComponentRef Id="cmp289565675F8E1D4CD87E0627509545DF" />
+            <ComponentRef Id="cmp34ABC78F1EFF6E4560CF196C9EF384B8" />
+            <ComponentRef Id="cmp49E46CC5913046A79B04663EE450DAB1" />
+            <ComponentRef Id="cmp24A1183C3E3D57F595DB798260B56008" />
+            <ComponentRef Id="cmp6218E7C44C855718F381F46CEA46DE1E" />
+            <ComponentRef Id="cmpEDEA11EC116C4D23EAB6F1FA38519A71" />
+            <ComponentRef Id="cmpF32C0A8125F613E9C45A6C365707EAE0" />
+            <ComponentRef Id="cmp25B2512182D85DFEE33A1E52AC17E17B" />
+            <ComponentRef Id="cmp079D5A4C6B6E86EE152FC30AB5581640" />
+            <ComponentRef Id="cmp2039D60C2F3A15C8D27A2CE4443944AD" />
+            <ComponentRef Id="cmp0AFF85D2F8992F94C4DA3E9D10483909" />
+            <ComponentRef Id="cmp08EE3D179D36C5D530BF9858A09C7B90" />
+            <ComponentRef Id="cmpE4463CB4AC984476FBF704701550E600" />
+            <ComponentRef Id="cmp95004204E380692907D9B8A8B15F0679" />
+            <ComponentRef Id="cmpF21F7BD5E00121BDE94C19945A90CE72" />
+            <ComponentRef Id="cmp7E40B7B1ED00EAC3789B7D7E0FCE0155" />
+            <ComponentRef Id="cmp026B15D324CD9F02D901E622C86A2499" />
+            <ComponentRef Id="cmp1AB6585EF2686B5B8FECCB5AD35C8A63" />
+            <ComponentRef Id="cmp0EE635227A5CE2F80DA6C59343A280E0" />
+            <ComponentRef Id="cmp5682C97DDA582B3D3A35A10154FEAAFB" />
+            <ComponentRef Id="cmp01EC5EA128D9F382A54282FD7B1D46EB" />
+            <ComponentRef Id="cmp438F2C5EFD840124A5F8EE3C24C8DBB1" />
+            <ComponentRef Id="cmp29900366E3A532192A5384B3DC6C3335" />
+            <ComponentRef Id="cmp0E154357BDB8C9D9D515F166C2BDD19D" />
+            <ComponentRef Id="cmp3D67527C697EE379AF27ABDC23371C41" />
+            <ComponentRef Id="cmpB8EC9AC5A8F06F2B661DACCC66F53300" />
+            <ComponentRef Id="cmp33D447E3FA19601957C9B5B02A036170" />
+            <ComponentRef Id="cmp7E1F5E3890AC387302699FB2D051CB80" />
+            <ComponentRef Id="cmp904C0A1C0B1598BE9A7BBE76AD369249" />
+            <ComponentRef Id="cmpC0A6BAF64DDA025C6F3A44D3B024F62C" />
+            <ComponentRef Id="cmp39282DEA6221E20CC30FCBC9EC4DCFE8" />
+            <ComponentRef Id="cmp5DA7E239A3812F98DB9CF1E2FB572D9C" />
+            <ComponentRef Id="cmp4495B1DA3C92B15F2B0EDFB10CA1845C" />
+            <ComponentRef Id="cmp08B7F1F90033A606811BAC43E7EC2F84" />
+            <ComponentRef Id="cmpCFC8A796E477B475F6F619233EC4C4D5" />
+            <ComponentRef Id="cmpC79C4CC3DFCA1BAC62A1246C68D52199" />
+            <ComponentRef Id="cmp71E57C1CA05536D745E8048E7B536D17" />
+            <ComponentRef Id="cmp3EE50FBD8C9683BCA303DFD48295B2D1" />
+            <ComponentRef Id="cmp0AFC93AA98B15D6EA2D3A8F32CB3B4E5" />
+            <ComponentRef Id="cmpDFD69CF45EE3D1C7BF9438A1447BD106" />
+            <ComponentRef Id="cmp68A641AC3B3F5FD3A7DBD7BA1EF2E67A" />
+            <ComponentRef Id="cmp01690BB39D6E49F901949DB82CB9B031" />
+            <ComponentRef Id="cmp0379541D9D6773E150C95E946502EA56" />
+            <ComponentRef Id="cmp6EB720130C59DAD45A472C7C0FC83127" />
+            <ComponentRef Id="cmp6F39D44464020F1FA0D017EC563315D0" />
+            <ComponentRef Id="cmpC0F45AA732659FA8DB047DA08F7030F8" />
+            <ComponentRef Id="cmp27CE59567D966AA67BD38AF240F3C246" />
+            <ComponentRef Id="cmp8F9D2EDA2BD2F45C8E9249E9278EFCB2" />
+            <ComponentRef Id="cmp768A03B480B508F4C73CB8E0BA94B9E1" />
+            <ComponentRef Id="cmpAB7CD3FC310ACC7951FDC3C5701E8DC7" />
+            <ComponentRef Id="cmp07A3F6606C56C6E448A04517EAEF6766" />
+            <ComponentRef Id="cmpC8BFB27E4C9CB8BFF600E51C0ED3A31C" />
+            <ComponentRef Id="cmp87CAD6D56C33ADA7AFAD54D9016E7B45" />
+            <ComponentRef Id="cmpF02B6D6523D552998FC70FF411447AAA" />
+            <ComponentRef Id="cmp5E19DC57423F5508A9DA3F2B278C3A1C" />
+            <ComponentRef Id="cmp064EEF982959065F609DC0152C67C6BF" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>
