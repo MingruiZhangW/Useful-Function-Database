@@ -34,6 +34,8 @@ Avoid push_back and prefer emplace_back instead (using move semanic, and For pos
 ```reserve()```when you use a vector to avoid a lot of resize.
 > **Different Cast In C++**
 - [Casts](https://github.com/MingruiZhangW/Useful-Function-Database/tree/master/Differetn_cast_in%20C%2B%2B)<br>
+> **Variadic Function**
+- [Variadic](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Variadic%20function/Variadic_function.md)<br>
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
 
