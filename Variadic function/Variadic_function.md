@@ -1,5 +1,5 @@
 
-Variadic function
+# Variadic function
 
 In mathematics and in computer programming, a variadic function is a function of indefinite arity, i.e., 
    -one which accepts a variable number of arguments. 
