@@ -1,7 +1,0 @@
-obj\Release\Components.wixobj
-obj\Release\Product.wixobj
-obj\Release\WelcomeLicenseNoCheckDlg.wixobj
-C:\Users\mzhang\Desktop\ring-project\client-windows\JamiInstaller\bin\Release\en-us\Jami.msi
-obj\Release\JamiInstaller.wixproj.BindContentsFileListen-us.txt
-obj\Release\JamiInstaller.wixproj.BindOutputsFileListen-us.txt
-obj\Release\JamiInstaller.wixproj.BindBuiltOutputsFileListen-us.txt
