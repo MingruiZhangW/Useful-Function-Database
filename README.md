@@ -73,6 +73,10 @@ fatal: Could not read from remote repository.
 - https://www.ssh.com/ssh/add <br>
 - https://stackoverflow.com/questions/44250002/how-to-solve-sign-and-send-pubkey-signing-failed-agent-refused-operation <br>
 
+### Git - update repo content
+- [Git pull (with rebase)](https://www.atlassian.com/git/tutorials/syncing/git-pull)<br>
+`git pull --rebase`
+
 # Debug
 
 ### GDB Breakpoint insert
