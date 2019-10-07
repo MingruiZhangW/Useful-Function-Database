@@ -17,5 +17,5 @@
 <?endif ?>
 ```
 
-**Wix Conditional Define**
+**Wix Conditional Define** <br>
 [In wix project](https://stackoverflow.com/questions/1688569/wix-howto-set-the-name-of-the-msi-output-file-dynamically)<br>
