@@ -65,5 +65,5 @@ ui->label->setPixmap(image);
 >[Usage](https://stackoverflow.com/questions/32476006/how-to-make-an-expandable-collapsable-section-widget-in-qt)<br>
 
 # QT - How can I hide/delete the “?” help button on the “title bar” of a Qt Dialog?
-`setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+`setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);`<br>
 https://stackoverflow.com/questions/81627/how-can-i-hide-delete-the-help-button-on-the-title-bar-of-a-qt-dialog`
