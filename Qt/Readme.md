@@ -63,3 +63,7 @@ ui->label->setPixmap(image);
 # QT QParallelAnimationGroup Class And Usage
 [QParallelAnimationGroup--a container for animations--starts all its animations when it is started itself, i.e., runs all animations in parallel. The animation group finishes when the longest lasting animation has finished.](https://doc.qt.io/qt-5/qparallelanimationgroup.html)<br>
 >[Usage](https://stackoverflow.com/questions/32476006/how-to-make-an-expandable-collapsable-section-widget-in-qt)<br>
+
+# QT - How can I hide/delete the “?” help button on the “title bar” of a Qt Dialog?
+`setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
+https://stackoverflow.com/questions/81627/how-can-i-hide-delete-the-help-button-on-the-title-bar-of-a-qt-dialog`
