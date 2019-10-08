@@ -77,6 +77,9 @@ fatal: Could not read from remote repository.
 - [Git pull (with rebase)](https://www.atlassian.com/git/tutorials/syncing/git-pull)<br>
 `git pull --rebase`
 
+### Git - Submodules
+- [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)<br>
+
 # Debug
 
 ### GDB Breakpoint insert
