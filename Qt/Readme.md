@@ -67,3 +67,21 @@ ui->label->setPixmap(image);
 # QT - How can I hide/delete the “?” help button on the “title bar” of a Qt Dialog?
 `setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);`<br>
 https://stackoverflow.com/questions/81627/how-can-i-hide-delete-the-help-button-on-the-title-bar-of-a-qt-dialog`
+
+# Qt: How do I handle the event of the user pressing the 'X' (close) button?
+```
+#include <QCloseEvent>
+void MainWindow::closeEvent (QCloseEvent *event)
+{
+    QMessageBox::StandardButton resBtn = QMessageBox::question( this, APP_NAME,
+                                                                tr("Are you sure?\n"),
+                                                                QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
+                                                                QMessageBox::Yes);
+    if (resBtn != QMessageBox::Yes) {
+        event->ignore();
+    } else {
+        event->accept();
+    }
+}
+```
+https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the-user-pressing-the-x-close-button
