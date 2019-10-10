@@ -28,3 +28,6 @@ In wix project file
 <HeatDirectory Directory="..\x64\Release" PreprocessorVariable="var.HarvestPath" OutputFile="Components.wxs" ComponentGroupName="HeatGenerated" DirectoryRefId="APPLICATIONFOLDER" AutogenerateGuids="true" ToolPath="$(WixToolPath)" SuppressFragments="true" SuppressRegistry="true" SuppressRootDirectory="true" Transforms="HarvestFilter.xslt" />
 ```
 https://stackoverflow.com/questions/44765707/how-to-exclude-files-in-wix-toolset
+
+**Wix Prebuild Harvesting**
+- [Enabling Harvest (Heat.exe) in a Wix Setup Project](https://www.codeproject.com/Articles/1107786/Enabling-Harvest-Heat-exe-in-a-Wix-Setup-Project)<br>
