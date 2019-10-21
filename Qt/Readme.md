@@ -25,7 +25,8 @@ ui->label->setPixmap(image);
 [BlockSignals](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/QT%20BlockSignal%20General%20Function.md)<br>
 
 ### QT Signal & SLot
-[How Signal & Slot Works](https://woboq.com/blog/how-qt-signals-slots-work.html)<br>
+> [How Signal & Slot Works](https://woboq.com/blog/how-qt-signals-slots-work.html)<br>
+> [Qt signals (QueuedConnection and DirectConnection)](https://stackoverflow.com/questions/15051553/qt-signals-queuedconnection-and-directconnection)<br>
 
 ### QT KeyBoard Event
 [KeyBoard Press Event](https://www.qtcentre.org/threads/693-Capture-a-keyboard-event)<br>
