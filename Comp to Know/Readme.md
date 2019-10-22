@@ -38,6 +38,8 @@ Avoid push_back and prefer emplace_back instead (using move semanic, and For pos
 - [Variadic](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Variadic%20function/Variadic_function.md)<br>
 > **Std::tuple**
 - [Tuple](https://en.cppreference.com/w/cpp/utility/tuple)<br>
+> **Shared_ptr**
+[Shared_ptr and circular reference](https://www.learncpp.com/cpp-tutorial/15-7-circular-dependency-issues-with-stdshared_ptr-and-stdweak_ptr/)<br>
 ### CMake List
 https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
 
