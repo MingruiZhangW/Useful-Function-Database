@@ -31,6 +31,9 @@ https://sethrobertson.github.io/GitFixUm/fixup.html#discard_all_unpushed
 
     If you want to save the commits on a new branch name, then run git branch newbranchname before doing the git reset.
 
+### Git Current Branch Name
+https://stackoverflow.com/questions/6245570/how-to-get-the-current-branch-name-in-git?rq=1
+
 ### Git Detached Head/Fetch Head
 https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit
 https://stackoverflow.com/questions/9237348/what-does-fetch-head-in-git-mean
