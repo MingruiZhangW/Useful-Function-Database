@@ -102,7 +102,11 @@ git submodule update --init.
 To also initialize, fetch and checkout any nested submodules, you can use the foolproof
 git submodule update --init --recursive.
 ```
-
+**Update Submodules From upstream**
+```
+git submodule update --remote,
+Git will go into your submodules and fetch and update for you.
+```
 # Debug
 
 ### GDB Breakpoint insert
