@@ -91,7 +91,16 @@ and
 git submodule update 
 to fetch all the data from that project and check out the appropriate commit listed in your superproject
 
-There is another way to do this which is a little simpler, however. If you pass --recurse-submodules to the git clone command, it will automatically initialize and update each submodule in the repository, including nested submodules if any of the submodules in the repository have submodules themselves.
+There is another way to do this which is a little simpler, 
+If you pass --recurse-submodules to the git clone command,
+it will automatically initialize and update each submodule in the repository,
+including nested submodules if any of the submodules in the repository have submodules themselves.
+
+If you already cloned the project and forgot --recurse-submodules,
+you can combine the git submodule init and git submodule update steps by running
+git submodule update --init.
+To also initialize, fetch and checkout any nested submodules, you can use the foolproof
+git submodule update --init --recursive.
 ```
 
 # Debug
