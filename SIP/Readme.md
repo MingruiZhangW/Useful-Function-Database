@@ -11,3 +11,9 @@
 > [Blind Call Transfer & Attended Call Transfer](https://help.masierotechgroup.com/hc/en-us/articles/115013090548-What-is-the-difference-between-blind-and-attended-transfer-)<br>
 
 - [SIP Voice-Mail, MWI(Message Waitting Indication)](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/sip_MWI.md)<br>
+
+```
+	char x[1024];
+	pjsip_msg_print(tdata->msg, x, 1024);
+	JAMI_ERR("Data: %s", x);
+```
