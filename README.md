@@ -83,6 +83,16 @@ fatal: Could not read from remote repository.
 
 ### Git - Submodules
 - [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)<br>
+```
+You must run two commands: 
+git submodule init 
+to initialize your local configuration file, 
+and 
+git submodule update 
+to fetch all the data from that project and check out the appropriate commit listed in your superproject
+
+There is another way to do this which is a little simpler, however. If you pass --recurse-submodules to the git clone command, it will automatically initialize and update each submodule in the repository, including nested submodules if any of the submodules in the repository have submodules themselves.
+```
 
 # Debug
 
