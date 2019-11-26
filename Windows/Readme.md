@@ -7,3 +7,9 @@
 - [Powershell Move Files](https://dotnet-helpers.com/powershell/how-to-move-files-from-one-location-to-another-location-using-powershell/)<br>
 - [Powershell Wait For Process](https://stackoverflow.com/questions/43226877/wait-for-batch-file-to-finish-process-in-powershell-before-executing-other-comma)<br>
 - [Powershell Find TEMP Folder](https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-find-the-temp-folder-path/)<br>
+> Set Environment Var PATH Permentaly
+```
+$oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path
+$newpath = "$oldpath;;C:\tools\msys64\usr\bin;C:\Program Files\CMake"
+Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
+```
