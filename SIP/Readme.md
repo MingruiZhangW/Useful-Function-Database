@@ -12,8 +12,14 @@
 
 - [SIP Voice-Mail, MWI(Message Waitting Indication)](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/sip_MWI.md)<br>
 
+> Print pjsip_msg
 ```
-	char x[1024];
-	pjsip_msg_print(tdata->msg, x, 1024);
-	JAMI_ERR("Data: %s", x);
+char x[1024];
+pjsip_msg_print(tdata->msg, x, 1024);
+JAMI_ERR("Data: %s", x);
 ```
+
+> Differences Between SIP and SIPS
+Ex: https://tools.ietf.org/id/draft-ietf-sip-sips-09.html#6.2
+Define: https://tools.ietf.org/html/rfc5630#section-3.3
+https://tools.ietf.org/html/rfc3261#section-19.1
