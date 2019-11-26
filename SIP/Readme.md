@@ -24,3 +24,7 @@ Ex: https://tools.ietf.org/id/draft-ietf-sip-sips-09.html#6.2<br>
 Define: https://tools.ietf.org/html/rfc5630#section-3.3<br>
 https://tools.ietf.org/html/rfc3261#section-19.1<br>
 https://stackoverflow.com/questions/35129041/difference-between-sip-and-sips-uri
+
+- Pjsip Implementation of SIPS Check
+https://trac.pjsip.org/repos/ticket/1735<br>
+sip_inv.c(inv_check_secure_dlg())
