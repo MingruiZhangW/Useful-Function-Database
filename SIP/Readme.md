@@ -20,6 +20,6 @@ JAMI_ERR("Data: %s", x);
 ```
 
 > **Differences Between SIP and SIPS** <br>
-Ex: https://tools.ietf.org/id/draft-ietf-sip-sips-09.html#6.2
-Define: https://tools.ietf.org/html/rfc5630#section-3.3
+Ex: https://tools.ietf.org/id/draft-ietf-sip-sips-09.html#6.2<br>
+Define: https://tools.ietf.org/html/rfc5630#section-3.3<br>
 https://tools.ietf.org/html/rfc3261#section-19.1
