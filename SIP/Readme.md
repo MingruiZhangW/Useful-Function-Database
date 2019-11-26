@@ -25,6 +25,6 @@ Define: https://tools.ietf.org/html/rfc5630#section-3.3<br>
 https://tools.ietf.org/html/rfc3261#section-19.1<br>
 https://stackoverflow.com/questions/35129041/difference-between-sip-and-sips-uri
 
-- Pjsip Implementation of SIPS Check<br>
+# Pjsip Implementation of SIPS Check<br>
 https://trac.pjsip.org/repos/ticket/1735<br>
 sip_inv.c(inv_check_secure_dlg())
