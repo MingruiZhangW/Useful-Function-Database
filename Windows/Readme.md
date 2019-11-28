@@ -14,3 +14,13 @@ $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentC
 $newpath = "$oldpath;;C:\tools\msys64\usr\bin;C:\Program Files\CMake"
 Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $newPath
 ```
+> Powershell Function Input Parameters<br>
+Parameters in calls to functions in PowerShell (all versions) are space-separated, not comma separated. Also, the parentheses are entirely unneccessary and will cause a parse error in PowerShell 2.0 (or later) if Set-StrictMode is active. Parenthesised arguments are used in .NET methods only.
+```
+function foo($a, $b, $c) {
+   "a: $a; b: $b; c: $c"
+}
+
+ps> foo 1 2 3
+a: 1; b: 2; c: 3
+```
