@@ -107,6 +107,9 @@ git submodule update --init --recursive.
 git submodule update --remote,
 Git will go into your submodules and fetch and update for you.
 ```
+### Git - Move Files
+[Move Files](https://githowto.com/moving_files)<br>
+
 # Debug
 
 ### GDB Breakpoint insert
