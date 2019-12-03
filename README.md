@@ -111,6 +111,9 @@ Git will go into your submodules and fetch and update for you.
 ### Git - Move Files
 [Move Files](https://githowto.com/moving_files)<br>
 
+### Git - Patch file (apply diff file)
+[Patch file](https://medium.com/odds-team/create-a-patch-file-from-git-diff-c746be60d1e)<br>
+https://gist.github.com/zeuxisoo/980174
 # Debug
 
 ### Using Visual Studio to attach processes
