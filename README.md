@@ -112,6 +112,9 @@ Git will go into your submodules and fetch and update for you.
 
 # Debug
 
+### Using Visual Studio to attach processes
+[Vs Debug](https://stackoverflow.com/questions/8167610/how-do-i-attach-visual-studio-to-a-process-that-is-not-started-yet)<br>
+https://git.jami.net/savoirfairelinux/ring-project/issues/724#note_16719
 ### GDB Breakpoint insert
     gdb --args (binary)
     r 
