@@ -41,7 +41,8 @@ Avoid push_back and prefer emplace_back instead (using move semanic, and For pos
 > **Shared_ptr**
 - [Shared_ptr and circular reference](https://www.learncpp.com/cpp-tutorial/15-7-circular-dependency-issues-with-stdshared_ptr-and-stdweak_ptr/)<br>
 ### CMake List
-https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/
+[Learn CMake](https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/)<br>
+[Use add_custom_target and add_custom_command](https://gist.github.com/baiwfg2/39881ba703e9c74e95366ed422641609)<br>
 
 ### Function Pointer
 > **Best Function Pointer Explaination** [Learn C++ 7.8](https://www.learncpp.com/cpp-tutorial/78-function-pointers/)<br>
