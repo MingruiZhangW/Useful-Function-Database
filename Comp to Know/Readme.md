@@ -59,3 +59,6 @@ https://www.networkworld.com/article/3239677/the-osi-model-explained-how-to-unde
 
 # How does SSH works
 - [SSH](https://www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work)<br>
+
+# Linking static libraries to other static libraries
+https://stackoverflow.com/questions/2157629/linking-static-libraries-to-other-static-libraries/2157735#2157735
