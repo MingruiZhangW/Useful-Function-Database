@@ -89,3 +89,6 @@ void MainWindow::closeEvent (QCloseEvent *event)
 }
 ```
 https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the-user-pressing-the-x-close-button
+
+# QML
+[QML Loading method](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/qml.md)<br>
