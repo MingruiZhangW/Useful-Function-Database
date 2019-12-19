@@ -95,3 +95,4 @@ https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the
 [Difference Between QQmlapplicationengine and QQuickview](https://forum.qt.io/topic/72516/what-is-the-difference-between-qqmlapplicationengine-and-qquickview)<br>
 [Windeployqt qml deply](https://stackoverflow.com/questions/53160127/windeployqt-module-qtquick-not-installed)<br>
 [Row height change in tableview](https://stackoverflow.com/questions/25522719/how-to-correctly-change-the-row-height-of-a-tableview)<br>
+[Qml Property Binding (like height, width)](https://doc.qt.io/qt-5/qtqml-syntax-propertybinding.html)<br>
