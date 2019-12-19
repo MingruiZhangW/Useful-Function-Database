@@ -60,3 +60,4 @@ QObject* childItem = qobject_cast<QObject*>(component.create());
 childItem->setParent(window);
 window->show();
 ```
+https://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html
