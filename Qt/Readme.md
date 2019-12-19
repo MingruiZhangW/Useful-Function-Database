@@ -93,3 +93,4 @@ https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the
 # QML
 [QML Loading method](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/qml.md)<br>
 [Difference Between QQmlapplicationengine and QQuickview](https://forum.qt.io/topic/72516/what-is-the-difference-between-qqmlapplicationengine-and-qquickview)<br>
+[Windeployqt qml deply](https://stackoverflow.com/questions/53160127/windeployqt-module-qtquick-not-installed)<br>
