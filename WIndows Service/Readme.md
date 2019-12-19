@@ -6,3 +6,4 @@
 
 **[Example](https://docs.microsoft.com/en-us/windows/win32/toolhelp/taking-a-snapshot-and-viewing-processes)<br>**
 
+**Windows service requires Administrator right to be installed**
