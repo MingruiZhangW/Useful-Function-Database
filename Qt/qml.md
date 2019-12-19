@@ -38,6 +38,7 @@ container->move(this->rect().center() - container->rect().center());
 container->show();
 dialog->exec();*/
 return true;
+```
 
 ### QQmlApplicationEngine
 ```
