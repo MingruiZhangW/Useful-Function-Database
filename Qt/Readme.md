@@ -97,3 +97,7 @@ https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the
 + [Row height change in tableview](https://stackoverflow.com/questions/25522719/how-to-correctly-change-the-row-height-of-a-tableview)<br>
 + [Qml Property Binding (like height, width)](https://doc.qt.io/qt-5/qtqml-syntax-propertybinding.html)<br>
 + [Models and Views in QtQuick](https://doc.qt.io/qt-5/qtquick-modelviewsdata-modelview.html#qml-data-models)<br>
++ [QML TableView access model properties from delegate](https://stackoverflow.com/questions/22874387/qml-tableview-access-model-properties-from-delegate)<br>
++ [How to access data in QML TableViewColumn delegate?](https://stackoverflow.com/questions/19577210/how-to-access-data-in-qml-tableviewcolumn-delegate/26809548)<br>
++ [Dynamic QML Object Creation from JavaScript](https://doc.qt.io/qt-5/qtqml-javascript-dynamicobjectcreation.html)<br>
++ [QML: How can I pass model properties to a delegate loaded inside a GridView (or ListView) delegate?](https://stackoverflow.com/questions/8450992/qml-how-can-i-pass-model-properties-to-a-delegate-loaded-inside-a-gridview-or)<br>
