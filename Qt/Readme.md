@@ -108,5 +108,11 @@ https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the
 - [Exposing Attributes of C++ Types to QML](https://doc.qt.io/qt-5/qtqml-cppintegration-exposecppattributes.html)<br>
 - [Interacting with QML Objects from C++](https://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html)<br>
 
+```
+Every QML object can be assigned an id and an objectName that other objects can use to refer to the object.
+The difference between the two is that the id is for referencing the object within QML,
+while the objectName is required for referencing the object from C++
+```
+
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
