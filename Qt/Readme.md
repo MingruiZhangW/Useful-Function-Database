@@ -101,6 +101,12 @@ https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the
 + [How to access data in QML TableViewColumn delegate?](https://stackoverflow.com/questions/19577210/how-to-access-data-in-qml-tableviewcolumn-delegate/26809548)<br>
 + [Dynamic QML Object Creation from JavaScript](https://doc.qt.io/qt-5/qtqml-javascript-dynamicobjectcreation.html)<br>
 + [QML: How can I pass model properties to a delegate loaded inside a GridView (or ListView) delegate?](https://stackoverflow.com/questions/8450992/qml-how-can-i-pass-model-properties-to-a-delegate-loaded-inside-a-gridview-or)<br>
+- [Customizing Qt Quick Controls](https://doc.qt.io/qt-5/qtquickcontrols2-customize.html#customizing-button)<br>
+
+# Qml && C++ Interaction
+- [Overview](https://doc.qt.io/qt-5/qtqml-cppintegration-overview.html)<br>
+- [Exposing Attributes of C++ Types to QML](https://doc.qt.io/qt-5/qtqml-cppintegration-exposecppattributes.html)<br>
+- [Interacting with QML Objects from C++](https://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html)<br>
 
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
