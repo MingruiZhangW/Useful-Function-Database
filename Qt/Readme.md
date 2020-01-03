@@ -107,7 +107,7 @@ https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the
 https://forum.qt.io/topic/64041/textfield-and-mousearea
 
 ### Qml ClipBoard
--[Qml and c++ QClipBoard](https://ruedigergad.com/2011/08/06/qml-and-clipboard-interaction/?unapproved=11929&moderation-hash=90a2276746f2445ad9fdd8464cdb66b5#comment-11929)<br>
+- [Qml and c++ QClipBoard](https://ruedigergad.com/2011/08/06/qml-and-clipboard-interaction/?unapproved=11929&moderation-hash=90a2276746f2445ad9fdd8464cdb66b5#comment-11929)<br>
 
 ### QWindow & QWedget
 - [What is the difference between a QWindow and QWidget](https://stackoverflow.com/questions/17860604/what-is-the-difference-between-a-qwindow-and-qwidget)<br>
