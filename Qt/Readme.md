@@ -112,6 +112,9 @@ https://forum.qt.io/topic/64041/textfield-and-mousearea
 ### QWindow & QWedget
 - [What is the difference between a QWindow and QWidget](https://stackoverflow.com/questions/17860604/what-is-the-difference-between-a-qwindow-and-qwidget)<br>
 
+### Qml Image Loading
++ [Qt/QML : Send QImage From C++ to QML and Display The QImage On GUI](https://stackoverflow.com/questions/20691414/qt-qml-send-qimage-from-c-to-qml-and-display-the-qimage-on-gui)<br>
+
 # Qml && C++ Interaction
 - [Overview](https://doc.qt.io/qt-5/qtqml-cppintegration-overview.html)<br>
 - [Exposing Attributes of C++ Types to QML](https://doc.qt.io/qt-5/qtqml-cppintegration-exposecppattributes.html)<br>
