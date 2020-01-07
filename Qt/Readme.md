@@ -103,7 +103,7 @@ https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the
 + [QML: How can I pass model properties to a delegate loaded inside a GridView (or ListView) delegate?](https://stackoverflow.com/questions/8450992/qml-how-can-i-pass-model-properties-to-a-delegate-loaded-inside-a-gridview-or)<br>
 - [Customizing Qt Quick Controls](https://doc.qt.io/qt-5/qtquickcontrols2-customize.html#customizing-button)<br>
 - [Qml Mouse Absolute Pos](https://stackoverflow.com/questions/19392163/qml-mouse-absolute-position-in-mousearea/44779025#44779025)<br>
-
+- [Property signal - Does an Item emit a signal when its position/size is changed in QML?](https://stackoverflow.com/questions/19987177/does-an-item-emit-a-signal-when-its-position-size-is-changed-in-qml)<br>
 https://forum.qt.io/topic/64041/textfield-and-mousearea
 
 ### Qml ClipBoard
