@@ -29,3 +29,10 @@ https://stackoverflow.com/questions/35129041/difference-between-sip-and-sips-uri
 https://trac.pjsip.org/repos/ticket/1735<br>
 sip_inv.c(inv_check_secure_dlg())<br>
 [Record Route](https://www.youtube.com/watch?v=p9OvtmTS-wU)
+
+# Pjsip access sip display name
+```
+const auto sip_from_uri_name_address = reinterpret_cast<pjsip_name_addr*>(rdata->msg_info.from->uri);
+
+std::string toDisplayName(sip_from_uri_name_address->display.ptr, sip_from_uri_name_address->display.slen);
+```
