@@ -128,6 +128,7 @@ while the objectName is required for referencing the object from C++
 ```
 
 - [Model in c++ To Qml](https://wiki.qt.io/How_to_Use_a_Custom_Class_in_C%2B%2B_Model_and_QML_View)<br>
+- [Using C++ Models with Qt Quick Views](https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html)<br>
 
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
