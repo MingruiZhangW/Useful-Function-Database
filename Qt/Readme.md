@@ -4,7 +4,6 @@
 QcoreApplication -> non-gui based application (complier)
 QGuiApplication -> mainly qml
 QApplication -> Qwidget bases application
-
 ```
 - [QT Layout Managment](https://doc.qt.io/qt-5/layout.html)<br>
 - [QT Crash Course/ Event Loop](https://www.cleanqt.io/blog/crash-course-in-qt-for-c%2B%2B-developers,-part-1)<br>
