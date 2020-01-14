@@ -111,7 +111,7 @@ https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the
 - [Property signal - Does an Item emit a signal when its position/size is changed in QML?](https://stackoverflow.com/questions/19987177/does-an-item-emit-a-signal-when-its-position-size-is-changed-in-qml)<br>
 https://forum.qt.io/topic/64041/textfield-and-mousearea
 - [Scroll Bar AsNeeded](https://stackoverflow.com/questions/51961813/qml-scrollbar-asneeded)<br>
-
+- [MapToItem Qml](https://stackoverflow.com/questions/21001124/what-is-the-qquickitemmaptoitem-return-type)<br>
 ### Qml ClipBoard
 - [Qml and c++ QClipBoard](https://ruedigergad.com/2011/08/06/qml-and-clipboard-interaction/?unapproved=11929&moderation-hash=90a2276746f2445ad9fdd8464cdb66b5#comment-11929)<br>
 
@@ -134,6 +134,11 @@ while the objectName is required for referencing the object from C++
 
 - [Model in c++ To Qml](https://wiki.qt.io/How_to_Use_a_Custom_Class_in_C%2B%2B_Model_and_QML_View)<br>
 - [Using C++ Models with Qt Quick Views](https://doc.qt.io/qt-5/qtquick-modelviewsdata-cppmodels.html)<br>
+
+# Qml Customiziation Example
+
+- [QtQuick2 ComboBox with sections](https://stackoverflow.com/questions/44849497/qtquick2-combobox-with-sections)<br>
+
 
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
