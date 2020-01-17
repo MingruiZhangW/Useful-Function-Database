@@ -12,4 +12,20 @@ auto foo = [x] () mutable {
 };
 ```
 
+```
+ // call foo
+std::cout << foo() << " ";
+
+// assign foo to bar
+auto bar = foo;
+
+// call foo again
+std::cout << foo() << " ";
+
+// call bar
+std::cout << bar() << " ";
+
+122
+```
+
 https://isocpp.org/wiki/faq/cpp14-language#lambda-captures
