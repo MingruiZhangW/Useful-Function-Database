@@ -20,6 +20,17 @@
 - [Is it safe to delete a void pointer?](https://stackoverflow.com/questions/941832/is-it-safe-to-delete-a-void-pointer)<br>
 - [C++ function: pass non const argument to const reference parameter](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/c%2B%2B%20function:%20pass%20non%20const%20argument%20to%20const%20reference%20parameter.md)<br>
 - [std::unique_lock or std::lock_guard?](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/std::unique_lock%3Cstd::mutex%3E%20or%20std::lock_guard%3Cstd::mutex%3E%3F.md)<br>
+- [How to iterate a Map](https://exceptionshub.com/c-loop-through-map.html)<br>
+```
+With C++17 ( and onwards ),
+for( auto const& [key, val] : symbolTable )
+{
+    std::cout << key         // string (key)
+              << ':'  
+              << val        // string's value
+              << std::endl ;
+}
+```
 
 ### Advanced:
 > **Const Vs Constexpr**
