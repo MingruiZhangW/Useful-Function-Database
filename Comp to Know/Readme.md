@@ -94,5 +94,4 @@ https://stackoverflow.com/questions/2157629/linking-static-libraries-to-other-st
     newArgv[argc] = ARG_DISABLE_WEB_SECURITY;
     newArgv[argc + 1] = nullptr;
 ```
-![alt text][image_double_pointer]
-[image_double_pointer]: https://www.geeksforgeeks.org/wp-content/uploads/Double-Pointer-in-C.png "Logo Title Text 2"
+![alt text](https://www.geeksforgeeks.org/wp-content/uploads/Double-Pointer-in-C.png "Logo Title Text 2")
