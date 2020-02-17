@@ -79,3 +79,20 @@ https://www.networkworld.com/article/3239677/the-osi-model-explained-how-to-unde
 
 # Linking static libraries to other static libraries
 https://stackoverflow.com/questions/2157629/linking-static-libraries-to-other-static-libraries/2157735#2157735
+
+# Double Pointer
+```
+    int argc;
+    char* argv[];
+    int newArgc = argc + 1 + 1;
+    // initialize of a double pointer (a pointer to a char pointer)
+    char** newArgv = new char* [newArgc];
+    for (int i = 0; i < argc; i++) {
+        // deference once
+        newArgv[i] = argv[i];
+    }
+    newArgv[argc] = ARG_DISABLE_WEB_SECURITY;
+    newArgv[argc + 1] = nullptr;
+```
+![alt text][image_double_pointer]
+[image_double_pointer]: https://www.geeksforgeeks.org/wp-content/uploads/Double-Pointer-in-C.png "Logo Title Text 2"
