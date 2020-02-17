@@ -85,7 +85,7 @@ https://stackoverflow.com/questions/2157629/linking-static-libraries-to-other-st
     int argc;
     char* argv[];
     int newArgc = argc + 1 + 1;
-    // initialize of a double pointer (a pointer to a char pointer)
+    // initialize of a double pointer (a pointer to a array of char pointer)
     char** newArgv = new char* [newArgc];
     for (int i = 0; i < argc; i++) {
         // deference once
