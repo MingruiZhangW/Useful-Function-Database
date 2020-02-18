@@ -120,7 +120,6 @@ https://gist.github.com/zeuxisoo/980174
 Two branches:
 - ```master``` is a local branch
 - ```origin/master``` is a remote branch (which is a **local copy** of the branch named "master" on the remote named "origin")<br>
-<a/>
 One remote:
 - ```origin``` is a remote
 
