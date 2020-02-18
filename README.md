@@ -118,11 +118,11 @@ https://gist.github.com/zeuxisoo/980174
 ## Git - Difference between origin master and origin/master
 There are actually three things here: origin master is two separate things, and origin/master is one thing. Three things total.
 <br>
-Two branches:
+- Two branches:
 
 ```master is a local branch```
 ```origin/master is a remote branch (which is a local copy of the branch named "master" on the remote named "origin")```
-One remote:
+- One remote:
 
 ```origin is a remote```
 
