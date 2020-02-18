@@ -116,19 +116,16 @@ Git will go into your submodules and fetch and update for you.
 https://gist.github.com/zeuxisoo/980174
 
 ## Git - Difference between origin master and origin/master
-There are actually three things here: origin master is two separate things, and origin/master is one thing. Three things total.
-<br>
-- Two branches:
+There are actually three things here: origin master is two separate things, and origin/master is one thing.<br>
+Three things total.<br>
+Two branches:
+- ```master``` is a local branch
 
-```
-master is a local branch
+- ```origin/master``` is a remote branch (which is a **local copy** of the branch named "master" on the remote named "origin")
+One remote:
+- ```origin``` is a remote
 
-origin/master is a remote branch (which is a local copy of the branch named "master" on the remote named "origin")
-```
-- One remote:
-
-```origin is a remote```
-
+> [Example](https://stackoverflow.com/questions/18137175/in-git-what-is-the-difference-between-origin-master-vs-origin-master)<br>
 # Debug
 
 ### Using Visual Studio to attach processes
