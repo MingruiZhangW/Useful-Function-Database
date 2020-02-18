@@ -119,7 +119,8 @@ https://gist.github.com/zeuxisoo/980174
 There are actually three things here: origin master is two separate things, and origin/master is one thing.<br>Three things total.<br>
 Two branches:
 * ```master``` is a local branch
-* ```origin/master``` is a remote branch (which is a **local copy** of the branch named "master" on the remote named "origin")\n\n
+* ```origin/master``` is a remote branch (which is a **local copy** of the branch named "master" on the remote named "origin")
+[//]: # (Hello)
 One remote:
 * ```origin``` is a remote
 
