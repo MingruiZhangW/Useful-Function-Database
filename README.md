@@ -120,8 +120,11 @@ There are actually three things here: origin master is two separate things, and 
 <br>
 - Two branches:
 
-```master is a local branch```
-```origin/master is a remote branch (which is a local copy of the branch named "master" on the remote named "origin")```
+```
+master is a local branch
+
+origin/master is a remote branch (which is a local copy of the branch named "master" on the remote named "origin")
+```
 - One remote:
 
 ```origin is a remote```
