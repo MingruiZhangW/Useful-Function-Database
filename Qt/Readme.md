@@ -139,6 +139,102 @@ while the objectName is required for referencing the object from C++
 
 - [QtQuick2 ComboBox with sections](https://stackoverflow.com/questions/44849497/qtquick2-combobox-with-sections)<br>
 
+- Responsive rect
+```
+    Component {
+        id: welcomeRectComp
+
+        Rectangle {
+            id: welcomeRect
+
+            Rectangle{
+                id: welcomeRectComponentsGroup
+
+                anchors.centerIn: parent
+
+                //width: 300
+                //height: mainViewWindow.minimumHeight
+                width: parent.width - 100
+                height: parent.height - 200
+
+                ColumnLayout {
+                    id: welcomeRectComponentsGroupColumnLayout
+
+                    Image {
+                        id: jamiLogoImage
+
+                        Layout.alignment: Qt.AlignCenter
+                        Layout.preferredWidth: welcomeRectComponentsGroup.width
+                        Layout.preferredHeight: 100
+
+                        fillMode: Image.PreserveAspectFit
+                        source: "qrc:/images/logo-jami-standard-coul.png"
+                        mipmap: true
+                    }
+
+                    Label {
+                        id: jamiIntroText
+
+                        Layout.alignment: Qt.AlignCenter
+                        Layout.preferredWidth: welcomeRectComponentsGroup.width
+                        Layout.preferredHeight: 100
+
+                        wrapMode: Text.WordWrap
+                        fontSizeMode: Text.Fit
+                        font.pointSize: textFontSize + 1
+                        minimumPointSize: 5
+                        elide: Text.ElideRight
+
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+
+                        text: "Jami is a free software for universal communication which repects the freedoms and privacy of its user."
+
+                        background: Rectangle {
+                            color: "yellow"
+                        }
+                    }
+
+                    Label {
+                        id: jamiShareWithFriendText
+
+                        Layout.alignment: Qt.AlignCenter
+                        Layout.preferredWidth: welcomeRectComponentsGroup.width
+                        Layout.preferredHeight: 50
+                        Layout.topMargin: 5
+
+                        wrapMode: Text.WordWrap
+                        fontSizeMode: Text.Fit
+                        minimumPointSize: 5
+                        font.pointSize: textFontSize - 1
+                        elide: Text.ElideRight
+
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+
+                        text: "This is your ID.\nCopy and share it with your friends"
+
+                        background: Rectangle {
+                            color: "orange"
+                        }
+                    }
+
+                }
+                color: "blue"
+            }
+
+            CustomBorder {
+                commonBorder: false
+                lBorderwidth: 1
+                rBorderwidth: 0
+                tBorderwidth: 0
+                bBorderwidth: 0
+                borderColor: ColorConstant.tabbarBorderColor
+            }
+            color: "pink"
+        }
+    }
+```
 
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
