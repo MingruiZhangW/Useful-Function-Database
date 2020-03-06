@@ -236,5 +236,21 @@ while the objectName is required for referencing the object from C++
     }
 ```
 
+### Qml HyperText
+
+```
+Text {
+    anchors.centerIn: parent
+    text: "To learn about KDE, <a href='http://www.kde.org'>click here</a>"
+    onLinkActivated: Qt.openUrlExternally(link)
+
+    MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.NoButton // we don't want to eat clicks on the Text
+        cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+    }
+}
+```
+
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
