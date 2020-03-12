@@ -252,5 +252,8 @@ Text {
 }
 ```
 
+### QML WebEngine
+- [Doc](https://retifrav.github.io/blog/2018/07/14/html-from-qml-over-webchannel-websockets/)<br>
+
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
