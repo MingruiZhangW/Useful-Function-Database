@@ -162,4 +162,4 @@ To get previous command containing string, hit [CTRL]+[r] followed by search str
 [Docker 入门](https://wangyi.ai/blog/2020/01/18/docker/)<br>
 
 # VC++
-<script src="https://gist.github.com/MingruiZhangW/0d83a11e04eaf854a5a6e46574e1585f.js"></script>
+[Functional-level Linking](https://gist.github.com/MingruiZhangW/0d83a11e04eaf854a5a6e46574e1585f)
