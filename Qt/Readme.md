@@ -95,6 +95,11 @@ void MainWindow::closeEvent (QCloseEvent *event)
 ```
 https://stackoverflow.com/questions/17480984/qt-how-do-i-handle-the-event-of-the-user-pressing-the-x-close-button
 
+# Qt Object Destory Chain
+- [Doc](https://doc.qt.io/archives/qt-4.8/objecttrees.html)<br>
+```
+QObjects organize themselves in object trees. When you create a QObject with another object as parent, it's added to the parent's children() list, and is deleted when the parent is. It turns out that this approach fits the needs of GUI objects very well. For example, a QShortcut (keyboard shortcut) is a child of the relevant window, so when the user closes that window, the shorcut is deleted too.
+```
 # QML
 - [QML Loading method](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Qt/qml.md)<br>
 + [Difference Between QQmlapplicationengine and QQuickview](https://forum.qt.io/topic/72516/what-is-the-difference-between-qqmlapplicationengine-and-qquickview)<br>
