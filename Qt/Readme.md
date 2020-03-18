@@ -258,7 +258,7 @@ Text {
 ```
 
 # Cpp Structure in QMl 
-[Cpp Structure In Qml](https://stackoverflow.com/questions/45650277/best-way-to-access-a-cpp-structure-in-qml)<br>
+[Cpp Structure In Qml](https://forum.qt.io/topic/82325/best-way-to-access-a-cpp-structure-in-qml/9)<br>
 ```
 struct MyStruct {
     Q_GADGET
