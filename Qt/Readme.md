@@ -277,5 +277,8 @@ struct MyStruct {
 # QML WebEngine
 - [Doc](https://retifrav.github.io/blog/2018/07/14/html-from-qml-over-webchannel-websockets/)<br>
 
+# QML oneShotConnect
+[oneShotConnect](https://stackoverflow.com/questions/45019082/connect-signal-to-slot-but-call-the-slot-only-once-and-then-auto-disconnect-the)<br>
+
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
