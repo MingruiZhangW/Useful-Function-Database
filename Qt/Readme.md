@@ -257,6 +257,23 @@ Text {
 }
 ```
 
+# Cpp Structure in QMl 
+[Cpp Structure In Qml](https://stackoverflow.com/questions/45650277/best-way-to-access-a-cpp-structure-in-qml)<br>
+```
+struct MyStruct {
+    Q_GADGET
+    int m_val;
+    QString m_name1;
+    QString m_name2;
+    QString m_name3;
+    QString m_name4;
+    Q_PROPERTY(int val MEMBER m_val)
+    Q_PROPERTY(QString name1 MEMBER m_name1)
+    Q_PROPERTY(QString name2 MEMBER m_name2)
+    Q_PROPERTY(QString name3 MEMBER m_name3)
+    Q_PROPERTY(QString name4 MEMBER m_name4)
+};
+```
 # QML WebEngine
 - [Doc](https://retifrav.github.io/blog/2018/07/14/html-from-qml-over-webchannel-websockets/)<br>
 
