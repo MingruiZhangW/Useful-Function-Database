@@ -155,6 +155,8 @@ https://www.thegeekstuff.com/2014/02/gdb-breakpoins-watchpoints/<br>
 [Command History](https://www.cyberciti.biz/faq/linux-unix-shell-history-search-command/)<br>
 To get previous command containing string, hit [CTRL]+[r] followed by search string
 
+# ~~Strike through Example~~
+
 # PPI Vs DPI
 
 [PPI vs DPI](https://wangyi.ai/blog/2013/08/07/ppi-vs-dpi-you-shi-yao-qu-bie/)<br>
