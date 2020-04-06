@@ -8,6 +8,7 @@
 - [Dup - Print into a file](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Create_a_file_to_print.md)
 - [Remove new lines in char string](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Remove_new_lines_in_char.md)
 - [Regex - Find All Except a Specific Word](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Regex-Find%20All%20Except%20a%20Specific%20Word.md)<br>
+- [Windows Startup Link](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Create%20Start-ip%20link%20(ink)%20-%20windows.md)<br>
 
 [//]: # (Hello)
 **QT**
