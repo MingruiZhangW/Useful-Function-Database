@@ -31,3 +31,16 @@ https://stackoverflow.com/questions/44765707/how-to-exclude-files-in-wix-toolset
 
 **Wix Prebuild Harvesting**
 - [Enabling Harvest (Heat.exe) in a Wix Setup Project](https://www.codeproject.com/Articles/1107786/Enabling-Harvest-Heat-exe-in-a-Wix-Setup-Project)<br>
+
+
+### Quiet Execution Custom Action
+
+https://wixtoolset.org/documentation/manual/v3/customactions/qtexec.html
+```
+    <Property Id="QtExecCmdLine" Value='"[WindowsFolder]\System32\taskkill.exe" /F /IM QtWebEngineProcess.exe /IM Jami.exe'/>
+    <CustomAction Id="JamiProcesses.TaskKill"
+                  BinaryKey="WixCA"
+                  DllEntry="CAQuietExec"
+                  Execute="immediate"
+                  Return="ignore"/>
+```
