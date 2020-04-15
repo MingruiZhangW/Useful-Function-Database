@@ -286,3 +286,6 @@ struct MyStruct {
 # Solve Qml App Flickers When Resize or Move Issue
 https://stackoverflow.com/questions/30818886/qml-window-resize-move-flicker
 
+# QMl - Js Signal Connection
+https://stackoverflow.com/questions/18647604/is-it-possible-to-connect-a-signal-from-javascript-to-qml
+
