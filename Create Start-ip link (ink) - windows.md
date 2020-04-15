@@ -1,7 +1,7 @@
 # Make application run on Startup (windows)
 
 in Path : C:\Users\mzhang\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
-
+**Run -> shell:startup**
 ```
 bool
 Utils::CreateStartupLink(const std::wstring& wstrAppName)
