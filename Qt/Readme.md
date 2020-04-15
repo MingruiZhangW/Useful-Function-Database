@@ -282,3 +282,7 @@ struct MyStruct {
 
 # Qmake
 [A Guild to Qmake](https://www.toptal.com/qt/vital-guide-qmake)<br>
+
+# Solve Qml App Flickers When Resize or Move Issue
+https://stackoverflow.com/questions/30818886/qml-window-resize-move-flicker
+
