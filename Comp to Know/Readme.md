@@ -99,6 +99,20 @@ https://stackoverflow.com/questions/2157629/linking-static-libraries-to-other-st
 ```
 ![alt text](https://www.geeksforgeeks.org/wp-content/uploads/Double-Pointer-in-C.png "Logo Title Text 2")
 
+```
+#include <iostream>
+
+int
+main(int argc, char* argv[])
+{
+    for (size_t i = 0; i < argc; i++)
+    {
+        std::cout<< *(argv + i) << std::endl;
+    }
+    
+}
+```
+
 # Const Member Function
 
 https://www.geeksforgeeks.org/const-member-functions-c/
