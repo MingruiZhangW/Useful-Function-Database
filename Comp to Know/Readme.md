@@ -98,3 +98,13 @@ https://stackoverflow.com/questions/2157629/linking-static-libraries-to-other-st
     newArgv[argc + 1] = nullptr;
 ```
 ![alt text](https://www.geeksforgeeks.org/wp-content/uploads/Double-Pointer-in-C.png "Logo Title Text 2")
+
+# Const Member Function
+
+https://www.geeksforgeeks.org/const-member-functions-c/
+```
+Const class object -> const member function
+```
+
+# Complied Vs Interpreted
+https://guide.freecodecamp.org/computer-science/compiled-versus-interpreted-languages/
