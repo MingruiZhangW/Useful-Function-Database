@@ -24,3 +24,7 @@ function foo($a, $b, $c) {
 ps> foo 1 2 3
 a: 1; b: 2; c: 3
 ```
+
+### Visual Studio Clang Format
+https://devblogs.microsoft.com/cppblog/clangformat-support-in-visual-studio-2017-15-7-preview-1/
+
