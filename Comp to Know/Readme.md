@@ -122,3 +122,33 @@ Const class object -> const member function
 
 # Complied Vs Interpreted
 https://guide.freecodecamp.org/computer-science/compiled-versus-interpreted-languages/
+
+
+# void foo(int)&
+```
+class Test{
+public: 
+    // overloading
+    void foo(int)&
+    void foo(int)&&
+    void foo(int)const;
+}
+
+// obj
+Test obj;
+obj.foo(1);
+
+// Actually
+//隐藏 this 参数
+foo(*this, 1);
+```
+So, actual full declaration
+```
+void foo(Test&, int);
+void foo(Test&&, int);
+void foo(const Test&, int);
+
+// Reminder
+D(D&&) = default; // forces a move constructor anyway
+```
+
