@@ -299,3 +299,19 @@ Repeater {
         }
     }
 ```
+
+# C++ Enum/NameSpace QML Declare (support multiple enum)
+```
+namespace MyNamespace {
+  Q_NAMESPACE
+  Q_CLASSINFO("RegisterEnumClassesUnscoped", "false")
+  
+  enum class MyEnum {
+      Key1,
+      Key2,
+  };
+  Q_ENUMS(MyEnum)
+}
+//...
+qmlRegisterUncreatableMetaObject(MyNamespace::staticMetaObject, "io.qt", 1, 0, "MyNamespace", "Access to enums & flags only");
+```
