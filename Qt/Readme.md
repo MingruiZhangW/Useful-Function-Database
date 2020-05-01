@@ -289,3 +289,13 @@ https://stackoverflow.com/questions/30818886/qml-window-resize-move-flicker
 # QMl - Js Signal Connection
 https://stackoverflow.com/questions/18647604/is-it-possible-to-connect-a-signal-from-javascript-to-qml
 
+# Qml -Force update by adding extra dependency
+http://www.mardy.it/blog/2016/11/qml-trick-force-re-evaluation-of.html
+```
+Repeater {
+        model: 10
+        Text {
+            text: {theItem.something; return theItem.computeWithSomething(index);}
+        }
+    }
+```
