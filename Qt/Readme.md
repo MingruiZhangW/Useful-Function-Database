@@ -301,17 +301,58 @@ Repeater {
 ```
 
 # C++ Enum/NameSpace QML Declare (support multiple enum)
+- **c++ Step 1 (lrc)**
 ```
-namespace MyNamespace {
-  Q_NAMESPACE
-  Q_CLASSINFO("RegisterEnumClassesUnscoped", "false")
-  
-  enum class MyEnum {
-      Key1,
-      Key2,
-  };
-  Q_ENUMS(MyEnum)
+namespace lrc {
+namespace api {
+namespace account {
+    Q_NAMESPACE
+    Q_CLASSINFO("RegisterEnumClassesUnscoped", "false")
+
+    enum class RegisterNameStatus {
+        SUCCESS = 0,
+        WRONG_PASSWORD = 1,
+        INVALID_NAME = 2,
+        ALREADY_TAKEN = 3,
+        NETWORK_ERROR = 4,
+        INVALID
+    };
+    Q_ENUMS(RegisterNameStatus)
+
+    enum class LookupStatus {
+        INVALID_NAME = 0,
+        SUCCESS = 1,
+        NOT_FOUND = 2,
+        ERROR = 3,
+        INVALID
+    };
+    Q_ENUMS(LookupStatus)
 }
-//...
-qmlRegisterUncreatableMetaObject(MyNamespace::staticMetaObject, "io.qt", 1, 0, "MyNamespace", "Access to enums & flags only");
+
+namespace conversation {
+    Q_NAMESPACE
+    Q_CLASSINFO("RegisterEnumClassesUnscoped", "false")
+
+    enum class Test {
+        SUCCESS = 2
+    };
+    Q_ENUMS(Test)
+}
+}
+}
+```
+- **c++ Step 2 (qml-client)**
+
+qmlRegisterUncreatableMetaObject(lrc::api::account::staticMetaObject,
+                                     "lrc.api", 1, 0, "Account", "");
+
+qmlRegisterUncreatableMetaObject(lrc::api::conversation::staticMetaObject,
+                                     "lrc.api", 1, 0, "Conversation", "");
+- **qml Step 3**
+```
+import lrc.api 1.0
+...
+console.log(Account.RegisterNameStatus.SUCCESS)
+console.log(Account.LookupStatus.SUCCESS)
+console.log(Conversation.Test.SUCCESS)
 ```
