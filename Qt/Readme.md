@@ -1,5 +1,12 @@
 # Qt knowlodge
 
+**Important**
+### [Object Trees & Ownership](https://doc.qt.io/archives/qt-4.8/objecttrees.html)
+```
+When QObjects are created on the heap (i.e., created with new), a tree can be constructed from them in any order, and later, the objects in the tree can be destroyed in any order. When any QObject in the tree is deleted, if the object has a parent, the destructor automatically removes the object from its parent. If the object has children, the destructor automatically deletes each child. No QObject is deleted twice, regardless of the order of destruction.
+```
+
+
 ```
 QcoreApplication -> non-gui based application (complier)
 QGuiApplication -> mainly qml
