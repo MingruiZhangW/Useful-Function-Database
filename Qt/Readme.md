@@ -363,3 +363,5 @@ console.log(Account.RegisterNameStatus.SUCCESS)
 console.log(Account.LookupStatus.SUCCESS)
 console.log(Conversation.Test.SUCCESS)
 ```
+
+[**QML Enum**](https://evileg.com/en/post/314/)
