@@ -130,6 +130,10 @@ One remote:
 - ```origin``` is a remote
 
 > [Example](https://stackoverflow.com/questions/18137175/in-git-what-is-the-difference-between-origin-master-vs-origin-master)<br>
+
+## Git Three Tree (staging index, working directory, commit history) and Git Reset
+[Link](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset)
+
 # Debug
 
 ### Using Visual Studio to attach processes
