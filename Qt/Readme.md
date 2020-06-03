@@ -365,3 +365,5 @@ console.log(Conversation.Test.SUCCESS)
 ```
 
 [**QML Enum**](https://evileg.com/en/post/314/)
+
+### [QML Tableview Header](https://stackoverflow.com/questions/55610163/how-to-create-a-tableview-5-12-with-column-headers)
