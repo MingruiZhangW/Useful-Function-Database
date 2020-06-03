@@ -367,3 +367,13 @@ console.log(Conversation.Test.SUCCESS)
 [**QML Enum**](https://evileg.com/en/post/314/)
 
 ### [QML Tableview Header](https://stackoverflow.com/questions/55610163/how-to-create-a-tableview-5-12-with-column-headers)
+
+### QML Item layer & How it apply
+```
+An Item will normally be rendered directly into the window it belongs to. 
+However, by setting layer.enabled, 
+it is possible to delegate the item and its entire subtree into an offscreen surface.
+
+Only the offscreen surface, a texture, will be then drawn into the window.
+```
+**Subtree item will also be effected**
