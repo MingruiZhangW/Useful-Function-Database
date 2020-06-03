@@ -29,8 +29,8 @@ It is recommended practice to make as many functions const as possible so that a
 
         20
 
-When a function is declared as const, 
-it can be called on any type of object. Non-const functions can only be called by non-const objects.
+**When a function is declared as const, 
+it can be called on any type of object. Non-const functions can only be called by non-const objects.**
 
 For example the following program has compiler errors.
 
