@@ -377,3 +377,9 @@ it is possible to delegate the item and its entire subtree into an offscreen sur
 Only the offscreen surface, a texture, will be then drawn into the window.
 ```
 **Subtree item will also be effected**
+
+### [Qml qmldir file](https://doc.qt.io/qt-5/qtqml-modules-qmldir.html)
+```
+A qmldir file is a plain-text file that contains the commands
+```
+
