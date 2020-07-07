@@ -383,3 +383,39 @@ Only the offscreen surface, a texture, will be then drawn into the window.
 A qmldir file is a plain-text file that contains the commands
 ```
 
+### Qml Signals between Repeater Components
+```
+...
+id: idOfTheParent  // <=== THIS IS IMPORTANT
+signal update_values(new_values)
+
+function qt_update_values(newValues){
+     update_values(newValues);
+}
+
+Repeater {
+    id:idRepeater
+    model: 3
+
+    Rectangle {
+        id:example
+
+        Text{ text: "hello"}
+        ...
+
+        AnotherComponent {
+            id: idOfAnotherComponent // This ID is only available in the 
+                                     // scope of the Component
+                                     // that will be instantiated by the
+                                     // Repeater, i.e. children of the Rectangle
+            name: "name"
+            othervariables: "others"
+        }
+        Connections {
+            target: idOfTheParent
+            onUpdate_values: idOfAnotherComponent.dosomethingWith(new_values)
+        }
+    }
+}
+...
+```
