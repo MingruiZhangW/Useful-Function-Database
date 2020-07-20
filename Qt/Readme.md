@@ -419,3 +419,11 @@ Repeater {
 }
 ...
 ```
+# Qml Clip item using an another custom item
+https://stackoverflow.com/questions/39455806/clip-children-of-custom-qml-item-after-custom-shape
+```
+layer.enabled: true
+layer.effect: OpacityMask {
+    maskSource: mask
+}
+```
