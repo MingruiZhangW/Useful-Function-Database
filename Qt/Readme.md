@@ -427,3 +427,5 @@ layer.effect: OpacityMask {
     maskSource: mask
 }
 ```
+
+# [QTimer - Does a QTimer object run in a separate thread? What is its mechanism?](https://stackoverflow.com/questions/42279360/does-a-qtimer-object-run-in-a-separate-thread-what-is-its-mechanism)
