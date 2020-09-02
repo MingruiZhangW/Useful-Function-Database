@@ -28,3 +28,8 @@ a: 1; b: 2; c: 3
 ### Visual Studio Clang Format
 https://devblogs.microsoft.com/cppblog/clangformat-support-in-visual-studio-2017-15-7-preview-1/
 
+### Windows Start up Link
+- [Windows Startup Link](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Create%20Start-ip%20link%20(ink)%20-%20windows.md)<br>
+```
+ They are shortcuts of the applications that start when your Windows start.
+```
