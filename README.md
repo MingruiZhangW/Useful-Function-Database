@@ -9,6 +9,7 @@
 - [Remove new lines in char string](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Remove_new_lines_in_char.md)
 - [Regex - Find All Except a Specific Word](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Regex-Find%20All%20Except%20a%20Specific%20Word.md)<br>
 - [Windows Startup Link](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Create%20Start-ip%20link%20(ink)%20-%20windows.md)<br>
+- [Windows Connectivity Changed](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/connectivitymonitor.h)<br>
 
 [//]: # (Hello)
 **QT**
