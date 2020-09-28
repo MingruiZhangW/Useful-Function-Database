@@ -171,3 +171,12 @@ To get previous command containing string, hit [CTRL]+[r] followed by search str
 
 # VC++
 [Functional-level Linking](https://gist.github.com/MingruiZhangW/0d83a11e04eaf854a5a6e46574e1585f)
+
+# MD
+- Add custom styling to markdown
+::: {style="margin: 20px"}
+2020-09-24 {#section style="font-size:40px;"}
+==========
+
+Mingrui {#new-features style="font-size:30px;"}
+:::
