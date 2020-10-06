@@ -152,3 +152,6 @@ void foo(const Test&, int);
 D(D&&) = default; // forces a move constructor anyway
 ```
 
+# The Monostate Pattern
+- [This is accomplished mostly by using static data members.](https://riptutorial.com/design-patterns/example/21458/the-monostate-pattern)
+
