@@ -437,3 +437,5 @@ layer.effect: OpacityMask {
 # [QTimer - Does a QTimer object run in a separate thread? What is its mechanism?](https://stackoverflow.com/questions/42279360/does-a-qtimer-object-run-in-a-separate-thread-what-is-its-mechanism)
 
 # [QML ImageProvider 类不能刷新Image的解决方法](https://blog.csdn.net/keanight/article/details/79175198)
+
+# [Scene Graph - Direct3D 11 Under QML](https://doc.qt.io/qt-5.15/qtquick-scenegraph-d3d11underqml-example.html)
