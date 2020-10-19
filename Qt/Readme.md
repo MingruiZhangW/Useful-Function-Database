@@ -27,6 +27,12 @@ QByteArray txt = "iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6Q
 QPixmap image;
 image.loadFromData(QByteArray::fromBase64(txt));
 ui->label->setPixmap(image);
+
+QByteArray ba;
+QBuffer buffer(&ba);
+buffer.open(QIODevice::WriteOnly);
+image.save(&buffer, "PNG");
+base64 string = QString::fromLatin1(ba.toBase64().data());
 ```
 
 - [QT Tab Order](https://doc.qt.io/archives/qt-4.8/designer-tab-order.html)<br>
