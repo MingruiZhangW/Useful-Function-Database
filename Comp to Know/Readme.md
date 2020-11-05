@@ -155,3 +155,15 @@ D(D&&) = default; // forces a move constructor anyway
 # The Monostate Pattern
 - [This is accomplished mostly by using static data members.](https://riptutorial.com/design-patterns/example/21458/the-monostate-pattern)
 
+# size_t & ptrdiff_t
+
+[size_t](https://prateekvjoshi.com/2015/01/03/why-do-we-need-size_t/#:~:text=It%20is%20an%20unsigned%20integer,are%20dealing%20with%20memory%20ranges.&text=One%20thing%20to%20note%20is%20that%20size_t%20is%20never%20negative.)
+```
+We can avoid all these performance issues by using size_t. When we use the type “size_t”, we are actually using a typedef that’s an alias for some unsigned integer type. That unsigned integer type can unsigned int, unsigned long, or unsigned long long. When we use this, then the standard C implementation is free to choose the unsigned integer that’s big enough for our needs, but not bigger than what’s needed, to represent the size of the largest possible object on our platform.
+```
+
+- ptrdiff_t is signed (because subtraction). size_t is unsigned (because length).
+
+```
+This is the signed integer type of the result of subtracting two pointers. For example, with the declaration char *p1, *p2;, the expression p2 - p1 is of type ptrdiff_t. This will probably be one of the standard signed integer types (short int, int or long int), but might be a nonstandard type that exists only for this purpose.
+```
