@@ -177,5 +177,5 @@ but might be a nonstandard type that exists only for this purpose.
 
 
 # Mix C and C++
-[What do I need to know when mixing C and C++ code?](https://isocpp.org/wiki/faq/mixing-c-and-cpp)
+[What do I need to know when mixing C and C++ code?](https://isocpp.org/wiki/faq/mixing-c-and-cpp) <br>
 [What is the effect of extern “C” in C++?](https://stackoverflow.com/questions/1041866/what-is-the-effect-of-extern-c-in-c)
