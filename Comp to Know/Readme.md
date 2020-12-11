@@ -174,3 +174,7 @@ For example, with the declaration char *p1, *p2;, the expression p2 - p1 is of t
 This will probably be one of the standard signed integer types (short int, int or long int),
 but might be a nonstandard type that exists only for this purpose.
 ```
+
+
+# Mix C and C++
+[What do I need to know when mixing C and C++ code?](https://isocpp.org/wiki/faq/mixing-c-and-cpp)
