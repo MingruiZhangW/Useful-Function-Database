@@ -179,3 +179,6 @@ but might be a nonstandard type that exists only for this purpose.
 # Mix C and C++
 [What do I need to know when mixing C and C++ code?](https://isocpp.org/wiki/faq/mixing-c-and-cpp) <br>
 [What is the effect of extern “C” in C++?](https://stackoverflow.com/questions/1041866/what-is-the-effect-of-extern-c-in-c)
+
+# Concept
+- [SFINAE](https://www.bfilipek.com/2016/02/notes-on-c-sfinae.html#:~:text=Substitution%20failure%20is%20not%20an,to%20describe%20related%20programming%20techniques.)
