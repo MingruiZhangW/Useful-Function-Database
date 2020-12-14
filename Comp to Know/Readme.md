@@ -182,3 +182,6 @@ but might be a nonstandard type that exists only for this purpose.
 
 # Concept
 - [SFINAE](https://www.bfilipek.com/2016/02/notes-on-c-sfinae.html#:~:text=Substitution%20failure%20is%20not%20an,to%20describe%20related%20programming%20techniques.)
+```
+https://stackoverflow.com/questions/44025340/purpose-of-class-void-in-c
+```
