@@ -193,7 +193,8 @@ This is done in situations when it is necessary to know that the name of the cla
 
 In C++, classes and structs can be forward-declared like this:
 
-```class MyClass;
+```
+class MyClass;
 struct MyStruct;
 ```
 
