@@ -185,3 +185,22 @@ but might be a nonstandard type that exists only for this purpose.
 ```
 https://stackoverflow.com/questions/44025340/purpose-of-class-void-in-c
 ```
+
+# Forward declaration
+
+In some object-oriented languages like C++ and Objective-C, it is sometimes necessary to forward-declare classes. <br>
+This is done in situations when it is necessary to know that the name of the class is a type, but where it is unnecessary to know the structure.
+
+In C++, classes and structs can be forward-declared like this:
+
+```class MyClass;
+struct MyStruct;
+```
+
+In C++, classes can be forward-declared if you only need to use the pointer-to-that-class type (since all object pointers are the same size, and this is what the compiler cares about). This is especially useful inside class definitions, e.g. if a class contains a member that is a pointer (or a reference) to another class.
+
+Forward-declaration is used to avoid unnecessary coupling which help reducing compilation time by reducing the number of header inclusion. This has a triple advantage:
+
+- reduce the number of files opened by #include (hence the number of operating system calls)
+- reducing the volume of the pre-processed files (as the header is not included)
+- reducing recompilation impact when the forward declared class is modified.
