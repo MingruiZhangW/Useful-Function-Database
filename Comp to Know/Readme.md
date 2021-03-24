@@ -205,3 +205,21 @@ Forward-declaration is used to avoid unnecessary coupling which help reducing co
 - reduce the number of files opened by #include (hence the number of operating system calls)
 - reducing the volume of the pre-processed files (as the header is not included)
 - reducing recompilation impact when the forward declared class is modified.
+
+https://stackoverflow.com/a/1280969
+```
+Forward declaration of enums is possible since C++11.
+Previously, the reason enum types couldn't be forward declared was because the size of the enumeration depended on its contents.
+As long as the size of the enumeration is specified by the application, it can be forward declared:
+
+enum Enum1;                     // Illegal in C++ and C++0x; no size is explicitly specified.
+enum Enum2 : unsigned int;      // Legal in C++0x.
+```
+
+https://stackoverflow.com/a/45852594
+
+```
+You can forward-declare enum in C++ starting from C++11. It's called "opaque declaration" rather than "forward declaration"
+because technically it results in a bit different effect: the size of the enum is known after its opaque declaration,
+while with the forward-declared types that's not the case.
+```
