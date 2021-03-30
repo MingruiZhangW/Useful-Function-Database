@@ -39,3 +39,7 @@ std::string toDisplayName(sip_from_uri_name_address->display.ptr, sip_from_uri_n
 ```
 # SIP re-INVITE
 https://andrewjprokop.wordpress.com/2015/02/10/understanding-sip-re-invite/comment-page-1/
+```
+The most common use for re-INVITE is call hold. The party putting the call on hold sends a re-INVITE with SDP indicating that media will no longer be sent.
+That same party will take the call off hold by sending another re-INVITE with SDP indicating that media transmission will resume
+```
