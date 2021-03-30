@@ -36,3 +36,5 @@ const auto sip_from_uri_name_address = reinterpret_cast<pjsip_name_addr*>(rdata-
 
 std::string toDisplayName(sip_from_uri_name_address->display.ptr, sip_from_uri_name_address->display.slen);
 ```
+# SIP re-INVITE
+https://andrewjprokop.wordpress.com/2015/02/10/understanding-sip-re-invite/comment-page-1/
