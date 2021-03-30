@@ -1,5 +1,6 @@
 # SIP Knowledge
 
+- [SIP Outbound Proxy](https://stackoverflow.com/questions/34195532/difference-between-sip-proxy-and-sip-outbound-proxy)
 - [SIP Proxy](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/SIP_Proxy.md)
 - [SIP Introduction - Slides](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/indroductiontosippublished-160410122633.pdf)
 - [SIP Introduction - PDF](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/session_initiation_protocol_tutorial.pdf)
