@@ -1,5 +1,6 @@
 # SIP Knowledge
 
+- [SIP INVITE header field](https://www.3cx.com/blog/voip-howto/sip-invite-header-fields/)
 - [SIP Outbound Proxy](https://stackoverflow.com/questions/34195532/difference-between-sip-proxy-and-sip-outbound-proxy)
 - [SIP Proxy](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/SIP_Proxy.md)
 - [SIP Introduction - Slides](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/SIP/indroductiontosippublished-160410122633.pdf)
