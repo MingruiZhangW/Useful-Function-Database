@@ -1,5 +1,7 @@
 # Comp to Know
 
+[C++ 20](https://oleksandrkvl.github.io/2021/04/02/cpp-20-overview.html)
+
 ### Basic:
 - [C++ Order of Definition](https://stackoverflow.com/questions/2133250/x-does-not-name-a-type-error-in-c)<br>
 - [Conditional Operator ?](https://github.com/MingruiZhangW/Useful-Function-Database/blob/master/Comp%20to%20Know/Conditional%20Operator%20%3F.md)<br>
