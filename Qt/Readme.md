@@ -1,5 +1,10 @@
 # Qt knowlodge
 
+# [QT WinMain](https://stackoverflow.com/questions/27187064/how-does-qt-manage-to-use-main-for-non-console-applications-in-windows)
+```
+Qt makes use of WinMain() defined in qtbase/src/winmain/qtmain_win.cpp, which subsequently calls our "fictional" int main(int argc, char *argv[])
+```
+
 **Important**
 ### [Object Trees & Ownership](https://doc.qt.io/archives/qt-4.8/objecttrees.html)
 ```
