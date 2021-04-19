@@ -1,5 +1,14 @@
 # Windows Specific Knowledge
 
+# [Different Entry Point](https://stackoverflow.com/a/416762)
+```
+main()
+
+WinMain() 
+
+DllMain()
+```
+
 ### Powershell
 
 - [Powershell Download File](https://blog.jourdant.me/post/3-ways-to-download-files-with-powershell)<br>
