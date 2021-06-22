@@ -252,3 +252,25 @@ assert(out[i] == in[i] + 1); // for all i
 ```
 
 https://stackoverflow.com/questions/356950/what-are-c-functors-and-their-uses
+
+# Soft (symbolic) Link & Hard Link
+
+https://medium.com/@673/a-hard-link-and-a-symbolic-link-what-is-the-difference-between-them-9f207654f2d9
+
+### Hard links
+A hard link is a link that connects many files with the same inode, so the same data block is shared with these files.
+A change in the data of a file will reflect on the others. If the original file is deleted, the hard link still exists as long as there is a file linked to the inode.
+- The hard link can be flexible and can be moved everywhere in the fixed file system, but it cannot cross or use in the different file system.
+- The hard link can be used as a backup plan in the system because each file is the same. Therefore, if we lose a file, we still have the others.
+- The hard link cannot link to directories, only files.
+
+### Symbolic links
+A symbolic link, also known as a soft link or a symlink, is a link that acts as a pointer to another file or a shortcut of a file.
+Each soft link file contains a different inode which links to the original file.
+Just like hard links, changing the content of a soft link file will reflect on the others.
+- The soft link can cross to other file systems because of the difference of inodes.
+- If the symbolic file is deleted, the original still exists. However, if the original file is deleted, the symbolic file is not gonna work correctly because it links to the nonexistent file.
+- The symbolic link can link to file or directory.
+- You can use the command ls -l to which one is the symbolic link.
+
+![image](https://user-images.githubusercontent.com/46324965/122941516-74c0e400-d343-11eb-8951-03b73b1061c3.png)
