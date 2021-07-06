@@ -444,3 +444,10 @@ layer.effect: OpacityMask {
 # [QML ImageProvider 类不能刷新Image的解决方法](https://blog.csdn.net/keanight/article/details/79175198)
 
 # [Scene Graph - Direct3D 11 Under QML](https://doc.qt.io/qt-5.15/qtquick-scenegraph-d3d11underqml-example.html)
+
+# QML Register Namespace Enum
+https://doc.qt.io/qt-5/qqmlengine.html#qmlRegisterUncreatableMetaObject
+```
+Q_CLASSINFO("RegisterEnumClassesUnscoped", "false")
+```
+Use the name ```RegisterEnumClassesUnscoped``` with the value false to prevent scoped enums from being merged into the same name space.
