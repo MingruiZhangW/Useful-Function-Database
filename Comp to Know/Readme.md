@@ -55,7 +55,8 @@ Avoid push_back and prefer emplace_back instead (using move semanic, and For pos
 - [Shared_ptr and circular reference](https://www.learncpp.com/cpp-tutorial/15-7-circular-dependency-issues-with-stdshared_ptr-and-stdweak_ptr/)<br>
 > **Type traits in modern C++**
 - [Type traits are a clever technique used in C++ template metaprogramming that gives you the ability to inspect and transform the properties of types.](https://www.internalpointers.com/post/quick-primer-type-traits-modern-cpp)<br>
-> [Why Why emplace_back is faster than push_back?](https://stackoverflow.com/questions/23717151/why-emplace-back-is-faster-than-push-back)<br>
+> Why emplace_back is faster than push_back?
+- [Why emplace_back is faster than push_back?](https://stackoverflow.com/questions/23717151/why-emplace-back-is-faster-than-push-back)<br>
 ### CMake List
 [Learn CMake](https://preshing.com/20170522/learn-cmakes-scripting-language-in-15-minutes/)<br>
 [Use add_custom_target and add_custom_command](https://gist.github.com/baiwfg2/39881ba703e9c74e95366ed422641609)<br>
