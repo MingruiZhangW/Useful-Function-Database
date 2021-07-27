@@ -278,3 +278,5 @@ Just like hard links, changing the content of a soft link file will reflect on t
 # Move Constructor Implicitly deletion
 ![image](https://user-images.githubusercontent.com/46324965/124510591-2a5b5080-dda2-11eb-85ef-6a7f902ab561.png)
 
+# Copy elision
+[Copy elision is an optimization implemented by most compilers to prevent extra (potentially expensive) copies in certain situations.](https://stackoverflow.com/questions/12953127/what-are-copy-elision-and-return-value-optimization)
