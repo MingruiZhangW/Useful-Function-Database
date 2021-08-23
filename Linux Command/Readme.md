@@ -11,3 +11,7 @@ cd ~/.lcoal
 
 # Linux图形界面知识（介绍X、X11、GNOME、Xorg、KDE等之间的关系
 https://blog.csdn.net/qq_16093937/article/details/83269106
+
+# Snap & AppImage
+https://snapcraft.io/
+https://appimage.org/
