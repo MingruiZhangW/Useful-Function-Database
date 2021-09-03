@@ -158,6 +158,7 @@ https://git.jami.net/savoirfairelinux/ring-project/issues/724#note_16719
     Control + X + A(UI thread backtrace(bt))
     up/down/step
     info b
+    thread apply all bt
 ### GDB - Watch point
 https://www.thegeekstuff.com/2014/02/gdb-breakpoins-watchpoints/<br>
 
