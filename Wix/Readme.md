@@ -47,3 +47,6 @@ https://wixtoolset.org/documentation/manual/v3/customactions/qtexec.html
 
 ### Conditionally launching the application after installation
 http://www.dizzymonkeydesign.com/blog/misc/adding-and-customizing-dlgs-in-wix-3/
+
+### Wix and cabinetry
+https://www.joyofsetup.com/2011/06/21/wix-and-cabinetry/
