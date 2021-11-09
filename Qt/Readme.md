@@ -451,3 +451,12 @@ https://doc.qt.io/qt-5/qqmlengine.html#qmlRegisterUncreatableMetaObject
 Q_CLASSINFO("RegisterEnumClassesUnscoped", "false")
 ```
 Use the name ```RegisterEnumClassesUnscoped``` with the value false to prevent scoped enums from being merged into the same name space.
+
+# Q_NAMESPACE_EXPORT(CONTROLLER_LIB_EXPORT)
+```
+#if defined MAKE_CONTROLLER_LIB
+#define CONTROLLER_LIB_EXPORT Q_DECL_EXPORT
+#else
+#define CONTROLLER_LIB_EXPORT Q_DECL_IMPORT
+#endif
+```
