@@ -452,11 +452,13 @@ Q_CLASSINFO("RegisterEnumClassesUnscoped", "false")
 ```
 Use the name ```RegisterEnumClassesUnscoped``` with the value false to prevent scoped enums from being merged into the same name space.
 
-# Q_NAMESPACE_EXPORT(CONTROLLER_LIB_EXPORT)
+# Q_NAMESPACE_EXPORT(EXPORT_MACRO)
 ```
 #if defined MAKE_CONTROLLER_LIB
 #define CONTROLLER_LIB_EXPORT Q_DECL_EXPORT
 #else
 #define CONTROLLER_LIB_EXPORT Q_DECL_IMPORT
 #endif
+
+Q_NAMESPACE_EXPORT(CONTROLLER_LIB_EXPORT)
 ```
