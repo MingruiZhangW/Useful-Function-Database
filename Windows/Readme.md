@@ -42,3 +42,6 @@ https://devblogs.microsoft.com/cppblog/clangformat-support-in-visual-studio-2017
 ```
  They are shortcuts of the applications that start when your Windows start.
 ```
+
+### Windows ICO
+https://docs.microsoft.com/en-us/windows/win32/uxguide/vis-icons?redirectedfrom=MSDN
