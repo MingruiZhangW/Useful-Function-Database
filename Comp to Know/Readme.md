@@ -282,3 +282,9 @@ Just like hard links, changing the content of a soft link file will reflect on t
 
 # Copy elision
 [Copy elision is an optimization implemented by most compilers to prevent extra (potentially expensive) copies in certain situations.](https://stackoverflow.com/questions/12953127/what-are-copy-elision-and-return-value-optimization)
+
+# C++17 If statement with initializer
+https://skebanga.github.io/if-with-initializer/
+
+# C++17 Structured Bindings
+https://skebanga.github.io/structured-bindings/
