@@ -291,3 +291,6 @@ https://skebanga.github.io/structured-bindings/
 
 # Private implementation - d pointer
 https://wiki.qt.io/D-Pointer
+
+# std::atomic and memory order
+https://stackoverflow.com/questions/31978324/what-exactly-is-stdatomic
