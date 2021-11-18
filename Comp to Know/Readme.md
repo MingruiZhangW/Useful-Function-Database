@@ -294,3 +294,6 @@ https://wiki.qt.io/D-Pointer
 
 # std::atomic and memory order
 https://stackoverflow.com/questions/31978324/what-exactly-is-stdatomic
+
+# Opaque pointer
+https://en.wikipedia.org/wiki/Opaque_pointer
