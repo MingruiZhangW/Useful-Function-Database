@@ -288,3 +288,6 @@ https://skebanga.github.io/if-with-initializer/
 
 # C++17 Structured Bindings
 https://skebanga.github.io/structured-bindings/
+
+# Private implementation - d pointer
+https://wiki.qt.io/D-Pointer
