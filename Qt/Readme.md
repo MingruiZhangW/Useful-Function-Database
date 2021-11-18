@@ -462,3 +462,6 @@ Use the name ```RegisterEnumClassesUnscoped``` with the value false to prevent s
 
 Q_NAMESPACE_EXPORT(CONTROLLER_LIB_EXPORT)
 ```
+
+# Qt Meta object system
+https://doc.qt.io/qt-5/metaobjects.html
