@@ -285,6 +285,7 @@ Just like hard links, changing the content of a soft link file will reflect on t
 
 # C++17 If statement with initializer
 https://skebanga.github.io/if-with-initializer/
+- (scope is within if-else block)
 
 # C++17 Structured Bindings
 https://skebanga.github.io/structured-bindings/
